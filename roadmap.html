@@ -3,12 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Roadmap — Brown 2 → Shodan · Road to Shodan</title>
-<meta name="description" content="The personal training plan from brown 2 to shodan. Gap analysis, weekly schedule, conditioning, mental preparation, and the shodan grading day itself.">
+<title>Roadmap — Brown 3 → Shodan · Road to Shodan</title>
+<meta name="description" content="The personal training plan from brown 3 to shodan. Gap analysis, weekly schedule, conditioning, mental preparation, and the shodan grading day itself.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
+<!-- Cloudflare Web Analytics -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "e20171382c37479f917e4cc268267b56"}'></script>
 </head>
 <body>
 
@@ -40,141 +42,229 @@
   <div class="kanji-watermark" aria-hidden="true">道</div>
   <div class="container">
     <p class="eyebrow">The Personal Road · 道程</p>
-    <h1>Brown 2 → Shodan</h1>
-    <p class="lede">A working plan from where I am — 2nd kyū, February 2026 — to where shodan waits, in roughly twelve to eighteen months.</p>
+    <h1>Brown 3 → Shodan</h1>
+    <p class="lede">A working plan from where I am — 3rd kyū, awarded 8 February 2026 — to where shodan waits, in roughly eighteen to twenty-four months.</p>
     <p class="breadcrumb-jp">準備 ・ 鍛錬 ・ 試験</p>
     <p style="color: var(--gray-soft); font-size: 0.92rem;">Junbi · Tanren · Shiken — Preparation · Conditioning · Examination</p>
   </div>
 </section>
 
-<!-- ============ THE ROAD ============ -->
+<!-- ============ THE ROAD SO FAR ============ -->
 <section>
   <div class="container">
     <div class="section-title">
-      <span class="jp">道のり — Michi-nori</span>
-      <h2>The remaining road</h2>
+      <span class="jp">これまで — Kore made</span>
+      <h2>The road so far &amp; the road remaining</h2>
+      <p class="lede">Six ranks in thirteen months: white → yellow → blue → purple → green → brown 4 → brown 3. Three ranks remain.</p>
     </div>
 
-    <!-- Big road SVG -->
-    <svg viewBox="0 0 1000 280" style="width:100%; height:auto; background: var(--washi-cream); border: 1px solid var(--line); padding: 1.5rem; box-shadow: var(--shadow-soft);">
+    <!-- Big road SVG with four waypoints -->
+    <svg viewBox="0 0 1100 280" style="width:100%; height:auto; background: var(--washi-cream); border: 1px solid var(--line); padding: 1.5rem; box-shadow: var(--shadow-soft);">
       <!-- horizon line -->
-      <line x1="40" y1="220" x2="960" y2="220" stroke="#c8b89e" stroke-width="1"/>
+      <line x1="40" y1="220" x2="1060" y2="220" stroke="#c8b89e" stroke-width="1"/>
 
       <!-- Mountain in distance -->
-      <path d="M 600 220 L 760 60 L 920 220 Z" fill="rgba(28, 58, 94, 0.06)" stroke="#0f2540" stroke-width="1.5"/>
-      <path d="M 700 130 L 760 60 L 820 130 Z" fill="rgba(28, 58, 94, 0.12)"/>
+      <path d="M 700 220 L 870 50 L 1040 220 Z" fill="rgba(28, 58, 94, 0.06)" stroke="#0f2540" stroke-width="1.5"/>
+      <path d="M 800 130 L 870 50 L 940 130 Z" fill="rgba(28, 58, 94, 0.12)"/>
 
       <!-- the path -->
-      <path d="M 50 240 Q 200 230, 320 220 T 540 200 T 760 60" fill="none" stroke="#b04a3a" stroke-width="3" stroke-dasharray="6 4"/>
+      <path d="M 50 240 Q 200 235, 320 225 T 540 210 T 700 180 T 870 50" fill="none" stroke="#b04a3a" stroke-width="3" stroke-dasharray="6 4"/>
 
-      <!-- waypoint 1: BROWN 2 (current) -->
+      <!-- waypoint: BROWN 3 (current) -->
       <circle cx="50" cy="240" r="14" fill="#6b4423" stroke="#1a1612" stroke-width="2"/>
-      <rect x="44" y="234" width="2" height="12" fill="#1a1612"/>
-      <rect x="50" y="234" width="2" height="12" fill="#1a1612"/>
-      <text x="50" y="270" text-anchor="middle" font-family="serif" font-size="13" fill="#0f2540" font-weight="700">Brown 2</text>
-      <text x="50" y="284" text-anchor="middle" font-family="serif" font-size="10" fill="#6b6157">2nd kyū · Feb 2026</text>
+      <rect x="46" y="234" width="2" height="12" fill="#1a1612"/>
+      <text x="50" y="270" text-anchor="middle" font-family="serif" font-size="13" fill="#0f2540" font-weight="700">Brown 3</text>
+      <text x="50" y="284" text-anchor="middle" font-family="serif" font-size="10" fill="#b04a3a" font-weight="600">3rd kyū · Feb 8, 2026 (you)</text>
 
-      <!-- waypoint 2: months 1-3 review -->
-      <circle cx="180" cy="232" r="8" fill="#c9a35e" stroke="#1a1612" stroke-width="1"/>
-      <text x="180" y="208" text-anchor="middle" font-family="serif" font-size="11" fill="#0f2540" font-weight="600">Phase 1</text>
-      <text x="180" y="195" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">Mar–May 2026</text>
-      <text x="180" y="258" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">consolidate</text>
+      <!-- waypoint: Phase 1 marker -->
+      <circle cx="200" cy="232" r="7" fill="#c9a35e" stroke="#1a1612" stroke-width="1"/>
+      <text x="200" y="208" text-anchor="middle" font-family="serif" font-size="11" fill="#0f2540" font-weight="600">Phase 1</text>
+      <text x="200" y="195" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">Mar – Aug 2026</text>
+      <text x="200" y="258" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">consolidate</text>
 
-      <!-- waypoint 3: BROWN 3 -->
-      <circle cx="360" cy="218" r="14" fill="#6b4423" stroke="#1a1612" stroke-width="2"/>
-      <rect x="354" y="212" width="2" height="12" fill="#1a1612"/>
-      <rect x="358" y="212" width="2" height="12" fill="#1a1612"/>
-      <rect x="362" y="212" width="2" height="12" fill="#1a1612"/>
-      <text x="360" y="195" text-anchor="middle" font-family="serif" font-size="13" fill="#0f2540" font-weight="700">Brown 3</text>
-      <text x="360" y="180" text-anchor="middle" font-family="serif" font-size="10" fill="#6b6157">1st kyū · ~Aug 2026</text>
+      <!-- waypoint: BROWN 2 -->
+      <circle cx="380" cy="220" r="14" fill="#6b4423" stroke="#1a1612" stroke-width="2"/>
+      <rect x="376" y="214" width="2" height="12" fill="#1a1612"/>
+      <rect x="380" y="214" width="2" height="12" fill="#1a1612"/>
+      <text x="380" y="195" text-anchor="middle" font-family="serif" font-size="13" fill="#0f2540" font-weight="700">Brown 2</text>
+      <text x="380" y="180" text-anchor="middle" font-family="serif" font-size="10" fill="#6b6157">2nd kyū · ~Q4 2026</text>
 
-      <!-- waypoint 4: months 6-12 -->
-      <circle cx="540" cy="200" r="8" fill="#c9a35e" stroke="#1a1612" stroke-width="1"/>
-      <text x="540" y="178" text-anchor="middle" font-family="serif" font-size="11" fill="#0f2540" font-weight="600">Phase 3</text>
-      <text x="540" y="165" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">Sep 2026 – Q1 2027</text>
-      <text x="540" y="225" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">shodan-prep</text>
+      <!-- waypoint: Phase 2 marker -->
+      <circle cx="540" cy="208" r="7" fill="#c9a35e" stroke="#1a1612" stroke-width="1"/>
+      <text x="540" y="184" text-anchor="middle" font-family="serif" font-size="11" fill="#0f2540" font-weight="600">Phase 2</text>
+      <text x="540" y="171" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">Sep 2026 – Apr 2027</text>
+      <text x="540" y="232" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">deepen</text>
 
-      <!-- waypoint 5: SHODAN -->
-      <circle cx="760" cy="60" r="20" fill="#0a0a0a" stroke="#c9a35e" stroke-width="3"/>
-      <text x="760" y="38" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="16" fill="#0f2540" font-weight="700">SHODAN</text>
-      <text x="760" y="22" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="14" fill="#b04a3a">初段</text>
-      <text x="760" y="100" text-anchor="middle" font-family="serif" font-size="10" fill="#6b6157">target: ~Q2 2027</text>
+      <!-- waypoint: BROWN 1 -->
+      <circle cx="700" cy="180" r="14" fill="#6b4423" stroke="#1a1612" stroke-width="2"/>
+      <rect x="694" y="174" width="2" height="12" fill="#1a1612"/>
+      <rect x="699" y="174" width="2" height="12" fill="#1a1612"/>
+      <rect x="704" y="174" width="2" height="12" fill="#1a1612"/>
+      <text x="700" y="155" text-anchor="middle" font-family="serif" font-size="13" fill="#0f2540" font-weight="700">Brown 1</text>
+      <text x="700" y="140" text-anchor="middle" font-family="serif" font-size="10" fill="#6b6157">1st kyū · ~Q2 2027</text>
+
+      <!-- waypoint: Phase 3 marker -->
+      <circle cx="800" cy="130" r="7" fill="#c9a35e" stroke="#1a1612" stroke-width="1"/>
+      <text x="800" y="113" text-anchor="middle" font-family="serif" font-size="11" fill="#0f2540" font-weight="600">Phase 3</text>
+      <text x="800" y="100" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">May 2027 – Q1 2028</text>
+      <text x="800" y="155" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">shodan-prep</text>
+
+      <!-- waypoint: SHODAN -->
+      <circle cx="870" cy="50" r="20" fill="#0a0a0a" stroke="#c9a35e" stroke-width="3"/>
+      <text x="870" y="28" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="16" fill="#0f2540" font-weight="700">SHODAN</text>
+      <text x="870" y="14" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="14" fill="#b04a3a">初段</text>
+      <text x="870" y="90" text-anchor="middle" font-family="serif" font-size="10" fill="#6b6157">target: ~late 2027 / Q1 2028</text>
 
       <!-- sun -->
-      <circle cx="900" cy="80" r="22" fill="none" stroke="#b04a3a" stroke-width="2.5" opacity="0.6"/>
-      <circle cx="900" cy="80" r="14" fill="#b04a3a" opacity="0.25"/>
-      <text x="900" y="125" text-anchor="middle" font-family="serif" font-size="10" fill="#6b6157" font-style="italic">…and the road continues</text>
+      <circle cx="1010" cy="80" r="22" fill="none" stroke="#b04a3a" stroke-width="2.5" opacity="0.6"/>
+      <circle cx="1010" cy="80" r="14" fill="#b04a3a" opacity="0.25"/>
+      <text x="1010" y="125" text-anchor="middle" font-family="serif" font-size="10" fill="#6b6157" font-style="italic">…and the road continues</text>
     </svg>
 
     <div class="row-3 mt-4">
       <div>
-        <h4>Phase 1 · Mar – May 2026</h4>
-        <p><strong>Consolidate brown 2.</strong> Sharpen Pinan series + Naihanchi Shodan + Passai Shō. Begin Passai Dai. Daily kihon. Introduce Naihanchi Nidan.</p>
+        <h4>Phase 1 · Mar – Aug 2026</h4>
+        <p><strong>Consolidate brown 3 → brown 2.</strong> Polish the Pinan series + Naihanchi Shodan; introduce Naihanchi Nidan. Begin Passai Dai. Daily kihon. Yakusoku kumite drilled until automatic.</p>
       </div>
       <div>
-        <h4>Phase 2 · Jun – Aug 2026 → Brown 3</h4>
-        <p><strong>Press to 1st kyū.</strong> Add Seisan, Ananku, Gojūshiho. Bunkai for one Pinan + Naihanchi. Bō: begin Shūshi-no-Kon. Jiyū-ippon kumite.</p>
-    </div>
+        <h4>Phase 2 · Sep 2026 – Apr 2027</h4>
+        <p><strong>Brown 2 → brown 1.</strong> Add Seisan, Ananku, Gojūshiho. Start Naihanchi Sandan. Bunkai for one Pinan + Naihanchi performed live. Bō: begin Shūshi-no-Kon. Jiyū-ippon kumite.</p>
+      </div>
       <div>
-        <h4>Phase 3 · Sep 2026 – grading</h4>
-        <p><strong>Shodan preparation.</strong> Add Chinto and Kūsankū. Polish all kata for examiner. Tokui-gata chosen. Kumite gauntlet drilled. Oral &amp; written prep.</p>
+        <h4>Phase 3 · May 2027 – grading</h4>
+        <p><strong>Brown 1 → shodan.</strong> Add Chinto and Kūsankū. Polish all kata for examiner. <em>Tokui-gata</em> (chosen kata) selected. Kumite gauntlet drilled. Oral &amp; written prep. Kobudō second kata.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ GAP ANALYSIS ============ -->
+<!-- ============ TRAINING HISTORY ============ -->
 <section class="alt">
   <div class="container">
     <div class="section-title">
+      <span class="jp">歩み — Ayumi</span>
+      <h2>Training history — Jan 2025 → present</h2>
+      <p class="lede">Thirteen months from white belt to brown 3. ~2 months per rank on average — but the brown ladder slows: depth replaces breadth.</p>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item milestone">
+        <p class="date">January 2, 2025</p>
+        <h4>White belt — beginning</h4>
+        <p>First class at OSK Academy. The road begins.</p>
+      </div>
+
+      <div class="timeline-item">
+        <p class="date">~Apr 2025</p>
+        <h4>Yellow — 8th kyū</h4>
+        <p>Fukyū-gata learned. Stances becoming familiar. Counting in Japanese without translation.</p>
+      </div>
+
+      <div class="timeline-item">
+        <p class="date">~Jul 2025</p>
+        <h4>Blue — 7th kyū</h4>
+        <p>Pinan Shodan introduced. Ippon kumite formal. Reigi internalized.</p>
+      </div>
+
+      <div class="timeline-item">
+        <p class="date">~Sep 2025</p>
+        <h4>Purple — 6th kyū</h4>
+        <p>Pinan Nidan, Sandan. Sanbon and gohon kumite.</p>
+      </div>
+
+      <div class="timeline-item">
+        <p class="date">~Nov 2025</p>
+        <h4>Green — 5th kyū</h4>
+        <p>Pinan Yondan. Naihanchi Shodan introduced. Yakusoku kumite begins to make sense.</p>
+      </div>
+
+      <div class="timeline-item">
+        <p class="date">~Dec 2025 / Jan 2026</p>
+        <h4>Brown 4 — 4th kyū</h4>
+        <p>Pinan Godan. Naihanchi deepens. First steps toward Passai Shō.</p>
+      </div>
+
+      <div class="timeline-item milestone">
+        <p class="date">February 8, 2026</p>
+        <h4>Brown 3 — 3rd kyū <span style="color: var(--kincha); font-weight: 700;">— current rank</span></h4>
+        <p>The brown ladder has begun. From here the kata add depth, not just count: bunkai, breath, intent. Three ranks remain.</p>
+      </div>
+
+      <div class="timeline-item">
+        <p class="date">~Q4 2026 (target)</p>
+        <h4>Brown 2 — 2nd kyū</h4>
+        <p>Passai Dai polished. Naihanchi Nidan added. Yakusoku kumite fluent. Begin formal bō practice.</p>
+      </div>
+
+      <div class="timeline-item">
+        <p class="date">~Q2 2027 (target)</p>
+        <h4>Brown 1 — 1st kyū</h4>
+        <p>Seisan, Ananku, Gojūshiho added. Naihanchi Sandan. Live bunkai for two kata. Shūshi-no-Kon (bō kata) demonstrated.</p>
+      </div>
+
+      <div class="timeline-item milestone">
+        <p class="date">Target ~late 2027 / Q1 2028</p>
+        <h4>Shodan — 初段</h4>
+        <p>Chinto and Kūsankū fluent. <em>Tokui-gata</em> chosen and polished. Kumite gauntlet completed. Oral history mastered. The road continues.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ GAP ANALYSIS ============ -->
+<section>
+  <div class="container">
+    <div class="section-title">
       <span class="jp">差分分析 — Sabun bunseki</span>
-      <h2>Gap analysis — what is missing from brown 2</h2>
-      <p class="lede">A frank inventory: what shodan requires, and which of those things the brown-2 student already has.</p>
+      <h2>Gap analysis — what is missing from brown 3</h2>
+      <p class="lede">A frank inventory: what shodan requires, and which of those things the brown-3 student already has.</p>
     </div>
 
     <table>
-      <thead><tr><th>Domain</th><th>Required at shodan</th><th>Likely status at brown 2</th><th>Action</th></tr></thead>
+      <thead><tr><th>Domain</th><th>Required at shodan</th><th>Likely status at brown 3</th><th>Action</th></tr></thead>
       <tbody>
 
         <tr><td><strong>Kihon</strong></td>
           <td>All stances clean; PT 1 + PT 2 fluent both sides; correct kime on every technique</td>
-          <td>~85%</td>
+          <td>~75%</td>
           <td>Daily 20-min PT 1 + PT 2; weekly stance-only session</td></tr>
 
         <tr><td><strong>Pinan series</strong></td>
           <td>All five fluent; bunkai for at least one (typically Yondan or Godan)</td>
-          <td>~80% form, ~40% bunkai</td>
+          <td>~75% form, ~30% bunkai</td>
           <td>Cycle through one Pinan/week with bunkai partner</td></tr>
 
         <tr><td><strong>Naihanchi</strong></td>
           <td>Shodan, Nidan, Sandan all required</td>
           <td>Shodan only</td>
-          <td><strong>Add Nidan immediately; Sandan by Brown 3</strong></td></tr>
+          <td><strong>Add Nidan in Phase 1; Sandan by Phase 2</strong></td></tr>
 
         <tr><td><strong>Intermediate kata</strong></td>
           <td>Seisan, Passai Shō, Passai Dai, Ananku, Gojūshiho, Rōhai, Jion</td>
-          <td>~60% (Passai Shō, possibly Seisan)</td>
-          <td><strong>Add 1 new kata per month from now to grading</strong></td></tr>
+          <td>~40% (Passai Shō started)</td>
+          <td><strong>Add 1 new kata every 6–8 weeks from now to grading</strong></td></tr>
 
         <tr><td><strong>Advanced kata</strong></td>
           <td>Chinto + Kūsankū (Sho or Dai). One chosen as <em>tokui-gata</em>.</td>
           <td>0%</td>
-          <td><strong>Begin Chinto in Phase 3 (Sep 2026)</strong></td></tr>
+          <td><strong>Begin Chinto in Phase 3 (May 2027)</strong></td></tr>
 
         <tr><td><strong>Bunkai</strong></td>
           <td>Demonstrate live bunkai for 2 kata (with a partner) at full speed</td>
-          <td>~30%</td>
+          <td>~20%</td>
           <td>Schedule weekly bunkai sessions with a sempai or peer</td></tr>
 
         <tr><td><strong>Kumite</strong></td>
           <td>Jiyū kumite vs. multiple senior partners (the "shodan gauntlet")</td>
-          <td>~50% (yakusoku + jiyū-ippon)</td>
-          <td>Add free-sparring rounds in Phase 2; conditioning for the gauntlet</td></tr>
+          <td>~40% (yakusoku at 3rd kyū)</td>
+          <td>Add jiyū-ippon in Phase 1; free sparring rounds in Phase 2</td></tr>
 
         <tr><td><strong>Kobudō</strong></td>
           <td>At least one weapon kata — usually Shūshi-no-Kon (bō)</td>
-          <td>~10%</td>
-          <td><strong>Begin bō in Phase 2 (June 2026)</strong></td></tr>
+          <td>~5%</td>
+          <td><strong>Begin bō in Phase 2 (Sep 2026)</strong></td></tr>
 
         <tr><td><strong>History &amp; theory</strong></td>
           <td>Lineage names; dōjō kun in Japanese; meaning of kata names; Itosu's Ten Precepts</td>
@@ -183,12 +273,12 @@
 
         <tr><td><strong>Conditioning</strong></td>
           <td>Sustain ~60 min of intense kihon + 3 kata + multi-round kumite</td>
-          <td>~70%</td>
+          <td>~65%</td>
           <td>Add 2 conditioning sessions/week (see schedule below)</td></tr>
 
         <tr><td><strong>Etiquette</strong></td>
           <td>Flawless reigi; recite dōjō kun in seiza without prompt</td>
-          <td>~90%</td>
+          <td>~85%</td>
           <td>Recite the kun nightly until automatic</td></tr>
 
       </tbody>
@@ -197,7 +287,7 @@
 </section>
 
 <!-- ============ WEEKLY SCHEDULE ============ -->
-<section>
+<section class="alt">
   <div class="container">
     <div class="section-title">
       <span class="jp">週間予定 — Shūkan yotei</span>
@@ -255,7 +345,7 @@
 </section>
 
 <!-- ============ CONDITIONING ============ -->
-<section class="alt">
+<section>
   <div class="container">
     <div class="section-title">
       <span class="jp">鍛錬 — Tanren</span>
@@ -266,7 +356,7 @@
     <div class="row-2">
       <div>
         <h3>The fitness baseline</h3>
-        <p>Aim for these by 6 months before grading:</p>
+        <p>Aim for these by 6 months before grading (i.e. by mid-2027):</p>
         <ul>
           <li><strong>Cardio:</strong> 5 km run in &lt; 30 min, or 30 min continuous shadow-kumite without pause.</li>
           <li><strong>Strength:</strong> 50 push-ups (military), 50 sit-ups, 30 burpees in 3 minutes.</li>
@@ -316,7 +406,7 @@
 </section>
 
 <!-- ============ MENTAL PREP ============ -->
-<section>
+<section class="alt">
   <div class="container">
     <div class="section-title">
       <span class="jp">精神修養 — Seishin shūyō</span>
@@ -367,7 +457,7 @@
 </section>
 
 <!-- ============ SHODAN EXAM ============ -->
-<section class="alt" id="shodan-test">
+<section id="shodan-test">
   <div class="container">
     <div class="section-title">
       <span class="jp">審査 — Shinsa</span>
@@ -461,7 +551,7 @@
 </section>
 
 <!-- ============ DAY-BEFORE / DAY-OF ============ -->
-<section>
+<section class="alt">
   <div class="container">
     <div class="section-title">
       <span class="jp">当日 — Tōjitsu</span>
@@ -541,7 +631,7 @@
     <div class="footer-rule"></div>
     <p><a href="index.html">← Back to home</a></p>
     <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--washi-cream); opacity: 0.7;">
-      Built February–April 2026, in the months following the brown 2 grading. Edited by the practitioner over the years that follow.
+      Built April 2026, in the months following the brown 3 grading. Edited by the practitioner over the years that follow.
     </p>
   </div>
 </footer>
