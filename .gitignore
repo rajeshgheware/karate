@@ -1,0 +1,4 @@
+# Claude-specific operational guide — kept local only.
+# Contains references to credential file paths and account IDs that
+# don't need to be public. See CLAUDE.md itself for orientation.
+CLAUDE.md
