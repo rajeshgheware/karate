@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roadmap — Brown 2 → Shodan · Road to Shodan</title>
+<meta name="description" content="The personal training plan from brown 2 to shodan. Gap analysis, weekly schedule, conditioning, mental preparation, and the shodan grading day itself.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="topnav">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <svg width="36" height="36" viewBox="0 0 100 100" aria-hidden="true">
+        <defs><filter id="ink-mini" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="2"/></filter></defs>
+        <path d="M 85 50 A 35 35 0 1 1 50 15" fill="none" stroke="#c9a35e" stroke-width="6" stroke-linecap="round" filter="url(#ink-mini)"/>
+      </svg>
+      <span class="brand-text">Road to Shodan<span class="brand-jp">道</span></span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="kihon.html">Kihon</a></li>
+        <li><a href="kata.html">Kata</a></li>
+        <li><a href="kumite.html">Kumite</a></li>
+        <li><a href="kobudo.html">Kobudō</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="terminology.html">Terms</a></li>
+        <li><a href="roadmap.html" class="active">Roadmap</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="kanji-watermark" aria-hidden="true">道</div>
+  <div class="container">
+    <p class="eyebrow">The Personal Road · 道程</p>
+    <h1>Brown 2 → Shodan</h1>
+    <p class="lede">A working plan from where I am — 2nd kyū, February 2026 — to where shodan waits, in roughly twelve to eighteen months.</p>
+    <p class="breadcrumb-jp">準備 ・ 鍛錬 ・ 試験</p>
+    <p style="color: var(--gray-soft); font-size: 0.92rem;">Junbi · Tanren · Shiken — Preparation · Conditioning · Examination</p>
+  </div>
+</section>
+
+<!-- ============ THE ROAD ============ -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <span class="jp">道のり — Michi-nori</span>
+      <h2>The remaining road</h2>
+    </div>
+
+    <!-- Big road SVG -->
+    <svg viewBox="0 0 1000 280" style="width:100%; height:auto; background: var(--washi-cream); border: 1px solid var(--line); padding: 1.5rem; box-shadow: var(--shadow-soft);">
+      <!-- horizon line -->
+      <line x1="40" y1="220" x2="960" y2="220" stroke="#c8b89e" stroke-width="1"/>
+
+      <!-- Mountain in distance -->
+      <path d="M 600 220 L 760 60 L 920 220 Z" fill="rgba(28, 58, 94, 0.06)" stroke="#0f2540" stroke-width="1.5"/>
+      <path d="M 700 130 L 760 60 L 820 130 Z" fill="rgba(28, 58, 94, 0.12)"/>
+
+      <!-- the path -->
+      <path d="M 50 240 Q 200 230, 320 220 T 540 200 T 760 60" fill="none" stroke="#b04a3a" stroke-width="3" stroke-dasharray="6 4"/>
+
+      <!-- waypoint 1: BROWN 2 (current) -->
+      <circle cx="50" cy="240" r="14" fill="#6b4423" stroke="#1a1612" stroke-width="2"/>
+      <rect x="44" y="234" width="2" height="12" fill="#1a1612"/>
+      <rect x="50" y="234" width="2" height="12" fill="#1a1612"/>
+      <text x="50" y="270" text-anchor="middle" font-family="serif" font-size="13" fill="#0f2540" font-weight="700">Brown 2</text>
+      <text x="50" y="284" text-anchor="middle" font-family="serif" font-size="10" fill="#6b6157">2nd kyū · Feb 2026</text>
+
+      <!-- waypoint 2: months 1-3 review -->
+      <circle cx="180" cy="232" r="8" fill="#c9a35e" stroke="#1a1612" stroke-width="1"/>
+      <text x="180" y="208" text-anchor="middle" font-family="serif" font-size="11" fill="#0f2540" font-weight="600">Phase 1</text>
+      <text x="180" y="195" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">Mar–May 2026</text>
+      <text x="180" y="258" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">consolidate</text>
+
+      <!-- waypoint 3: BROWN 3 -->
+      <circle cx="360" cy="218" r="14" fill="#6b4423" stroke="#1a1612" stroke-width="2"/>
+      <rect x="354" y="212" width="2" height="12" fill="#1a1612"/>
+      <rect x="358" y="212" width="2" height="12" fill="#1a1612"/>
+      <rect x="362" y="212" width="2" height="12" fill="#1a1612"/>
+      <text x="360" y="195" text-anchor="middle" font-family="serif" font-size="13" fill="#0f2540" font-weight="700">Brown 3</text>
+      <text x="360" y="180" text-anchor="middle" font-family="serif" font-size="10" fill="#6b6157">1st kyū · ~Aug 2026</text>
+
+      <!-- waypoint 4: months 6-12 -->
+      <circle cx="540" cy="200" r="8" fill="#c9a35e" stroke="#1a1612" stroke-width="1"/>
+      <text x="540" y="178" text-anchor="middle" font-family="serif" font-size="11" fill="#0f2540" font-weight="600">Phase 3</text>
+      <text x="540" y="165" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">Sep 2026 – Q1 2027</text>
+      <text x="540" y="225" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">shodan-prep</text>
+
+      <!-- waypoint 5: SHODAN -->
+      <circle cx="760" cy="60" r="20" fill="#0a0a0a" stroke="#c9a35e" stroke-width="3"/>
+      <text x="760" y="38" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="16" fill="#0f2540" font-weight="700">SHODAN</text>
+      <text x="760" y="22" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="14" fill="#b04a3a">初段</text>
+      <text x="760" y="100" text-anchor="middle" font-family="serif" font-size="10" fill="#6b6157">target: ~Q2 2027</text>
+
+      <!-- sun -->
+      <circle cx="900" cy="80" r="22" fill="none" stroke="#b04a3a" stroke-width="2.5" opacity="0.6"/>
+      <circle cx="900" cy="80" r="14" fill="#b04a3a" opacity="0.25"/>
+      <text x="900" y="125" text-anchor="middle" font-family="serif" font-size="10" fill="#6b6157" font-style="italic">…and the road continues</text>
+    </svg>
+
+    <div class="row-3 mt-4">
+      <div>
+        <h4>Phase 1 · Mar – May 2026</h4>
+        <p><strong>Consolidate brown 2.</strong> Sharpen Pinan series + Naihanchi Shodan + Passai Shō. Begin Passai Dai. Daily kihon. Introduce Naihanchi Nidan.</p>
+      </div>
+      <div>
+        <h4>Phase 2 · Jun – Aug 2026 → Brown 3</h4>
+        <p><strong>Press to 1st kyū.</strong> Add Seisan, Ananku, Gojūshiho. Bunkai for one Pinan + Naihanchi. Bō: begin Shūshi-no-Kon. Jiyū-ippon kumite.</p>
+    </div>
+      <div>
+        <h4>Phase 3 · Sep 2026 – grading</h4>
+        <p><strong>Shodan preparation.</strong> Add Chinto and Kūsankū. Polish all kata for examiner. Tokui-gata chosen. Kumite gauntlet drilled. Oral &amp; written prep.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GAP ANALYSIS ============ -->
+<section class="alt">
+  <div class="container">
+    <div class="section-title">
+      <span class="jp">差分分析 — Sabun bunseki</span>
+      <h2>Gap analysis — what is missing from brown 2</h2>
+      <p class="lede">A frank inventory: what shodan requires, and which of those things the brown-2 student already has.</p>
+    </div>
+
+    <table>
+      <thead><tr><th>Domain</th><th>Required at shodan</th><th>Likely status at brown 2</th><th>Action</th></tr></thead>
+      <tbody>
+
+        <tr><td><strong>Kihon</strong></td>
+          <td>All stances clean; PT 1 + PT 2 fluent both sides; correct kime on every technique</td>
+          <td>~85%</td>
+          <td>Daily 20-min PT 1 + PT 2; weekly stance-only session</td></tr>
+
+        <tr><td><strong>Pinan series</strong></td>
+          <td>All five fluent; bunkai for at least one (typically Yondan or Godan)</td>
+          <td>~80% form, ~40% bunkai</td>
+          <td>Cycle through one Pinan/week with bunkai partner</td></tr>
+
+        <tr><td><strong>Naihanchi</strong></td>
+          <td>Shodan, Nidan, Sandan all required</td>
+          <td>Shodan only</td>
+          <td><strong>Add Nidan immediately; Sandan by Brown 3</strong></td></tr>
+
+        <tr><td><strong>Intermediate kata</strong></td>
+          <td>Seisan, Passai Shō, Passai Dai, Ananku, Gojūshiho, Rōhai, Jion</td>
+          <td>~60% (Passai Shō, possibly Seisan)</td>
+          <td><strong>Add 1 new kata per month from now to grading</strong></td></tr>
+
+        <tr><td><strong>Advanced kata</strong></td>
+          <td>Chinto + Kūsankū (Sho or Dai). One chosen as <em>tokui-gata</em>.</td>
+          <td>0%</td>
+          <td><strong>Begin Chinto in Phase 3 (Sep 2026)</strong></td></tr>
+
+        <tr><td><strong>Bunkai</strong></td>
+          <td>Demonstrate live bunkai for 2 kata (with a partner) at full speed</td>
+          <td>~30%</td>
+          <td>Schedule weekly bunkai sessions with a sempai or peer</td></tr>
+
+        <tr><td><strong>Kumite</strong></td>
+          <td>Jiyū kumite vs. multiple senior partners (the "shodan gauntlet")</td>
+          <td>~50% (yakusoku + jiyū-ippon)</td>
+          <td>Add free-sparring rounds in Phase 2; conditioning for the gauntlet</td></tr>
+
+        <tr><td><strong>Kobudō</strong></td>
+          <td>At least one weapon kata — usually Shūshi-no-Kon (bō)</td>
+          <td>~10%</td>
+          <td><strong>Begin bō in Phase 2 (June 2026)</strong></td></tr>
+
+        <tr><td><strong>History &amp; theory</strong></td>
+          <td>Lineage names; dōjō kun in Japanese; meaning of kata names; Itosu's Ten Precepts</td>
+          <td>~30%</td>
+          <td>Read through <a href="history.html">history</a> + <a href="terminology.html">terms</a> monthly</td></tr>
+
+        <tr><td><strong>Conditioning</strong></td>
+          <td>Sustain ~60 min of intense kihon + 3 kata + multi-round kumite</td>
+          <td>~70%</td>
+          <td>Add 2 conditioning sessions/week (see schedule below)</td></tr>
+
+        <tr><td><strong>Etiquette</strong></td>
+          <td>Flawless reigi; recite dōjō kun in seiza without prompt</td>
+          <td>~90%</td>
+          <td>Recite the kun nightly until automatic</td></tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ WEEKLY SCHEDULE ============ -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <span class="jp">週間予定 — Shūkan yotei</span>
+      <h2>Weekly training plan</h2>
+      <p class="lede">A realistic seven-day rhythm. Three classes/week + four self-practice days. Adjust to OSK Academy's class schedule.</p>
+    </div>
+
+    <div class="schedule-grid">
+      <div class="sched-cell sched-head">Time</div>
+      <div class="sched-cell sched-head">Mon</div>
+      <div class="sched-cell sched-head">Tue</div>
+      <div class="sched-cell sched-head">Wed</div>
+      <div class="sched-cell sched-head">Thu</div>
+      <div class="sched-cell sched-head">Fri</div>
+      <div class="sched-cell sched-head">Sat</div>
+      <div class="sched-cell sched-head">Sun</div>
+
+      <div class="sched-cell sched-time">Morning<br><small>15–20 min</small></div>
+      <div class="sched-cell sched-active"><strong>Kihon PT 1</strong><br>+ recite dōjō kun</div>
+      <div class="sched-cell sched-active"><strong>Stance hold</strong><br>kiba-dachi 2×2 min</div>
+      <div class="sched-cell sched-active"><strong>Kihon PT 2</strong><br>both sides</div>
+      <div class="sched-cell sched-active"><strong>Kata: 1 Pinan</strong><br>shape · breath · bunkai</div>
+      <div class="sched-cell sched-active"><strong>Kihon PT 1</strong><br>silent, no count</div>
+      <div class="sched-cell sched-rest">rest or<br>light stretch</div>
+      <div class="sched-cell sched-active"><strong>Naihanchi</strong><br>3 reps each side</div>
+
+      <div class="sched-cell sched-time">Evening<br><small>60–90 min</small></div>
+      <div class="sched-cell sched-rest">rest</div>
+      <div class="sched-cell sched-active"><strong>OSK CLASS</strong></div>
+      <div class="sched-cell sched-active"><strong>Hojo undō</strong><br>chi-ishi + makiwara</div>
+      <div class="sched-cell sched-active"><strong>OSK CLASS</strong></div>
+      <div class="sched-cell sched-active"><strong>Bunkai practice</strong><br>w/ partner</div>
+      <div class="sched-cell sched-active"><strong>OSK CLASS</strong><br>or open mat</div>
+      <div class="sched-cell sched-rest">rest /<br>family</div>
+
+      <div class="sched-cell sched-time">Late<br><small>10 min</small></div>
+      <div class="sched-cell sched-active">Read 1 kata page<br>(<a href="kata.html">kata.html</a>)</div>
+      <div class="sched-cell sched-active">Review class<br>notes</div>
+      <div class="sched-cell sched-active">Read 1 history page<br>(<a href="history.html">history.html</a>)</div>
+      <div class="sched-cell sched-active">Review class<br>notes</div>
+      <div class="sched-cell sched-active">Recite dōjō kun<br>in Japanese</div>
+      <div class="sched-cell sched-active">Plan week's<br>kata focus</div>
+      <div class="sched-cell sched-rest">—</div>
+    </div>
+
+    <div class="callout paper">
+      <h4>Three principles for self-practice</h4>
+      <ol style="margin:0;">
+        <li><strong>Less reps, deeper attention.</strong> Five perfect mae-geri beat fifty sloppy ones. The body learns what you actually do, not what you intend.</li>
+        <li><strong>Always end with the basics.</strong> The last technique of every session should be something you have done a thousand times — leave with confirmation, not novelty.</li>
+        <li><strong>Train one thing alone, not everything together.</strong> Daily focus on one stance, one block, or one kata. The other domains rest while one progresses.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONDITIONING ============ -->
+<section class="alt">
+  <div class="container">
+    <div class="section-title">
+      <span class="jp">鍛錬 — Tanren</span>
+      <h2>Conditioning for shodan</h2>
+      <p class="lede">The shodan gauntlet — 60–90 minutes of full-effort kihon, multiple kata, and consecutive jiyū kumite — is as much a conditioning test as a technical one. Begin training the body for it now.</p>
+    </div>
+
+    <div class="row-2">
+      <div>
+        <h3>The fitness baseline</h3>
+        <p>Aim for these by 6 months before grading:</p>
+        <ul>
+          <li><strong>Cardio:</strong> 5 km run in &lt; 30 min, or 30 min continuous shadow-kumite without pause.</li>
+          <li><strong>Strength:</strong> 50 push-ups (military), 50 sit-ups, 30 burpees in 3 minutes.</li>
+          <li><strong>Stance endurance:</strong> kiba-dachi held for 5 minutes; zenkutsu held for 3 each side.</li>
+          <li><strong>Kicking endurance:</strong> 100 mae-geri each leg without setting down.</li>
+          <li><strong>Flexibility:</strong> mawashi-geri to head height (front leg) without warm-up; full splits-progress over years.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Hojo undō rotation</h3>
+        <p>Three sessions per week, 30–40 min each. Pick two tools per session.</p>
+        <table>
+          <tbody>
+            <tr><td><strong>Makiwara</strong></td><td>50 oi-zuki + 50 gyaku-zuki each hand. Build to 100. Knuckles must callus, not bleed.</td></tr>
+            <tr><td><strong>Chi-ishi</strong></td><td>Wrist circles, arc swings, single-arm presses. 3×10 each pattern.</td></tr>
+            <tr><td><strong>Nigiri-game</strong></td><td>Walk in sanchin-dachi 3×30 m holding the jars by the rim. Forearms will burn.</td></tr>
+            <tr><td><strong>Ishi-sashi</strong></td><td>Substitute kettlebell. Goblet squats, swings, halos — 3×10.</td></tr>
+            <tr><td><strong>Tetsu-geta</strong></td><td>Or ankle weights. Slow mae-geri × 30 each leg, no setting down.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row-2 mt-4">
+      <div>
+        <h3>Mobility &amp; recovery</h3>
+        <ul>
+          <li><strong>Daily:</strong> 10 min joint circles (neck, shoulders, hips, knees, ankles). No karate without this.</li>
+          <li><strong>Twice weekly:</strong> 20 min static stretching after class. Front splits, side splits, hip openers.</li>
+          <li><strong>Weekly:</strong> long walk (45+ min), or yoga session. Active recovery.</li>
+          <li><strong>Sleep:</strong> 7+ hours. The body integrates training in deep sleep, not on the floor.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Nutrition &amp; weight</h3>
+        <ul>
+          <li>Train light — empty stomach for early kata, light snack 60 min before class.</li>
+          <li>Hydrate before and during; coconut water or electrolytes after.</li>
+          <li>Protein within 30 min after every session (eggs, dal, lentils, paneer, fish).</li>
+          <li>If your weight class matters for tournament kumite — discuss with sensei. Most Okinawan schools do not weigh-in.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENTAL PREP ============ -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <span class="jp">精神修養 — Seishin shūyō</span>
+      <h2>Mental preparation</h2>
+      <p class="lede">A grading is not a fight; it is an examination of who you have become through training. The right mental frame for the year ahead is not <em>"I must pass"</em> — it is <em>"I will arrive ready, and the result will be honest."</em></p>
+    </div>
+
+    <div class="card-grid">
+
+      <div class="card">
+        <p class="card-jp">初心 · Shoshin</p>
+        <h3>Beginner's mind</h3>
+        <p>Approach every class as if it is the first. The brown belt who has "seen this before" learns nothing new; the brown belt who has "never seen this before" sees everything.</p>
+      </div>
+
+      <div class="card accent-beni">
+        <p class="card-jp">残心 · Zanshin</p>
+        <h3>Lingering awareness</h3>
+        <p>Train zanshin in daily life: do not collapse posture after each task. Examiners watch what you do <em>after</em> a technique as much as the technique itself.</p>
+      </div>
+
+      <div class="card">
+        <p class="card-jp">忍耐 · Nintai</p>
+        <h3>Patient endurance</h3>
+        <p>The plateau before shodan is normal — and the plateau is where the real shodan is forged. Skill compounds invisibly until one day it is visible.</p>
+      </div>
+
+      <div class="card accent-kincha">
+        <p class="card-jp">不動心 · Fudōshin</p>
+        <h3>Immovable mind</h3>
+        <p>Practice composure under stress: train when tired, train in front of strangers, train with a sempai watching. The grading must feel familiar, not extraordinary.</p>
+      </div>
+
+      <div class="card">
+        <p class="card-jp">継続 · Keizoku</p>
+        <h3>Continuation</h3>
+        <p>"Keizoku wa chikara nari" — continuation is power. Three poor sessions per week will outpace one perfect session per month.</p>
+      </div>
+
+      <div class="card accent-beni">
+        <p class="card-jp">空 · Kū</p>
+        <h3>Empty</h3>
+        <p>The day of the exam: empty the head. No counting moves, no rehearsing the next combination. Trust what training has put into the body. Watch what arises.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHODAN EXAM ============ -->
+<section class="alt" id="shodan-test">
+  <div class="container">
+    <div class="section-title">
+      <span class="jp">審査 — Shinsa</span>
+      <h2>The shodan examination</h2>
+      <p class="lede">A half-day to full-day event with senior examiners (often visiting from other dōjō) and an audience. OSK Academy's exact format is set by Renshi Sajesh and Kyōshi Chandran — verify two months out — but the components below are near-universal.</p>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item milestone">
+        <p class="date">Component 1 · Opening</p>
+        <h4>Reigi &amp; line-up</h4>
+        <p>Formal seiza, mokusō, recitation of dōjō kun, bows. The examination begins the moment you enter the dōjō. Composure here sets the tone for everything after.</p>
+      </div>
+
+      <div class="timeline-item">
+        <p class="date">Component 2 · 30–45 min</p>
+        <h4>Kihon demonstration</h4>
+        <p>All stances. Punches, blocks, kicks called by examiner. PT 1 and PT 2 forward and back. Combinations in pairs. <em>Listen to every count; do not anticipate.</em></p>
+      </div>
+
+      <div class="timeline-item milestone">
+        <p class="date">Component 3 · 30–45 min</p>
+        <h4>Kata demonstration</h4>
+        <p>Typically <strong>3–6 kata required</strong>: at least one Fukyū, the Naihanchi(s), full Pinan series (often 2–3 chosen at random), one intermediate (Passai, Ananku, Wansu, or Seisan), and one <em>tokui-gata</em> (chosen kata at high standard — usually Passai Dai or Kūsankū).</p>
+      </div>
+
+      <div class="timeline-item milestone">
+        <p class="date">Component 4 · 20–30 min</p>
+        <h4>Kata bunkai with a partner</h4>
+        <p>Selected sections of 1–2 kata performed at speed against an attacker. <strong>Often the most heavily weighted component</strong> — examiners want to see that the kata is understood, not just executed. Choose bunkai you have drilled hundreds of times.</p>
+      </div>
+
+      <div class="timeline-item">
+        <p class="date">Component 5 · 15–25 min</p>
+        <h4>Kumite</h4>
+        <p>Several rounds: ippon kumite, jiyū-ippon, then jiyū kumite. Many schools require the <strong>shodan gauntlet</strong> — 3 to 5 consecutive jiyū-kumite rounds against fresh senior partners. <em>Conditioning matters here as much as technique.</em></p>
+      </div>
+
+      <div class="timeline-item">
+        <p class="date">Component 6 · 10–20 min</p>
+        <h4>Kobudō kata</h4>
+        <p>At least one weapon kata. <strong>Shūshi-no-Kon (bō)</strong> is the standard. OSK's four-weapon syllabus may also ask for sai or tonfa.</p>
+      </div>
+
+      <div class="timeline-item">
+        <p class="date">Component 7 · 15 min</p>
+        <h4>Oral / written examination</h4>
+        <ul>
+          <li>History of Shōrin-Ryū — name the three branches and their founders.</li>
+          <li>Lineage of OSK Academy.</li>
+          <li>Recite the dōjō kun from memory in Japanese.</li>
+          <li>Translate the names and meanings of major kata.</li>
+          <li>Some schools: a written essay — <em>"What does shodan mean to me?"</em></li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <p class="date">Component 8 · 5–10 min</p>
+        <h4>Conditioning (sometimes a gate)</h4>
+        <p>Push-ups, sit-ups, stance holds, makiwara strikes. Some schools test fitness before kata — to see what the candidate looks like under fatigue.</p>
+      </div>
+
+      <div class="timeline-item">
+        <p class="date">Component 9 · variable</p>
+        <h4>Self-defense demonstration (goshin-jutsu)</h4>
+        <p>Application against grabs, holds, weapons (knife, club). Increasingly common in modern Okinawan schools.</p>
+      </div>
+
+      <div class="timeline-item milestone">
+        <p class="date">Component 10 · Close</p>
+        <h4>Verdict, line-up, bow</h4>
+        <p>The panel deliberates. Result is announced — sometimes immediately, sometimes by post within days. Whatever the result: bow, thank the examiners, return to training tomorrow.</p>
+      </div>
+
+    </div>
+
+    <div class="callout warm" style="margin-top: 3rem;">
+      <h3>Two months before the test</h3>
+      <p>Visit Renshi Sajesh or Kyōshi Chandran. Ask explicitly:</p>
+      <ul style="margin: 0.5rem 0 0 0;">
+        <li>"Which kata will I be required to perform?"</li>
+        <li>"Which sections will I demonstrate as bunkai?"</li>
+        <li>"How many kumite rounds, and against whom?"</li>
+        <li>"Which kobudō kata?"</li>
+        <li>"What is on the oral / written component?"</li>
+      </ul>
+      <p style="margin-top: 0.75rem;">Sensei always outranks the page. <strong>This site is preparation; sensei is the syllabus.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DAY-BEFORE / DAY-OF ============ -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <span class="jp">当日 — Tōjitsu</span>
+      <h2>The day before, the day of</h2>
+    </div>
+
+    <div class="row-2">
+      <div>
+        <h3>Day before</h3>
+        <ul>
+          <li><strong>Light training only</strong> — one full kata run-through, then rest. Do not exhaust the body.</li>
+          <li>Pack the gi (clean, ironed), spare belt, hand wraps, water, towel, snack.</li>
+          <li>Pack any kobudō weapon you will be tested on — verify it is in good order.</li>
+          <li>Sleep 8 hours.</li>
+          <li>No alcohol, no heavy food.</li>
+          <li>Re-read the dōjō kun and one history page.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Day of</h3>
+        <ul>
+          <li>Light breakfast 2 hours before. Banana + nuts mid-morning.</li>
+          <li>Hydrate steadily — small sips, not gulps.</li>
+          <li>Arrive 30 minutes early. Bow at the threshold. Greet your examiners formally.</li>
+          <li>Warm up alone, quietly. Joint circles, light stances, one Pinan.</li>
+          <li>If a technique goes wrong — recover, do not stop. <em>The recovery is what is being tested.</em></li>
+          <li>If you forget a kata sequence — pause, breathe, restart from kamae. Better than a wild improvisation.</li>
+          <li>End every kata with full <strong>zanshin</strong>. Hold the final stance. Eyes forward. Then naore.</li>
+          <li>Whatever the result: bow, thank, leave with dignity. Train again tomorrow.</li>
+        </ul>
+      </div>
+    </div>
+
+    <blockquote>
+      "If you have trained well, the test is the easy part. If you have not trained well, no advice will help. The day-of work was done in the months before."
+      <cite>— a common Okinawan teaching</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============ AFTER SHODAN ============ -->
+<section class="dark">
+  <div class="container-narrow">
+    <div class="section-title">
+      <span class="jp">初段の後 — Shodan no ato</span>
+      <h2>After shodan — what then?</h2>
+    </div>
+
+    <p>The black belt is awarded the day after the test. Most students hear at this point what they suspected — that shodan is not a graduation, but the entry into a new kind of training. A few changes follow:</p>
+
+    <ul style="color: var(--washi-cream);">
+      <li><strong>Bunkai becomes the main subject.</strong> Below shodan, you learn the form. After shodan, you learn what the form means.</li>
+      <li><strong>Teaching becomes part of training.</strong> You are now sempai to colored belts. The act of teaching reveals what you do not yet know — which is most things.</li>
+      <li><strong>Cross-style kata enter.</strong> OSK's Goju-influenced advanced kata (Seipai, Nipaipo, Shisōchin, Anan, Unsū) become accessible.</li>
+      <li><strong>Kobudō deepens.</strong> Multiple weapon kata; transitions between weapon and empty-hand.</li>
+      <li><strong>Self-direction grows.</strong> No one will tell you when to grade for nidan. You decide when you are ready and ask.</li>
+      <li><strong>The dōjō kun starts to make sense.</strong> The five precepts are the <em>actual curriculum</em> from shodan onward — not symbolic words but practical disciplines, applied daily.</li>
+    </ul>
+
+    <blockquote style="background: rgba(201, 163, 94, 0.1); color: var(--washi); border-color: var(--kincha); margin-top: 2.5rem;">
+      "Spend three years to find a teacher. Spend ten years training. Then you will know what karate is."
+      <cite style="color: var(--washi-cream); opacity: 0.7;">— a Ryūkyū saying, paraphrased</cite>
+    </blockquote>
+
+    <div style="text-align: center; margin-top: 3rem;">
+      <p style="font-family: 'Noto Serif JP', serif; font-size: 4rem; color: var(--kincha); line-height: 1;">道</p>
+      <p style="color: var(--washi-cream); margin-top: 1rem;"><em>The road continues.</em></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-jp">道</div>
+    <p>Roadmap — the personal road belongs to the one walking it.</p>
+    <div class="footer-rule"></div>
+    <p><a href="index.html">← Back to home</a></p>
+    <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--washi-cream); opacity: 0.7;">
+      Built February–April 2026, in the months following the brown 2 grading. Edited by the practitioner over the years that follow.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

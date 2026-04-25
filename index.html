@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Road to Shodan — Okinawa Shorin-Ryu Karate</title>
+<meta name="description" content="A life-long study reference for Okinawa Shorin-Ryu Karate. Kihon, kata, kumite, kobudo, history, and the road from brown 2 to shodan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<!-- ============ TOP NAV ============ -->
+<header class="topnav">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <!-- Enso mini logo -->
+      <svg width="36" height="36" viewBox="0 0 100 100" aria-hidden="true">
+        <defs>
+          <filter id="ink-mini" x="-20%" y="-20%" width="140%" height="140%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="2" seed="3"/>
+            <feDisplacementMap in="SourceGraphic" scale="2"/>
+          </filter>
+        </defs>
+        <path d="M 85 50 A 35 35 0 1 1 50 15" fill="none" stroke="#c9a35e" stroke-width="6" stroke-linecap="round" filter="url(#ink-mini)" opacity="0.95"/>
+      </svg>
+      <span class="brand-text">Road to Shodan<span class="brand-jp">道</span></span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="kihon.html">Kihon</a></li>
+        <li><a href="kata.html">Kata</a></li>
+        <li><a href="kumite.html">Kumite</a></li>
+        <li><a href="kobudo.html">Kobudō</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="terminology.html">Terms</a></li>
+        <li><a href="roadmap.html">Roadmap</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="kanji-watermark" aria-hidden="true">道</div>
+  <div class="container">
+    <p class="eyebrow">Okinawa Shōrin-Ryū · 沖縄少林流</p>
+    <h1>The Road to Shodan</h1>
+    <p class="lede">A life-long study reference for the karate I am becoming —<br>from brown belt to black belt, and every day after.</p>
+
+    <!-- Enso (zen circle) -->
+    <svg class="enso-hero" viewBox="0 0 220 220" aria-hidden="true">
+      <defs>
+        <filter id="ink-rough" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/>
+          <feDisplacementMap in="SourceGraphic" scale="3.5"/>
+        </filter>
+        <linearGradient id="ensoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#0f2540"/>
+          <stop offset="60%" stop-color="#1c3a5e"/>
+          <stop offset="100%" stop-color="#1a1612"/>
+        </linearGradient>
+      </defs>
+      <!-- Brush-stroke enso, thick to thin -->
+      <path d="M 175 110
+               A 65 65 0 1 1 92 49
+               A 65 70 0 1 1 178 105"
+            fill="none"
+            stroke="url(#ensoGrad)"
+            stroke-width="14"
+            stroke-linecap="round"
+            filter="url(#ink-rough)"
+            opacity="0.92"/>
+      <!-- inner small splatter -->
+      <circle cx="180" cy="110" r="3" fill="#1a1612" opacity="0.6"/>
+      <circle cx="184" cy="116" r="1.5" fill="#1a1612" opacity="0.4"/>
+    </svg>
+
+    <p class="breadcrumb-jp">心 ・ 技 ・ 体</p>
+    <p style="color: var(--gray-soft); font-size: 0.95rem; margin-top: 0.25rem;">Shin · Gi · Tai — Mind · Technique · Body</p>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section>
+  <div class="container-narrow">
+    <div class="section-title">
+      <span class="jp">序 — Jo</span>
+      <h2>Why this guide exists</h2>
+    </div>
+    <p>This is a personal reference, kept in the spirit of <em>shoshin</em> — beginner's mind. The Okinawan masters taught that kata is the textbook; bunkai is the lesson; and the dojo is the laboratory. Books, websites and seminars are only fingerprints of a much older oral tradition. This guide collects the fingerprints I will return to, so that on any morning I can revise a stance, recall a kata's intent, or rehearse a precept I have begun to forget.</p>
+    <p>It is built around the syllabus of <a href="https://oskacademy.com" target="_blank" rel="noopener">OSK Academy</a> — my school — and cross-referenced against the canonical Okinawan Shōrin-Ryū lineages: <strong>Kobayashi</strong> (Chibana), <strong>Shōbayashi</strong> (Kyan / Seibukan), and <strong>Matsubayashi</strong> (Nagamine). Where lineages disagree on a count or a movement, that disagreement is preserved — because the disagreement itself is part of the tradition.</p>
+    <blockquote>
+      "Karate ni sente nashi." — There is no first attack in karate.
+      <cite>— Anko Itosu (and after him, Funakoshi and Nagamine)</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============ EIGHT PILLARS ============ -->
+<section class="alt">
+  <div class="container">
+    <div class="section-title">
+      <span class="jp">八柱 — Hachi-Hashira</span>
+      <h2>Eight pillars of study</h2>
+      <p class="lede">A Shōrin-Ryū practitioner trains across eight intersecting domains. Walk any of them long enough and you will arrive at the others.</p>
+    </div>
+
+    <div class="card-grid">
+
+      <a href="kihon.html" class="card" style="border-top-color: var(--indigo);">
+        <div class="card-icon">
+          <!-- Kihon icon: stance silhouette -->
+          <svg width="56" height="56" viewBox="0 0 100 100">
+            <circle cx="50" cy="20" r="9" fill="none" stroke="#1c3a5e" stroke-width="2.5"/>
+            <line x1="50" y1="29" x2="50" y2="60" stroke="#1c3a5e" stroke-width="2.5"/>
+            <line x1="50" y1="40" x2="30" y2="55" stroke="#b04a3a" stroke-width="2.5"/>
+            <line x1="50" y1="40" x2="78" y2="38" stroke="#b04a3a" stroke-width="2.5"/>
+            <line x1="50" y1="60" x2="32" y2="85" stroke="#1c3a5e" stroke-width="2.5"/>
+            <line x1="50" y1="60" x2="72" y2="85" stroke="#1c3a5e" stroke-width="2.5"/>
+            <line x1="22" y1="92" x2="42" y2="92" stroke="#1c3a5e" stroke-width="3"/>
+            <line x1="62" y1="92" x2="82" y2="92" stroke="#1c3a5e" stroke-width="3"/>
+          </svg>
+        </div>
+        <p class="card-jp">基本 · Kihon</p>
+        <h3>Basics</h3>
+        <p>Stances, punches, kicks, blocks. The grammar from which every kata sentence is built. Conditioned daily; never outgrown.</p>
+        <span class="card-link">Open kihon</span>
+      </a>
+
+      <a href="kata.html" class="card accent-beni">
+        <div class="card-icon">
+          <!-- Kata icon: embusen H -->
+          <svg width="56" height="56" viewBox="0 0 100 100">
+            <line x1="20" y1="50" x2="80" y2="50" stroke="#b04a3a" stroke-width="3"/>
+            <line x1="50" y1="20" x2="50" y2="80" stroke="#b04a3a" stroke-width="3"/>
+            <circle cx="20" cy="50" r="4" fill="#b04a3a"/>
+            <circle cx="80" cy="50" r="4" fill="#b04a3a"/>
+            <circle cx="50" cy="20" r="4" fill="#b04a3a"/>
+            <circle cx="50" cy="80" r="4" fill="#b04a3a"/>
+            <circle cx="50" cy="50" r="6" fill="#1c3a5e"/>
+          </svg>
+        </div>
+        <p class="card-jp">型 · Kata</p>
+        <h3>Forms</h3>
+        <p>From Fukyū to Kūsankū — a complete progression of the school's kata, with embusen, key techniques, and bunkai notes for each.</p>
+        <span class="card-link">Open kata</span>
+      </a>
+
+      <a href="kumite.html" class="card">
+        <div class="card-icon">
+          <svg width="56" height="56" viewBox="0 0 100 100">
+            <circle cx="32" cy="30" r="7" fill="none" stroke="#1c3a5e" stroke-width="2.2"/>
+            <circle cx="68" cy="30" r="7" fill="none" stroke="#1c3a5e" stroke-width="2.2"/>
+            <line x1="32" y1="37" x2="32" y2="65" stroke="#1c3a5e" stroke-width="2.2"/>
+            <line x1="68" y1="37" x2="68" y2="65" stroke="#1c3a5e" stroke-width="2.2"/>
+            <line x1="32" y1="45" x2="50" y2="50" stroke="#b04a3a" stroke-width="2.5"/>
+            <line x1="68" y1="45" x2="50" y2="50" stroke="#b04a3a" stroke-width="2.5"/>
+            <circle cx="50" cy="50" r="4" fill="#c9a35e"/>
+            <line x1="32" y1="65" x2="20" y2="88" stroke="#1c3a5e" stroke-width="2.2"/>
+            <line x1="32" y1="65" x2="44" y2="88" stroke="#1c3a5e" stroke-width="2.2"/>
+            <line x1="68" y1="65" x2="56" y2="88" stroke="#1c3a5e" stroke-width="2.2"/>
+            <line x1="68" y1="65" x2="80" y2="88" stroke="#1c3a5e" stroke-width="2.2"/>
+          </svg>
+        </div>
+        <p class="card-jp">組手 · Kumite</p>
+        <h3>Sparring</h3>
+        <p>From kihon ippon to jiyū kumite. Distance (ma-ai), timing, and the nine target zones. Sport scoring and traditional applications.</p>
+        <span class="card-link">Open kumite</span>
+      </a>
+
+      <a href="kobudo.html" class="card accent-kincha">
+        <div class="card-icon">
+          <svg width="56" height="56" viewBox="0 0 100 100">
+            <line x1="15" y1="20" x2="85" y2="80" stroke="#a8853f" stroke-width="4"/>
+            <line x1="85" y1="20" x2="15" y2="80" stroke="#1c3a5e" stroke-width="4"/>
+            <circle cx="15" cy="20" r="3" fill="#1a1612"/>
+            <circle cx="85" cy="20" r="3" fill="#1a1612"/>
+            <circle cx="15" cy="80" r="3" fill="#1a1612"/>
+            <circle cx="85" cy="80" r="3" fill="#1a1612"/>
+          </svg>
+        </div>
+        <p class="card-jp">古武道 · Kobudō</p>
+        <h3>Weapons</h3>
+        <p>Bō, sai, nunchaku, and tonfa — the Ryūkyū farmer-noble's arsenal, refined into kata that sharpen the empty-hand body.</p>
+        <span class="card-link">Open kobudō</span>
+      </a>
+
+      <a href="history.html" class="card">
+        <div class="card-icon">
+          <svg width="56" height="56" viewBox="0 0 100 100">
+            <!-- torii gate -->
+            <line x1="20" y1="25" x2="80" y2="25" stroke="#b04a3a" stroke-width="4" stroke-linecap="round"/>
+            <line x1="18" y1="35" x2="82" y2="35" stroke="#b04a3a" stroke-width="3"/>
+            <line x1="30" y1="35" x2="30" y2="85" stroke="#1c3a5e" stroke-width="3.5"/>
+            <line x1="70" y1="35" x2="70" y2="85" stroke="#1c3a5e" stroke-width="3.5"/>
+            <line x1="40" y1="50" x2="60" y2="50" stroke="#1c3a5e" stroke-width="2.2"/>
+          </svg>
+        </div>
+        <p class="card-jp">歴史 · Rekishi</p>
+        <h3>History &amp; Lineage</h3>
+        <p>Matsumura, Itosu, Chibana, Kyan, Nagamine. The dōjō kun. Reigi (etiquette). The three branches of Shōrin and how OSK draws from them.</p>
+        <span class="card-link">Open history</span>
+      </a>
+
+      <a href="terminology.html" class="card">
+        <div class="card-icon">
+          <svg width="56" height="56" viewBox="0 0 100 100">
+            <text x="50" y="58" text-anchor="middle" font-family="serif" font-size="38" fill="#1c3a5e" font-weight="700">語</text>
+            <line x1="20" y1="80" x2="80" y2="80" stroke="#b04a3a" stroke-width="2.5"/>
+          </svg>
+        </div>
+        <p class="card-jp">用語 · Yōgo</p>
+        <h3>Terminology</h3>
+        <p>The Japanese vocabulary of the dōjō. Counting, body parts, commands, technique names — bilingual reference card for life.</p>
+        <span class="card-link">Open terms</span>
+      </a>
+
+      <a href="roadmap.html" class="card accent-beni">
+        <div class="card-icon">
+          <svg width="56" height="56" viewBox="0 0 100 100">
+            <path d="M 15 80 Q 35 40, 50 50 T 85 20" fill="none" stroke="#1c3a5e" stroke-width="2.5" stroke-dasharray="4 3"/>
+            <circle cx="15" cy="80" r="5" fill="#a04030"/>
+            <circle cx="50" cy="50" r="4" fill="#c9a35e"/>
+            <circle cx="85" cy="20" r="6" fill="#1a1612"/>
+          </svg>
+        </div>
+        <p class="card-jp">道程 · Dōtei</p>
+        <h3>Brown 2 → Shodan</h3>
+        <p>The personal road map: gap analysis from 2nd kyū, weekly training plan, conditioning, mental preparation, the grading day itself.</p>
+        <span class="card-link">Open roadmap</span>
+      </a>
+
+      <a href="roadmap.html#shodan-test" class="card">
+        <div class="card-icon">
+          <svg width="56" height="56" viewBox="0 0 100 100">
+            <rect x="20" y="35" width="60" height="50" fill="none" stroke="#1c3a5e" stroke-width="2.5"/>
+            <line x1="30" y1="50" x2="70" y2="50" stroke="#b04a3a" stroke-width="2"/>
+            <line x1="30" y1="60" x2="70" y2="60" stroke="#b04a3a" stroke-width="2"/>
+            <line x1="30" y1="70" x2="55" y2="70" stroke="#b04a3a" stroke-width="2"/>
+            <path d="M 50 35 L 50 18 L 65 25 L 50 35 Z" fill="#c9a35e"/>
+          </svg>
+        </div>
+        <p class="card-jp">審査 · Shinsa</p>
+        <h3>Shodan Examination</h3>
+        <p>What the test actually contains: kihon, all required kata, bunkai, kumite gauntlet, kobudō, oral history, and the written essay.</p>
+        <span class="card-link">Open exam guide</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ RANK LADDER ============ -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <span class="jp">十段階 — Jū-dankai</span>
+      <h2>The OSK Academy rank ladder</h2>
+      <p class="lede">Ten ranks across roughly four years of consistent training. I am at brown 2 (8th rank, 2nd kyū) — two grades from shodan.</p>
+    </div>
+
+    <div class="row-2">
+      <div class="belt-ladder">
+
+        <div class="rank-row">
+          <div class="belt-num">1</div>
+          <svg class="belt-vis" width="100" height="14" viewBox="0 0 100 14"><rect width="100" height="14" fill="#f4ede4" stroke="#8a7d6a" stroke-width="1"/></svg>
+          <div class="belt-name">White<small>9th kyū · Mukyū</small></div>
+          <div class="belt-time">~3 mo</div>
+        </div>
+
+        <div class="rank-row">
+          <div class="belt-num">2</div>
+          <svg class="belt-vis" width="100" height="14"><rect width="100" height="14" fill="#e8c84a"/></svg>
+          <div class="belt-name">Yellow<small>8th kyū</small></div>
+          <div class="belt-time">~3 mo</div>
+        </div>
+
+        <div class="rank-row">
+          <div class="belt-num">3</div>
+          <svg class="belt-vis" width="100" height="14"><rect width="100" height="14" fill="#3070b8"/></svg>
+          <div class="belt-name">Blue<small>7th kyū</small></div>
+          <div class="belt-time">~4 mo</div>
+        </div>
+
+        <div class="rank-row">
+          <div class="belt-num">4</div>
+          <svg class="belt-vis" width="100" height="14"><rect width="100" height="14" fill="#7a4ea3"/></svg>
+          <div class="belt-name">Purple<small>6th kyū</small></div>
+          <div class="belt-time">~4 mo</div>
+        </div>
+
+        <div class="rank-row">
+          <div class="belt-num">5</div>
+          <svg class="belt-vis" width="100" height="14"><rect width="100" height="14" fill="#3a8a3a"/></svg>
+          <div class="belt-name">Green<small>5th kyū</small></div>
+          <div class="belt-time">~5 mo</div>
+        </div>
+
+        <div class="rank-row">
+          <div class="belt-num">6</div>
+          <svg class="belt-vis" width="100" height="14"><rect width="100" height="14" fill="#6b4423"/></svg>
+          <div class="belt-name">Brown 1<small>4th kyū</small></div>
+          <div class="belt-time">~5 mo</div>
+        </div>
+
+        <div class="rank-row">
+          <div class="belt-num">7</div>
+          <svg class="belt-vis" width="100" height="14"><rect width="100" height="14" fill="#6b4423"/><rect x="40" width="20" height="14" fill="#1a1612"/></svg>
+          <div class="belt-name">Brown 1 (stripe)<small>3rd kyū</small></div>
+          <div class="belt-time">~6 mo</div>
+        </div>
+
+        <div class="rank-row current">
+          <div class="belt-num">8</div>
+          <svg class="belt-vis" width="100" height="14"><rect width="100" height="14" fill="#6b4423"/><rect x="35" width="10" height="14" fill="#1a1612"/><rect x="55" width="10" height="14" fill="#1a1612"/></svg>
+          <div class="belt-name">Brown 2 <span class="tag tag-kincha">YOU ARE HERE</span><small>2nd kyū · February 2026</small></div>
+          <div class="belt-time">~6 mo</div>
+        </div>
+
+        <div class="rank-row">
+          <div class="belt-num">9</div>
+          <svg class="belt-vis" width="100" height="14"><rect width="100" height="14" fill="#6b4423"/><rect x="30" width="10" height="14" fill="#1a1612"/><rect x="45" width="10" height="14" fill="#1a1612"/><rect x="60" width="10" height="14" fill="#1a1612"/></svg>
+          <div class="belt-name">Brown 3<small>1st kyū · ~Summer 2026</small></div>
+          <div class="belt-time">~6 mo</div>
+        </div>
+
+        <div class="rank-row target">
+          <div class="belt-num">10</div>
+          <svg class="belt-vis" width="100" height="14"><rect width="100" height="14" fill="#0a0a0a"/></svg>
+          <div class="belt-name">Black <span class="tag">SHODAN</span><small>初段 · 1st dan · Target ~2027</small></div>
+          <div class="belt-time">—</div>
+        </div>
+
+      </div>
+
+      <!-- Road-to-shodan SVG -->
+      <div>
+        <h3>The road remaining</h3>
+        <svg viewBox="0 0 400 320" style="width:100%; height:auto; background: var(--washi-cream); border: 1px solid var(--line); padding: 1rem; box-shadow: var(--shadow-soft);">
+          <defs>
+            <filter id="ink-road" x="-10%" y="-10%" width="120%" height="120%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2"/>
+              <feDisplacementMap in="SourceGraphic" scale="1.5"/>
+            </filter>
+          </defs>
+          <!-- mountain -->
+          <path d="M 60 280 L 180 80 L 300 280 Z" fill="none" stroke="#0f2540" stroke-width="2" filter="url(#ink-road)"/>
+          <path d="M 130 180 L 180 80 L 230 180 Z" fill="rgba(28, 58, 94, 0.08)"/>
+          <!-- mist clouds -->
+          <ellipse cx="100" cy="160" rx="35" ry="6" fill="#c8b89e" opacity="0.4"/>
+          <ellipse cx="280" cy="200" rx="40" ry="7" fill="#c8b89e" opacity="0.4"/>
+          <!-- path -->
+          <path d="M 40 290 Q 100 280, 130 250 T 180 80" fill="none" stroke="#b04a3a" stroke-width="2.5" stroke-dasharray="5 4"/>
+          <!-- waypoints -->
+          <circle cx="40" cy="290" r="9" fill="#6b4423" stroke="#1a1612" stroke-width="1.5"/>
+          <text x="40" y="312" text-anchor="middle" font-family="serif" font-size="11" fill="#0f2540" font-weight="600">Brown 2</text>
+          <text x="40" y="325" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">(here)</text>
+
+          <circle cx="115" cy="240" r="9" fill="#6b4423" stroke="#1a1612" stroke-width="1.5"/>
+          <line x1="111" y1="236" x2="119" y2="244" stroke="#1a1612" stroke-width="1.5"/>
+          <line x1="119" y1="236" x2="111" y2="244" stroke="#1a1612" stroke-width="1.5"/>
+          <text x="115" y="262" text-anchor="middle" font-family="serif" font-size="11" fill="#0f2540" font-weight="600">Brown 3</text>
+          <text x="115" y="275" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">~6 mo</text>
+
+          <circle cx="180" cy="80" r="13" fill="#0a0a0a" stroke="#c9a35e" stroke-width="2.5"/>
+          <text x="180" y="55" text-anchor="middle" font-family="serif" font-size="13" fill="#0f2540" font-weight="700">SHODAN</text>
+          <text x="180" y="42" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="14" fill="#b04a3a">初段</text>
+          <text x="180" y="113" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">~12–18 mo total</text>
+
+          <!-- sun -->
+          <circle cx="320" cy="60" r="18" fill="none" stroke="#b04a3a" stroke-width="2" opacity="0.7"/>
+          <circle cx="320" cy="60" r="10" fill="#b04a3a" opacity="0.3"/>
+        </svg>
+
+        <p class="mt-3" style="font-size:0.92rem; color: var(--gray-soft);">
+          <em>"Shodan" 初段 means "first step," not "highest rank." It is the door to serious training, not a graduation. Most who reach shodan have walked four to six years; the road continues for life.</em>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOJO KUN ============ -->
+<section class="alt">
+  <div class="container-narrow">
+    <div class="section-title">
+      <span class="jp">道場訓 — Dōjō Kun</span>
+      <h2>The five precepts</h2>
+      <p class="lede">Recited at the close of every class, in seiza, with hands on thighs and eyes closed. Each line begins with <span class="text-jp">一</span> ("Hitotsu" — "one") to mark them as equal in rank.</p>
+    </div>
+
+    <div class="dojo-kun">
+      <ol>
+        <li>
+          <span class="kun-jp">人格完成に努むること</span>
+          <span class="kun-en">Hitotsu, jinkaku kansei ni tsutomuru koto — Seek perfection of character.</span>
+        </li>
+        <li>
+          <span class="kun-jp">誠の道を守ること</span>
+          <span class="kun-en">Hitotsu, makoto no michi o mamoru koto — Be faithful; guard the path of truth.</span>
+        </li>
+        <li>
+          <span class="kun-jp">努力の精神を養うこと</span>
+          <span class="kun-en">Hitotsu, doryoku no seishin o yashinau koto — Cultivate the spirit of effort.</span>
+        </li>
+        <li>
+          <span class="kun-jp">礼儀を重んずること</span>
+          <span class="kun-en">Hitotsu, reigi o omonzuru koto — Respect others.</span>
+        </li>
+        <li>
+          <span class="kun-jp">血気の勇を戒むること</span>
+          <span class="kun-en">Hitotsu, kekki no yū o imashimuru koto — Refrain from violent and impetuous behaviour.</span>
+        </li>
+      </ol>
+    </div>
+
+    <p style="text-align:center; color: var(--gray-soft); margin-top: 1.5rem;">
+      The deeper text — <a href="history.html#dojo-kun">history of the precepts</a>, Itosu's Ten Precepts (1908), Funakoshi's Niju Kun, and Nagamine's Seven Principles — is on the history page.
+    </p>
+  </div>
+</section>
+
+<!-- ============ THREE BRANCHES OF SHORIN ============ -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <span class="jp">三派 — San-pa</span>
+      <h2>Three branches, one root</h2>
+      <p class="lede">All Shōrin-Ryū descends from <strong>Sōkon "Bushi" Matsumura</strong> through <strong>Anko Itosu</strong>. In the 20th century three lineages took distinct names — using nearly the same kanji.</p>
+    </div>
+
+    <svg viewBox="0 0 800 360" style="width:100%; height:auto; background: var(--washi-cream); border: 1px solid var(--line); padding: 1rem;">
+      <defs>
+        <linearGradient id="rootGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#0f2540"/>
+          <stop offset="100%" stop-color="#1c3a5e"/>
+        </linearGradient>
+      </defs>
+
+      <!-- root -->
+      <rect x="320" y="20" width="160" height="55" fill="url(#rootGrad)" stroke="#c9a35e" stroke-width="2"/>
+      <text x="400" y="42" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="18" fill="#f4ede4" font-weight="600">Sōkon Matsumura</text>
+      <text x="400" y="60" text-anchor="middle" font-family="serif" font-size="11" fill="#c9a35e">松村 宗棍 · 1809–1899</text>
+
+      <!-- arrow down -->
+      <line x1="400" y1="75" x2="400" y2="100" stroke="#1c3a5e" stroke-width="2"/>
+
+      <rect x="320" y="100" width="160" height="55" fill="#1c3a5e" stroke="#c9a35e" stroke-width="1.5"/>
+      <text x="400" y="122" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="17" fill="#f4ede4" font-weight="600">Anko Itosu</text>
+      <text x="400" y="140" text-anchor="middle" font-family="serif" font-size="11" fill="#c9a35e">糸洲 安恒 · 1831–1915</text>
+
+      <!-- branches -->
+      <line x1="400" y1="155" x2="400" y2="175" stroke="#1c3a5e" stroke-width="2"/>
+      <line x1="150" y1="175" x2="650" y2="175" stroke="#1c3a5e" stroke-width="2"/>
+      <line x1="150" y1="175" x2="150" y2="195" stroke="#1c3a5e" stroke-width="2"/>
+      <line x1="400" y1="175" x2="400" y2="195" stroke="#1c3a5e" stroke-width="2"/>
+      <line x1="650" y1="175" x2="650" y2="195" stroke="#1c3a5e" stroke-width="2"/>
+
+      <!-- Kobayashi -->
+      <rect x="50" y="195" width="200" height="80" fill="#fff" stroke="#1c3a5e" stroke-width="2"/>
+      <text x="150" y="215" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="16" fill="#0f2540" font-weight="600">Kobayashi-Ryū</text>
+      <text x="150" y="232" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="12" fill="#b04a3a">小林流 · "Small Forest"</text>
+      <text x="150" y="250" text-anchor="middle" font-family="serif" font-size="11" fill="#1c3a5e">Chōshin Chibana</text>
+      <text x="150" y="265" text-anchor="middle" font-family="serif" font-size="10" fill="#6b6157">named 1933 · 知花 朝信</text>
+
+      <!-- Shobayashi -->
+      <rect x="300" y="195" width="200" height="80" fill="#fff" stroke="#1c3a5e" stroke-width="2"/>
+      <text x="400" y="215" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="16" fill="#0f2540" font-weight="600">Shōbayashi-Ryū</text>
+      <text x="400" y="232" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="12" fill="#b04a3a">少林流 · same kanji, different reading</text>
+      <text x="400" y="250" text-anchor="middle" font-family="serif" font-size="11" fill="#1c3a5e">Chōtoku Kyan → Seibukan</text>
+      <text x="400" y="265" text-anchor="middle" font-family="serif" font-size="10" fill="#6b6157">喜屋武 朝徳 · 1870–1945</text>
+
+      <!-- Matsubayashi -->
+      <rect x="550" y="195" width="200" height="80" fill="#fff" stroke="#1c3a5e" stroke-width="2"/>
+      <text x="650" y="215" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="16" fill="#0f2540" font-weight="600">Matsubayashi-Ryū</text>
+      <text x="650" y="232" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="12" fill="#b04a3a">松林流 · "Pine Forest"</text>
+      <text x="650" y="250" text-anchor="middle" font-family="serif" font-size="11" fill="#1c3a5e">Shōshin Nagamine</text>
+      <text x="650" y="265" text-anchor="middle" font-family="serif" font-size="10" fill="#6b6157">named 1947 · 長嶺 将真</text>
+
+      <!-- OSK Academy -->
+      <line x1="150" y1="275" x2="400" y2="305" stroke="#b04a3a" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <line x1="400" y1="275" x2="400" y2="305" stroke="#b04a3a" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <line x1="650" y1="275" x2="400" y2="305" stroke="#b04a3a" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+      <rect x="280" y="305" width="240" height="40" fill="#b04a3a" stroke="#c9a35e" stroke-width="2"/>
+      <text x="400" y="325" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="15" fill="#f4ede4" font-weight="600">OSK Academy</text>
+      <text x="400" y="340" text-anchor="middle" font-family="serif" font-size="10" fill="#f4ede4">eclectic Shōrin syllabus, drawing all three lines</text>
+    </svg>
+
+    <p class="mt-3" style="text-align:center; color: var(--gray-soft); font-size: 0.95rem;">Full bios, dates, and the longer transmission tree are on the <a href="history.html">history page</a>.</p>
+  </div>
+</section>
+
+<!-- ============ HOW TO USE ============ -->
+<section class="dark">
+  <div class="container">
+    <div class="section-title">
+      <span class="jp">使い方 — Tsukai-kata</span>
+      <h2>How to use this guide</h2>
+    </div>
+
+    <div class="row-3">
+      <div>
+        <h4 style="color:var(--kincha);">Daily</h4>
+        <p>Open <a href="kihon.html">Kihon</a> before practice. Pick one stance, one strike, one block — drill them with focus, not volume.</p>
+      </div>
+      <div>
+        <h4 style="color:var(--kincha);">Weekly</h4>
+        <p>Cycle through the <a href="kata.html">kata page</a>. Read the bunkai for a single kata; on the floor, perform it three times — once for shape, once for breath, once for application.</p>
+      </div>
+      <div>
+        <h4 style="color:var(--kincha);">Quarterly</h4>
+        <p>Re-read the <a href="history.html">history</a>, recite the dōjō kun in Japanese, audit the <a href="roadmap.html">roadmap</a>. Adjust training in light of what has actually changed.</p>
+      </div>
+    </div>
+
+    <div class="callout warm" style="margin-top: 3rem;">
+      <h3>Sensei always outranks the page</h3>
+      <p>Where this guide and OSK Academy disagree — <strong>OSK is right</strong>. Numbers, sequences, and grading expectations are set by Renshi Sajesh and Kyoshi Chandran, not by the internet. Use this site to study between classes; use class to correct the site.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-jp">道 ・ 心 ・ 礼</div>
+    <p>The Way · The Heart · Courtesy</p>
+    <div class="footer-rule"></div>
+    <p>Personal study reference for Okinawa Shōrin-Ryū Karate.</p>
+    <p>Built for life-long return. School: <a href="https://oskacademy.com" target="_blank" rel="noopener">OSK Academy</a> · Renshi Sajesh P. · Kyoshi Chandran P.R.</p>
+    <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--washi-cream); opacity: 0.7;">
+      "Karate-dō wa rei ni hajimari rei ni owaru" — Karate begins and ends with courtesy. — Funakoshi
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

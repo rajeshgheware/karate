@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terminology · Road to Shodan</title>
+<meta name="description" content="Japanese karate terminology reference: numbers, body parts, stances, techniques, commands, ranks, and dojo phrases — bilingual.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="topnav">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <svg width="36" height="36" viewBox="0 0 100 100" aria-hidden="true">
+        <defs><filter id="ink-mini" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="2"/></filter></defs>
+        <path d="M 85 50 A 35 35 0 1 1 50 15" fill="none" stroke="#c9a35e" stroke-width="6" stroke-linecap="round" filter="url(#ink-mini)"/>
+      </svg>
+      <span class="brand-text">Road to Shodan<span class="brand-jp">道</span></span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="kihon.html">Kihon</a></li>
+        <li><a href="kata.html">Kata</a></li>
+        <li><a href="kumite.html">Kumite</a></li>
+        <li><a href="kobudo.html">Kobudō</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="terminology.html" class="active">Terms</a></li>
+        <li><a href="roadmap.html">Roadmap</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="kanji-watermark" aria-hidden="true">語</div>
+  <div class="container">
+    <p class="eyebrow">Vocabulary · 用語</p>
+    <h1>Terminology</h1>
+    <p class="lede">Japanese is the operating language of the dōjō. Knowing it lets you respond to commands without translation lag, understand a sensei from any country, and read the original sources rather than someone's interpretation of them.</p>
+    <p class="breadcrumb-jp">数 ・ 体 ・ 技 ・ 命令</p>
+    <p style="color: var(--gray-soft); font-size: 0.92rem;">Counting · Body · Technique · Commands</p>
+  </div>
+</section>
+
+<!-- ============ NUMBERS ============ -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <span class="jp">数 — Kazu</span>
+      <h2>Counting (1–10 and beyond)</h2>
+      <p class="lede">Counted aloud during basics drills. The class shouts the number after each technique. <em>Hai!</em> on landing — kiai on the kiai count.</p>
+    </div>
+
+    <table>
+      <thead><tr><th>#</th><th>Romaji</th><th>Kanji</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1</strong></td><td class="jp">Ichi</td><td>一</td><td></td></tr>
+        <tr><td><strong>2</strong></td><td class="jp">Ni</td><td>二</td><td></td></tr>
+        <tr><td><strong>3</strong></td><td class="jp">San</td><td>三</td><td></td></tr>
+        <tr><td><strong>4</strong></td><td class="jp">Shi (or Yon)</td><td>四</td><td>"Shi" sounds like "death" — many traditions use Yon instead.</td></tr>
+        <tr><td><strong>5</strong></td><td class="jp">Go</td><td>五</td><td></td></tr>
+        <tr><td><strong>6</strong></td><td class="jp">Roku</td><td>六</td><td></td></tr>
+        <tr><td><strong>7</strong></td><td class="jp">Shichi (or Nana)</td><td>七</td><td></td></tr>
+        <tr><td><strong>8</strong></td><td class="jp">Hachi</td><td>八</td><td></td></tr>
+        <tr><td><strong>9</strong></td><td class="jp">Ku (or Kyū)</td><td>九</td><td>Same kanji as the kyū-rank ("colored belt") system.</td></tr>
+        <tr><td><strong>10</strong></td><td class="jp">Jū</td><td>十</td><td>Same kanji as the dan-rank suffix (e.g. jūdan = 10th dan).</td></tr>
+        <tr><td>20</td><td class="jp">Ni-jū</td><td>二十</td><td>"Two tens"</td></tr>
+        <tr><td>100</td><td class="jp">Hyaku</td><td>百</td><td></td></tr>
+        <tr><td>1,000</td><td class="jp">Sen</td><td>千</td><td></td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="mt-3">Ordinals — for kata and kyū</h3>
+    <table>
+      <thead><tr><th>Position</th><th>Romaji</th><th>Used in</th></tr></thead>
+      <tbody>
+        <tr><td>First</td><td class="jp">Shodan / Ichi</td><td>Pinan Shodan, Naihanchi Shodan</td></tr>
+        <tr><td>Second</td><td class="jp">Nidan / Ni</td><td>Pinan Nidan, Brown 2nd kyū</td></tr>
+        <tr><td>Third</td><td class="jp">Sandan / San</td><td>Pinan Sandan</td></tr>
+        <tr><td>Fourth</td><td class="jp">Yondan</td><td>Pinan Yondan</td></tr>
+        <tr><td>Fifth</td><td class="jp">Godan</td><td>Pinan Godan</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ BODY PARTS ============ -->
+<section class="alt">
+  <div class="container">
+    <div class="section-title">
+      <span class="jp">体の部位 — Karada no bui</span>
+      <h2>Body parts</h2>
+      <p class="lede">Used in technique names (e.g. <em>hiza-geri</em> = knee kick), in target descriptions, and in anatomy / kyūsho discussion.</p>
+    </div>
+
+    <div class="row-2">
+      <table>
+        <thead><tr><th>Part</th><th>Romaji</th><th>Kanji</th></tr></thead>
+        <tbody>
+          <tr><td>Head</td><td class="jp">Atama</td><td>頭</td></tr>
+          <tr><td>Face</td><td class="jp">Kao</td><td>顔</td></tr>
+          <tr><td>Eye</td><td class="jp">Me</td><td>目</td></tr>
+          <tr><td>Nose</td><td class="jp">Hana</td><td>鼻</td></tr>
+          <tr><td>Mouth</td><td class="jp">Kuchi</td><td>口</td></tr>
+          <tr><td>Ear</td><td class="jp">Mimi</td><td>耳</td></tr>
+          <tr><td>Neck / throat</td><td class="jp">Kubi</td><td>首</td></tr>
+          <tr><td>Shoulder</td><td class="jp">Kata</td><td>肩</td></tr>
+          <tr><td>Arm</td><td class="jp">Ude</td><td>腕</td></tr>
+          <tr><td>Elbow</td><td class="jp">Hiji / Empi</td><td>肘</td></tr>
+          <tr><td>Hand</td><td class="jp">Te</td><td>手</td></tr>
+          <tr><td>Fist</td><td class="jp">Ken / Kobushi</td><td>拳</td></tr>
+          <tr><td>Finger</td><td class="jp">Yubi</td><td>指</td></tr>
+          <tr><td>Wrist</td><td class="jp">Tekubi</td><td>手首</td></tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead><tr><th>Part</th><th>Romaji</th><th>Kanji</th></tr></thead>
+        <tbody>
+          <tr><td>Chest</td><td class="jp">Mune</td><td>胸</td></tr>
+          <tr><td>Abdomen</td><td class="jp">Hara</td><td>腹</td></tr>
+          <tr><td>Back</td><td class="jp">Senaka</td><td>背中</td></tr>
+          <tr><td>Hip / waist</td><td class="jp">Koshi</td><td>腰</td></tr>
+          <tr><td>Foot / leg</td><td class="jp">Ashi</td><td>足</td></tr>
+          <tr><td>Knee</td><td class="jp">Hiza</td><td>膝</td></tr>
+          <tr><td>Shin</td><td class="jp">Sune</td><td>脛</td></tr>
+          <tr><td>Heel</td><td class="jp">Kakato</td><td>踵</td></tr>
+          <tr><td>Toes</td><td class="jp">Tsumasaki</td><td>爪先</td></tr>
+          <tr><td>Ball of foot</td><td class="jp">Koshi (foot)</td><td>足の甲</td></tr>
+          <tr><td>Edge of foot</td><td class="jp">Sokutō</td><td>足刀</td></tr>
+          <tr><td>Instep</td><td class="jp">Haisoku</td><td>背足</td></tr>
+          <tr><td>Sole of foot</td><td class="jp">Ashi-no-ura</td><td>足の裏</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIRECTIONS / LEVELS ============ -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <span class="jp">方向と段 — Hōkō to dan</span>
+      <h2>Directions, levels, and qualifiers</h2>
+    </div>
+
+    <table>
+      <thead><tr><th>Term</th><th>Romaji</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td>Upper level</td><td class="jp">Jōdan</td><td>Above shoulders (face / neck)</td></tr>
+        <tr><td>Middle level</td><td class="jp">Chūdan</td><td>Sternum to belt</td></tr>
+        <tr><td>Lower level</td><td class="jp">Gedan</td><td>Below belt</td></tr>
+        <tr><td>Front</td><td class="jp">Mae</td><td>(mae-geri = front kick)</td></tr>
+        <tr><td>Back / rear</td><td class="jp">Ushiro</td><td>(ushiro-geri = back kick)</td></tr>
+        <tr><td>Side</td><td class="jp">Yoko</td><td>(yoko-geri = side kick)</td></tr>
+        <tr><td>Right</td><td class="jp">Migi</td><td>(migi mawatte = turn right)</td></tr>
+        <tr><td>Left</td><td class="jp">Hidari</td><td>(hidari mawatte = turn left)</td></tr>
+        <tr><td>Round / circular</td><td class="jp">Mawashi</td><td>(mawashi-geri = round kick)</td></tr>
+        <tr><td>Vertical</td><td class="jp">Tate</td><td>(tate-zuki = vertical fist punch)</td></tr>
+        <tr><td>Reverse / opposite</td><td class="jp">Gyaku</td><td>(gyaku-zuki = reverse punch)</td></tr>
+        <tr><td>Same-side / following</td><td class="jp">Oi</td><td>(oi-zuki = lunge punch)</td></tr>
+        <tr><td>Diagonal</td><td class="jp">Naname</td><td></td></tr>
+        <tr><td>Inside</td><td class="jp">Uchi</td><td>(uchi-uke = inside-out block)</td></tr>
+        <tr><td>Outside</td><td class="jp">Soto</td><td>(soto-uke = outside-in block)</td></tr>
+        <tr><td>Up / rising</td><td class="jp">Age</td><td>(age-uke = rising block)</td></tr>
+        <tr><td>Down / lowering</td><td class="jp">Otoshi</td><td></td></tr>
+        <tr><td>Snap</td><td class="jp">Keage</td><td>(yoko-geri keage = side snap kick)</td></tr>
+        <tr><td>Thrust</td><td class="jp">Kekomi</td><td>(yoko-geri kekomi = side thrust kick)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ TECHNIQUES (compact lookup) ============ -->
+<section class="alt">
+  <div class="container">
+    <div class="section-title">
+      <span class="jp">技 — Waza</span>
+      <h2>Techniques — compact lookup</h2>
+      <p class="lede">For deep description with diagrams, see <a href="kihon.html">Kihon</a>. This page is for fast recall.</p>
+    </div>
+
+    <h3>Stances · 立ち方 · Tachi-kata</h3>
+    <table>
+      <thead><tr><th>Stance</th><th>Romaji</th><th>Kanji</th></tr></thead>
+      <tbody>
+        <tr><td>Front stance</td><td class="jp">Zenkutsu-dachi</td><td>前屈立ち</td></tr>
+        <tr><td>Back stance</td><td class="jp">Kōkutsu-dachi</td><td>後屈立ち</td></tr>
+        <tr><td>Horse stance</td><td class="jp">Kiba-dachi</td><td>騎馬立ち</td></tr>
+        <tr><td>Naihanchi stance</td><td class="jp">Naihanchi-dachi</td><td>内畔戦立ち</td></tr>
+        <tr><td>Cat stance</td><td class="jp">Neko-ashi-dachi</td><td>猫足立ち</td></tr>
+        <tr><td>Hourglass / three-battles stance</td><td class="jp">Sanchin-dachi</td><td>三戦立ち</td></tr>
+        <tr><td>Half-moon stance</td><td class="jp">Hangetsu-dachi</td><td>半月立ち</td></tr>
+        <tr><td>Parallel stance</td><td class="jp">Heikō-dachi</td><td>平行立ち</td></tr>
+        <tr><td>Open stance ("eight")</td><td class="jp">Hachiji-dachi</td><td>八字立ち</td></tr>
+        <tr><td>Attention / bowing stance</td><td class="jp">Musubi-dachi</td><td>結び立ち</td></tr>
+        <tr><td>Crane stance</td><td class="jp">Tsuru-ashi-dachi / Sagi-ashi-dachi</td><td>鶴足立ち</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Punches · 突き · Tsuki / Zuki</h3>
+    <table>
+      <thead><tr><th>Punch</th><th>Romaji</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td>Lunge punch</td><td class="jp">Oi-zuki</td><td>Same side as front foot</td></tr>
+        <tr><td>Reverse punch</td><td class="jp">Gyaku-zuki</td><td>Opposite side of front foot</td></tr>
+        <tr><td>Jab</td><td class="jp">Kizami-zuki</td><td>Lead-hand, no full hip rotation</td></tr>
+        <tr><td>Close upside-down</td><td class="jp">Ura-zuki</td><td>Palm up, short distance</td></tr>
+        <tr><td>Vertical fist</td><td class="jp">Tate-zuki</td><td>Thumb up</td></tr>
+        <tr><td>Rising punch</td><td class="jp">Age-zuki</td><td>Uppercut-like</td></tr>
+        <tr><td>Hook punch</td><td class="jp">Kagi-zuki</td><td>Across the body, Naihanchi signature</td></tr>
+        <tr><td>Mountain punch</td><td class="jp">Yama-zuki</td><td>Two punches, two heights</td></tr>
+        <tr><td>Round / swinging punch</td><td class="jp">Mawashi-zuki</td><td></td></tr>
+        <tr><td>Double punch</td><td class="jp">Morote-zuki</td><td></td></tr>
+        <tr><td>U-punch</td><td class="jp">Awase-zuki</td><td>Two fists meet at face + ribs</td></tr>
+        <tr><td>Three-punch combo</td><td class="jp">Sanbon-zuki</td><td>Jōdan-chūdan-chūdan</td></tr>
+        <tr><td>Consecutive punches</td><td class="jp">Ren-zuki</td><td>Hand-after-hand without retraction</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Kicks · 蹴り · Geri</h3>
+    <table>
+      <thead><tr><th>Kick</th><th>Romaji</th><th>Striking surface</th></tr></thead>
+      <tbody>
+        <tr><td>Front kick</td><td class="jp">Mae-geri</td><td>Ball of foot (koshi)</td></tr>
+        <tr><td>Side snap kick</td><td class="jp">Yoko-geri keage</td><td>Edge of foot (sokutō)</td></tr>
+        <tr><td>Side thrust kick</td><td class="jp">Yoko-geri kekomi</td><td>Edge of foot (sokutō)</td></tr>
+        <tr><td>Round kick</td><td class="jp">Mawashi-geri</td><td>Instep (haisoku) or shin (sune)</td></tr>
+        <tr><td>Back kick</td><td class="jp">Ushiro-geri</td><td>Heel (kakato)</td></tr>
+        <tr><td>Knee strike</td><td class="jp">Hiza-geri</td><td>Knee (hiza)</td></tr>
+        <tr><td>Stomp</td><td class="jp">Fumikomi</td><td>Heel / sole</td></tr>
+        <tr><td>Crescent kick</td><td class="jp">Mikazuki-geri</td><td>Sole of foot</td></tr>
+        <tr><td>Jumping kick</td><td class="jp">Tobi-geri</td><td>Various</td></tr>
+        <tr><td>Returning wave</td><td class="jp">Nami-gaeshi</td><td>Sole — Naihanchi</td></tr>
+        <tr><td>Joint kick</td><td class="jp">Kansetsu-geri</td><td>Edge / heel — to opponent's knee</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Blocks · 受け · Uke</h3>
+    <table>
+      <thead><tr><th>Block</th><th>Romaji</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td>Rising block</td><td class="jp">Age-uke</td><td>Forearm rises diagonally above head</td></tr>
+        <tr><td>Outside-in block</td><td class="jp">Soto-uke</td><td>Forearm sweeps inward to centerline</td></tr>
+        <tr><td>Inside-out block</td><td class="jp">Uchi-uke</td><td>Forearm sweeps outward from centerline</td></tr>
+        <tr><td>Low sweeping block</td><td class="jp">Gedan-barai</td><td>Sweeps low attack outward and down</td></tr>
+        <tr><td>Knife-hand block</td><td class="jp">Shutō-uke</td><td>Open hand in kōkutsu-dachi</td></tr>
+        <tr><td>X-block</td><td class="jp">Jūji-uke / Kosa-uke</td><td>Wrists cross, jōdan or gedan</td></tr>
+        <tr><td>Augmented / two-hand block</td><td class="jp">Morote-uke</td><td>Reinforced by opposite fist</td></tr>
+        <tr><td>Hooking block</td><td class="jp">Kake-uke</td><td>Catches the limb after deflection</td></tr>
+        <tr><td>Round block</td><td class="jp">Mawashi-uke</td><td>Both hands trace circles</td></tr>
+        <tr><td>Scooping block</td><td class="jp">Sukui-uke</td><td>Defends a kick by scooping under</td></tr>
+        <tr><td>Back-hand block</td><td class="jp">Haishu-uke</td><td>Back of open hand parries</td></tr>
+        <tr><td>Wedge / spreading block</td><td class="jp">Kakiwake-uke</td><td>Both arms separate outward</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Strikes · 打ち技 · Uchi-waza</h3>
+    <table>
+      <thead><tr><th>Strike</th><th>Romaji</th><th>Striking surface</th></tr></thead>
+      <tbody>
+        <tr><td>Knife-hand</td><td class="jp">Shutō-uchi</td><td>Outer edge of palm</td></tr>
+        <tr><td>Ridge-hand</td><td class="jp">Haitō-uchi</td><td>Inner edge of palm</td></tr>
+        <tr><td>Back-fist</td><td class="jp">Uraken-uchi</td><td>Back two knuckles</td></tr>
+        <tr><td>Hammer-fist</td><td class="jp">Tetsui / Kentsui-uchi</td><td>Bottom of fist</td></tr>
+        <tr><td>Elbow strike</td><td class="jp">Empi / Hijiate</td><td>Point of elbow</td></tr>
+        <tr><td>Spear-hand</td><td class="jp">Nukite</td><td>Tips of fingers</td></tr>
+        <tr><td>Palm-heel</td><td class="jp">Teishō / Shōtei</td><td>Heel of palm</td></tr>
+        <tr><td>One-finger spear</td><td class="jp">Ippon-nukite</td><td>Index fingertip</td></tr>
+        <tr><td>Eagle-hand</td><td class="jp">Washide</td><td>Bunched fingertips</td></tr>
+        <tr><td>Chicken-head wrist</td><td class="jp">Keitō</td><td>Bent wrist (top)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ COMMANDS ============ -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <span class="jp">命令 — Meirei</span>
+      <h2>Class commands</h2>
+      <p class="lede">Heard 100 times every class. By brown belt these should require no translation.</p>
+    </div>
+
+    <table>
+      <thead><tr><th>Romaji</th><th>Meaning</th><th>When heard</th></tr></thead>
+      <tbody>
+        <tr><td class="jp">Rei</td><td>Bow</td><td>Start &amp; end of class, partner work</td></tr>
+        <tr><td class="jp">Yoi</td><td>Ready</td><td>Before each technique / kata</td></tr>
+        <tr><td class="jp">Hajime</td><td>Begin</td><td>Start of kata or kumite</td></tr>
+        <tr><td class="jp">Yame</td><td>Stop</td><td>End of technique / break</td></tr>
+        <tr><td class="jp">Mate</td><td>Wait</td><td>Pause</td></tr>
+        <tr><td class="jp">Naore</td><td>Return to ready</td><td>Reset stance after kata</td></tr>
+        <tr><td class="jp">Mokusō</td><td>Meditate (close eyes)</td><td>Start &amp; end, in seiza</td></tr>
+        <tr><td class="jp">Mokusō yame</td><td>End meditation</td><td>Open eyes</td></tr>
+        <tr><td class="jp">Seiza</td><td>Formal kneeling position</td><td>Start &amp; end of class</td></tr>
+        <tr><td class="jp">Kiritsu</td><td>Stand up</td><td>From seiza</td></tr>
+        <tr><td class="jp">Kiotsuke</td><td>Attention</td><td>Before line-up bow</td></tr>
+        <tr><td class="jp">Mawatte</td><td>Turn around</td><td>180° in basics</td></tr>
+        <tr><td class="jp">Hidari / Migi mawatte</td><td>Turn left / right</td><td></td></tr>
+        <tr><td class="jp">Kamae-te</td><td>Take fighting stance</td><td>Before kumite</td></tr>
+        <tr><td class="jp">Hikite</td><td>Pulling hand (to hip)</td><td>Punching correction</td></tr>
+        <tr><td class="jp">Kime</td><td>Focus / climax of technique</td><td>Form correction</td></tr>
+        <tr><td class="jp">Zanshin</td><td>Lingering awareness after technique</td><td>Posture correction</td></tr>
+        <tr><td class="jp">Kiai</td><td>Spirit shout</td><td>At kata kiai-points and kumite scoring</td></tr>
+        <tr><td class="jp">Shōmen ni rei</td><td>Bow to the front</td><td>Opening / closing line-up</td></tr>
+        <tr><td class="jp">Sensei ni rei</td><td>Bow to the instructor</td><td>Opening / closing line-up</td></tr>
+        <tr><td class="jp">Otagai ni rei</td><td>Bow to one another</td><td>Opening / closing line-up</td></tr>
+        <tr><td class="jp">Hai!</td><td>Yes! / acknowledged</td><td>Whenever called by sensei</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ PHRASES ============ -->
+<section class="alt">
+  <div class="container">
+    <div class="section-title">
+      <span class="jp">挨拶 — Aisatsu</span>
+      <h2>Greetings &amp; phrases</h2>
+    </div>
+
+    <table>
+      <thead><tr><th>Phrase</th><th>Meaning</th><th>When used</th></tr></thead>
+      <tbody>
+        <tr><td class="jp">Onegai shimasu</td><td>"Please [train with me]"</td><td>Start of class &amp; partner work</td></tr>
+        <tr><td class="jp">Arigatō gozaimashita</td><td>"Thank you very much" (past form)</td><td>End of class &amp; partner work</td></tr>
+        <tr><td class="jp">Dōmo arigatō gozaimasu</td><td>"Thank you very much"</td><td>General respectful thanks</td></tr>
+        <tr><td class="jp">Dōmo</td><td>Casual thanks / acknowledgment</td><td>Informal</td></tr>
+        <tr><td class="jp">Sumimasen</td><td>"Excuse me / I'm sorry"</td><td>Apology, asking attention</td></tr>
+        <tr><td class="jp">Ohayō gozaimasu</td><td>Good morning</td><td>Morning class arrival</td></tr>
+        <tr><td class="jp">Konnichiwa</td><td>Hello / good afternoon</td><td>General arrival</td></tr>
+        <tr><td class="jp">Konbanwa</td><td>Good evening</td><td>Evening class arrival</td></tr>
+        <tr><td class="jp">Osu! / Oss!</td><td>(general greeting/acknowledgment)</td><td>Common in many schools but <em>not</em> universal in Okinawan tradition — verify with sensei</td></tr>
+        <tr><td class="jp">Oss arigatō!</td><td>(combined acknowledgment + thanks)</td><td>Often after instruction</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ RANKS ============ -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <span class="jp">段級 — Dan-kyū</span>
+      <h2>Ranks — kyū &amp; dan</h2>
+      <p class="lede">The Japanese rank system has two parallel scales: <strong>kyū</strong> counts <em>down</em> as the student improves; <strong>dan</strong> counts <em>up</em> after black belt.</p>
+    </div>
+
+    <div class="row-2">
+      <div>
+        <h3>Kyū (colored belts)</h3>
+        <table>
+          <thead><tr><th>Kyū</th><th>Romaji</th><th>Kanji</th></tr></thead>
+          <tbody>
+            <tr><td>9</td><td class="jp">Kukyū / Kyūkyū</td><td>九級</td></tr>
+            <tr><td>8</td><td class="jp">Hachikyū</td><td>八級</td></tr>
+            <tr><td>7</td><td class="jp">Shichikyū / Nanakyū</td><td>七級</td></tr>
+            <tr><td>6</td><td class="jp">Rokkyū</td><td>六級</td></tr>
+            <tr><td>5</td><td class="jp">Gokyū</td><td>五級</td></tr>
+            <tr><td>4</td><td class="jp">Yonkyū</td><td>四級</td></tr>
+            <tr><td>3</td><td class="jp">Sankyū</td><td>三級</td></tr>
+            <tr><td>2 <span class="tag tag-kincha">your rank</span></td><td class="jp">Nikyū</td><td>二級</td></tr>
+            <tr><td>1</td><td class="jp">Ikkyū</td><td>一級</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+        <h3>Dan (black belt grades)</h3>
+        <table>
+          <thead><tr><th>Dan</th><th>Romaji</th><th>Kanji</th><th>Title</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td class="jp">Shodan</td><td>初段</td><td>—</td></tr>
+            <tr><td>2</td><td class="jp">Nidan</td><td>二段</td><td>—</td></tr>
+            <tr><td>3</td><td class="jp">Sandan</td><td>三段</td><td>—</td></tr>
+            <tr><td>4</td><td class="jp">Yondan</td><td>四段</td><td>Renshi (錬士)</td></tr>
+            <tr><td>5</td><td class="jp">Godan</td><td>五段</td><td>Renshi</td></tr>
+            <tr><td>6</td><td class="jp">Rokudan</td><td>六段</td><td>Kyōshi (教士)</td></tr>
+            <tr><td>7</td><td class="jp">Shichidan / Nanadan</td><td>七段</td><td>Kyōshi</td></tr>
+            <tr><td>8</td><td class="jp">Hachidan</td><td>八段</td><td>Hanshi (範士)</td></tr>
+            <tr><td>9</td><td class="jp">Kudan</td><td>九段</td><td>Hanshi</td></tr>
+            <tr><td>10</td><td class="jp">Jūdan</td><td>十段</td><td>Hanshi</td></tr>
+          </tbody>
+        </table>
+        <p class="mt-2" style="font-size:0.9rem; color:var(--gray-soft);"><em>Renshi, Kyōshi, Hanshi — the three teaching titles. OSK Academy: <strong>Renshi</strong> Sajesh P., <strong>Kyōshi</strong> Chandran P.R.</em></p>
+      </div>
+    </div>
+
+    <div class="callout paper">
+      <h4>"Shodan" 初段</h4>
+      <p>Often translated "first-degree black belt." More accurately: <em>"first step."</em> The character 初 means "beginning"; 段 means "step / level." <strong>Shodan is the door to serious training, not a graduation.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ READING THE KANJI ============ -->
+<section class="dark">
+  <div class="container">
+    <div class="section-title">
+      <span class="jp">漢字 — Kanji</span>
+      <h2>The kanji you see most</h2>
+      <p class="lede" style="color: var(--washi-cream);">Eight characters that sit on dōjō walls, makimono scrolls, and certificate borders. Recognize them and you can read most of what surrounds you.</p>
+    </div>
+
+    <div class="row-4">
+
+      <div style="text-align: center;">
+        <p style="font-family: 'Noto Serif JP', serif; font-size: 5rem; color: var(--kincha); line-height: 1; margin-bottom: 0.5rem;">道</p>
+        <h4 style="color: var(--kincha);">Dō / Michi</h4>
+        <p style="color: var(--washi-cream);">"The Way." Karate-dō, judō, kendō — the philosophical path, not just the technique.</p>
+      </div>
+
+      <div style="text-align: center;">
+        <p style="font-family: 'Noto Serif JP', serif; font-size: 5rem; color: var(--kincha); line-height: 1; margin-bottom: 0.5rem;">空</p>
+        <h4 style="color: var(--kincha);">Kara / Kū</h4>
+        <p style="color: var(--washi-cream);">"Empty." As in karate (空手, "empty hand"). Originally written 唐手 ("Chinese hand"); changed by Funakoshi.</p>
+      </div>
+
+      <div style="text-align: center;">
+        <p style="font-family: 'Noto Serif JP', serif; font-size: 5rem; color: var(--kincha); line-height: 1; margin-bottom: 0.5rem;">手</p>
+        <h4 style="color: var(--kincha);">Te / Shu</h4>
+        <p style="color: var(--washi-cream);">"Hand." Karate, te (the original Okinawan word), shutō ("knife-hand").</p>
+      </div>
+
+      <div style="text-align: center;">
+        <p style="font-family: 'Noto Serif JP', serif; font-size: 5rem; color: var(--kincha); line-height: 1; margin-bottom: 0.5rem;">心</p>
+        <h4 style="color: var(--kincha);">Shin / Kokoro</h4>
+        <p style="color: var(--washi-cream);">"Mind / heart." Mushin, fudōshin, zanshin — the disciplines of the trained mind.</p>
+      </div>
+
+      <div style="text-align: center;">
+        <p style="font-family: 'Noto Serif JP', serif; font-size: 5rem; color: var(--kincha); line-height: 1; margin-bottom: 0.5rem;">技</p>
+        <h4 style="color: var(--kincha);">Gi / Waza</h4>
+        <p style="color: var(--washi-cream);">"Technique." Waza is the unit of action — uchi-waza, geri-waza, nage-waza.</p>
+      </div>
+
+      <div style="text-align: center;">
+        <p style="font-family: 'Noto Serif JP', serif; font-size: 5rem; color: var(--kincha); line-height: 1; margin-bottom: 0.5rem;">体</p>
+        <h4 style="color: var(--kincha);">Tai / Karada</h4>
+        <p style="color: var(--washi-cream);">"Body." Shin-gi-tai (心技体) — the mind-technique-body trinity karateka aim to integrate.</p>
+      </div>
+
+      <div style="text-align: center;">
+        <p style="font-family: 'Noto Serif JP', serif; font-size: 5rem; color: var(--kincha); line-height: 1; margin-bottom: 0.5rem;">禮</p>
+        <h4 style="color: var(--kincha);">Rei</h4>
+        <p style="color: var(--washi-cream);">"Courtesy / bow." Karate begins and ends with rei. Modern simplified form: 礼.</p>
+      </div>
+
+      <div style="text-align: center;">
+        <p style="font-family: 'Noto Serif JP', serif; font-size: 5rem; color: var(--kincha); line-height: 1; margin-bottom: 0.5rem;">力</p>
+        <h4 style="color: var(--kincha);">Riki / Chikara</h4>
+        <p style="color: var(--washi-cream);">"Power / strength." Not muscle — the integrated whole-body force that comes from rooted stance and aligned hip.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-jp">語</div>
+    <p>Terminology — the language of every dōjō, on any island.</p>
+    <div class="footer-rule"></div>
+    <p><a href="roadmap.html">Next: Roadmap →</a> &nbsp; · &nbsp; <a href="history.html">← Back to History</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
