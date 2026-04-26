@@ -281,6 +281,32 @@ footer .footer-rule { width: 60px; height: 2px; background: var(--kincha); margi
 .kata-card .bunkai-list { background: rgba(176, 74, 58, 0.04); padding: 1rem 1.25rem; border-left: 3px solid var(--beni); }
 .kata-card .bunkai-list h5 { color: var(--beni); margin-top: 0; }
 
+/* ============ Kata Video Embed ============ */
+.kata-video {
+  margin: 1.25rem 0 0.4rem;
+  position: relative;
+  padding-bottom: 56.25%;   /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+.kata-video iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+.kata-video-caption {
+  font-size: 0.85rem;
+  color: var(--gray-soft);
+  text-align: center;
+  margin: 0 0 0.5rem;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
 /* ============ Lineage Tree ============ */
 .lineage { padding: 2rem 0; overflow-x: auto; }
 
