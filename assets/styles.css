@@ -330,6 +330,7 @@ footer .footer-rule { width: 60px; height: 2px; background: var(--kincha); margi
 }
 .tech-card h4 { margin: 0.4rem 0 0.15rem; }
 .tech-card .name-jp { color: var(--beni); font-family: 'Noto Serif JP', serif; font-size: 0.9rem; margin: 0 0 0.5rem; letter-spacing: 0.03em; }
+.tech-card h4 .rj { font-weight: 400; font-size: 0.9rem; color: var(--gray-soft); font-style: italic; }
 .tech-card p { font-size: 0.95rem; margin: 0.35rem 0 0; }
 .tech-card .gloss { color: var(--gray-soft); font-style: italic; }
 .tech-card .verify { color: var(--kincha-deep); font-size: 0.85rem; font-style: italic; }
