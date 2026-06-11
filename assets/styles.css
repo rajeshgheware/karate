@@ -311,6 +311,34 @@ footer .footer-rule { width: 60px; height: 2px; background: var(--kincha); margi
   letter-spacing: 0.02em;
 }
 
+/* ============ Syllabus technique cards (grading.html) ============ */
+.tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+.tech-card {
+  background: var(--washi-cream);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--indigo-light);
+  box-shadow: var(--shadow-soft);
+  padding: 1.1rem 1.25rem 1.25rem;
+  position: relative;
+}
+.tech-card:hover { border-top-color: var(--beni); }
+.tech-card .syllabus-num {
+  position: absolute; top: -14px; left: 1rem;
+  background: var(--indigo-deep); color: var(--washi);
+  font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; font-weight: 500;
+  min-width: 1.9rem; text-align: center; padding: 0.2rem 0.45rem; border-radius: 2px;
+}
+.tech-card h4 { margin: 0.4rem 0 0.15rem; }
+.tech-card .name-jp { color: var(--beni); font-family: 'Noto Serif JP', serif; font-size: 0.9rem; margin: 0 0 0.5rem; letter-spacing: 0.03em; }
+.tech-card p { font-size: 0.95rem; margin: 0.35rem 0 0; }
+.tech-card .gloss { color: var(--gray-soft); font-style: italic; }
+.tech-card .verify { color: var(--kincha-deep); font-size: 0.85rem; font-style: italic; }
+
+/* Vertical frame for YouTube Shorts (9:16) */
+.tech-video.vertical { max-width: 320px; margin-left: auto; margin-right: auto; padding-bottom: 0; }
+.tech-video.vertical { position: relative; height: 0; padding-bottom: min(177.78%, 560px); overflow: hidden; background: #000; border: 1px solid var(--line); box-shadow: var(--shadow-soft); }
+.tech-video.vertical iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
 /* ============ Lineage Tree ============ */
 .lineage { padding: 2rem 0; overflow-x: auto; }
 
@@ -347,7 +375,8 @@ footer .footer-rule { width: 60px; height: 2px; background: var(--kincha); margi
 @media print {
   .topnav, footer, .hero::before, .kanji-watermark { display: none; }
   body { background: white; color: black; font-size: 11pt; }
-  .card, .technique, .kata-card { break-inside: avoid; box-shadow: none; }
+  .card, .technique, .kata-card, .tech-card { break-inside: avoid; box-shadow: none; }
+  .kata-video, .tech-video { display: none; }
   h1, h2, h3 { color: black; }
   a { color: black; }
 }
@@ -359,6 +388,7 @@ footer .footer-rule { width: 60px; height: 2px; background: var(--kincha); margi
   .hero h1 { font-size: 2.6rem; }
   .container { padding: 0 1.25rem; }
   .row-2, .row-3, .row-4 { grid-template-columns: 1fr; }
+  .tech-grid { grid-template-columns: 1fr; }
   .technique { grid-template-columns: 1fr; }
   .technique .svg-box { max-width: 240px; margin: 0 auto; }
   .kata-card .kata-header { grid-template-columns: 1fr; }
