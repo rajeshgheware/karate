@@ -1,384 +1,276 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Kumite — Sparring · Road to Shodan</title>
-<meta name="description" content="The kumite progression in Okinawa Shorin-Ryu: kihon ippon, sanbon, gohon, yakusoku, jiyu. Ma-ai, vital points, WKF scoring, and the mental disciplines of sparring.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css">
+<meta content="The kumite progression in Okinawa Shorin-Ryu: kihon ippon, sanbon, gohon, yakusoku, jiyu. Ma-ai, vital points, WKF scoring, and the mental disciplines of sparring." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=EB+Garamond:wght@400;500;600&amp;family=Noto+Serif+JP:wght@400;500;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="assets/styles.css" rel="stylesheet"/><style>
+/* Page-local spacing tune (kumite.html only) */
+section:not(.hero){padding:2.75rem 0}
+.section-title{margin-bottom:1.6rem}
+.section-title .lede{margin-top:1rem}
+.timeline{margin:1.25rem 0}
+.timeline-item{padding-bottom:1.2rem}
+.timeline-item p{margin:0.3rem 0}
+.kyusho-grid{grid-template-columns:1fr;gap:1rem}
+.kata-video{margin:0 0 0.4rem}
+.callout{padding:1.9rem 2rem;margin:1.6rem 0}
+.row-2,.row-3{gap:1.4rem}
+.mt-4{margin-top:1.2rem}
+table{margin:1rem 0}
+</style>
 <!-- Cloudflare Web Analytics -->
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "e20171382c37479f917e4cc268267b56"}'></script>
+<script data-cf-beacon='{"token": "e20171382c37479f917e4cc268267b56"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
 </head>
 <body>
-
 <header class="topnav">
-  <div class="container">
-    <a href="index.html" class="brand">
-      <svg width="36" height="36" viewBox="0 0 100 100" aria-hidden="true">
-        <defs><filter id="ink-mini" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="2"/></filter></defs>
-        <path d="M 85 50 A 35 35 0 1 1 50 15" fill="none" stroke="#c9a35e" stroke-width="6" stroke-linecap="round" filter="url(#ink-mini)"/>
-      </svg>
-      <span class="brand-text">Road to Shodan<span class="brand-jp">道</span></span>
-    </a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="kihon.html">Kihon</a></li>
-        <li><a href="kata.html">Kata</a></li>
-        <li><a href="kumite.html" class="active">Kumite</a></li>
-        <li><a href="kobudo.html">Kobudō</a></li>
-        <li><a href="history.html">History</a></li>
-        <li><a href="terminology.html">Terms</a></li>
-        <li><a href="roadmap.html">Roadmap</a></li>
-        <li><a href="grading.html">Grading</a></li>
-      </ul>
-    </nav>
-  </div>
+<div class="container">
+<a class="brand" href="index.html">
+<svg aria-hidden="true" height="36" viewbox="0 0 100 100" width="36">
+<defs><filter height="140%" id="ink-mini" width="140%" x="-20%" y="-20%"><feturbulence basefrequency="0.6" numoctaves="2" seed="3" type="fractalNoise"></feturbulence><fedisplacementmap in="SourceGraphic" scale="2"></fedisplacementmap></filter></defs>
+<path d="M 85 50 A 35 35 0 1 1 50 15" fill="none" filter="url(#ink-mini)" stroke="#c9a35e" stroke-linecap="round" stroke-width="6"></path>
+</svg>
+<span class="brand-text">Road to Shodan<span class="brand-jp">道</span></span>
+</a>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="kihon.html">Kihon</a></li>
+<li><a href="kata.html">Kata</a></li>
+<li><a class="active" href="kumite.html">Kumite</a></li>
+<li><a href="kobudo.html">Kobudō</a></li>
+<li><a href="history.html">History</a></li>
+<li><a href="terminology.html">Terms</a></li>
+<li><a href="roadmap.html">Roadmap</a></li>
+<li><a href="grading.html">Grading</a></li>
+</ul>
+</nav>
+</div>
 </header>
-
 <section class="hero">
-  <div class="kanji-watermark" aria-hidden="true">組</div>
-  <div class="container">
-    <p class="eyebrow">Sparring · 組手</p>
-    <h1>Kumite</h1>
-    <p class="lede">Where kihon meets a real partner and kata becomes pressure-tested. Kumite in Shōrin-Ryū is a graduated ladder — beginners learn one step at a time, advanced practitioners learn one moment at a time.</p>
-    <p class="breadcrumb-jp">間合い ・ 残心 ・ 機</p>
-    <p style="color: var(--gray-soft); font-size: 0.92rem;">Ma-ai · Zanshin · Ki — Distance · Awareness · Opportunity</p>
-  </div>
+<div aria-hidden="true" class="kanji-watermark">組</div>
+<div class="container">
+<p class="eyebrow">Sparring · 組手</p>
+<h1>Kumite</h1>
+<p class="lede">Where kihon meets a real partner and kata becomes pressure-tested. Kumite in Shōrin-Ryū is a graduated ladder — beginners learn one step at a time, advanced practitioners one moment at a time. The demonstration clips here are reference footage from Okinawan Shōrin schools — confirm exact OSK drills with Sensei.</p>
+<p class="breadcrumb-jp">間合い ・ 残心 ・ 機</p>
+<p style="color: var(--gray-soft); font-size: 0.92rem;">Ma-ai · Zanshin · Ki — Distance · Awareness · Opportunity</p>
+</div>
 </section>
-
 <!-- ============ THE LADDER ============ -->
 <section>
-  <div class="container">
-    <div class="section-title">
-      <span class="jp">六段階 — Roku-dankai</span>
-      <h2>The kumite ladder — six stages</h2>
-      <p class="lede">From completely scripted to completely free. Each stage adds one variable. Skip stages and you skip the lesson hidden in them.</p>
-    </div>
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <p class="date">Stage 1 · 9th–7th kyū</p>
-        <h4>Kihon ippon kumite — 基本一本組手</h4>
-        <p><strong>One-step pre-arranged sparring.</strong> Attacker announces target (jōdan / chūdan) and attacks with a single named technique; defender blocks and counters with a single named technique. Both bow, attacker steps, both bow. Repeat.</p>
-        <p><em>Lesson:</em> correct form under the slightest pressure of a real attacker. Builds ma-ai (distance) and clean blocks.</p>
-      </div>
-
-      <div class="timeline-item">
-        <p class="date">Stage 2 · 7th–5th kyū</p>
-        <h4>Sanbon kumite — 三本組手</h4>
-        <p><strong>Three-step sparring.</strong> Attacker delivers three sequential attacks (e.g. jōdan oi-zuki, chūdan oi-zuki, mae-geri); defender retreats one step blocking each, then counters on the third.</p>
-        <p><em>Lesson:</em> retreating without breaking posture; identifying the moment to switch from receiving to attacking.</p>
-      </div>
-
-      <div class="timeline-item">
-        <p class="date">Stage 3 · 5th–3rd kyū</p>
-        <h4>Gohon kumite — 五本組手</h4>
-        <p><strong>Five-step sparring.</strong> The same idea as sanbon, extended to five attacks. Counter on the fifth.</p>
-        <p><em>Lesson:</em> stamina under pressure; sustaining ma-ai across multiple attacks; reading the opponent's rhythm.</p>
-      </div>
-
-      <div class="timeline-item">
-        <p class="date">Stage 4 · 3rd–2nd kyū</p>
-        <h4>Yakusoku kumite — 約束組手</h4>
-        <p><strong>Pre-arranged "promise" sparring.</strong> Longer, flowing scripted sequences with multiple attacks and counters, derived from kata bunkai. Each Pinan and Naihanchi has yakusoku drills; OSK Academy introduces these formally at 3rd kyū.</p>
-        <p><em>Lesson:</em> kata as live application. The script is the bunkai you already know; now apply it with timing, distance, and a partner who is actually trying to land.</p>
-      </div>
-
-      <div class="timeline-item milestone">
-        <p class="date">Stage 5 · 2nd kyū → shodan <span style="color: var(--kincha); font-weight: 700;">— current focus</span></p>
-        <h4>Jiyū ippon kumite — 自由一本組手</h4>
-        <p><strong>Free one-step.</strong> Attacker chooses timing and target within an agreed technique; defender responds freely. Bridge to free sparring.</p>
-        <p><em>Lesson:</em> reading intent without script. Recognizing the kamae (guard) shift that precedes the attack; choosing the counter on the spot.</p>
-      </div>
-
-      <div class="timeline-item milestone">
-        <p class="date">Stage 6 · shodan and beyond</p>
-        <h4>Jiyū kumite — 自由組手</h4>
-        <p><strong>Free sparring.</strong> Both partners attack and defend without script. Light contact in Shōrin tradition; sport karate uses point-stop (sun-dome).</p>
-        <p><em>Lesson:</em> everything at once. Distance, timing, deception, recovery, breath. The grading-day "shodan gauntlet" — facing 3–5 senior partners back-to-back — sits here.</p>
-      </div>
-
-    </div>
-  </div>
+<div class="container">
+<div class="section-title">
+<span class="jp">六段階 — Roku-dankai</span>
+<h2>The kumite ladder — six stages</h2>
+<p class="lede">From completely scripted to completely free. Each stage adds one variable. Skip stages and you skip the lesson hidden in them.</p>
+</div>
+<div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/gn_Toqp-XHw" title="Shorin-Ryu kihon yakusoku kumite - demonstration"></iframe></div>
+<p class="kata-video-caption">Shōrin-Ryū Shōrinkan · kihon yakusoku kumite (Nakazato line)</p><div class="timeline">
+<div class="timeline-item">
+<p class="date">Stage 1 · 9th–7th kyū</p>
+<h4>Kihon ippon kumite — 基本一本組手</h4>
+<p><strong>One-step pre-arranged sparring.</strong> Attacker announces target (jōdan / chūdan) and delivers one named technique; defender blocks and counters with one named technique. Bow, step, repeat.</p>
+<p><em>Lesson:</em> correct form under the slightest pressure of a real attacker. Builds ma-ai (distance) and clean blocks.</p>
+</div>
+<div class="timeline-item">
+<p class="date">Stage 2 · 7th–5th kyū</p>
+<h4>Sanbon kumite — 三本組手</h4>
+<p><strong>Three-step sparring.</strong> Attacker delivers three sequential attacks (e.g. jōdan oi-zuki, chūdan oi-zuki, mae-geri); defender retreats one step blocking each, then counters on the third.</p>
+<p><em>Lesson:</em> retreating without breaking posture; identifying the moment to switch from receiving to attacking.</p>
+</div>
+<div class="timeline-item">
+<p class="date">Stage 3 · 5th–3rd kyū</p>
+<h4>Gohon kumite — 五本組手</h4>
+<p><strong>Five-step sparring.</strong> The same idea as sanbon, extended to five attacks. Counter on the fifth.</p>
+<p><em>Lesson:</em> stamina under pressure; sustaining ma-ai across multiple attacks; reading the opponent's rhythm.</p>
+</div>
+<div class="timeline-item">
+<p class="date">Stage 4 · 3rd–2nd kyū</p>
+<h4>Yakusoku kumite — 約束組手</h4>
+<p><strong>Pre-arranged "promise" sparring.</strong> Longer flowing scripted sequences of multiple attacks and counters, drawn from kata bunkai. Each Pinan and Naihanchi has yakusoku drills; OSK introduces them formally at 3rd kyū.</p>
+<p><em>Lesson:</em> kata as live application. The script is the bunkai you already know; now apply it with timing, distance, and a partner who is actually trying to land.</p>
+</div>
+<div class="timeline-item milestone">
+<p class="date">Stage 5 · 2nd kyū → shodan <span style="color: var(--kincha); font-weight: 700;">— current focus</span></p>
+<h4>Jiyū ippon kumite — 自由一本組手</h4>
+<p><strong>Free one-step.</strong> Attacker chooses timing and target within an agreed technique; defender responds freely. Bridge to free sparring.</p>
+<p><em>Lesson:</em> reading intent without script. Recognizing the kamae (guard) shift that precedes the attack; choosing the counter on the spot.</p>
+</div>
+<div class="timeline-item milestone">
+<p class="date">Stage 6 · shodan and beyond</p>
+<h4>Jiyū kumite — 自由組手</h4>
+<p><strong>Free sparring.</strong> Both partners attack and defend without script. Light contact in Shōrin tradition; sport karate uses point-stop (sun-dome).</p>
+<p><em>Lesson:</em> everything at once. Distance, timing, deception, recovery, breath. The grading-day "shodan gauntlet" — facing 3–5 senior partners back-to-back — sits here.</p>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ============ MA-AI ============ -->
 <section class="alt">
-  <div class="container">
-    <div class="section-title">
-      <span class="jp">間合い — Ma-ai</span>
-      <h2>Distance — the silent skill</h2>
-      <p class="lede">Distance decides the fight before timing or technique do. Three ranges — and the moment you cross between them is the moment to act.</p>
-    </div>
-
-    <svg viewBox="0 0 700 280" style="width:100%; height:auto; background: white; border: 1px solid var(--line); padding: 1rem; box-shadow: var(--shadow-soft);">
-      <!-- ground line -->
-      <line x1="40" y1="220" x2="660" y2="220" stroke="#c8b89e" stroke-width="1"/>
-
-      <!-- defender (blue, on left) -->
-      <circle cx="80" cy="100" r="14" fill="none" stroke="#1c3a5e" stroke-width="2.5"/>
-      <line x1="80" y1="114" x2="80" y2="180" stroke="#1c3a5e" stroke-width="3"/>
-      <line x1="80" y1="180" x2="60" y2="220" stroke="#1c3a5e" stroke-width="3"/>
-      <line x1="80" y1="180" x2="100" y2="220" stroke="#1c3a5e" stroke-width="3"/>
-      <line x1="80" y1="135" x2="50" y2="155" stroke="#1c3a5e" stroke-width="2.5"/>
-      <line x1="80" y1="135" x2="110" y2="155" stroke="#1c3a5e" stroke-width="2.5"/>
-      <text x="80" y="248" text-anchor="middle" font-family="serif" font-size="11" fill="#1c3a5e" font-weight="600">YOU</text>
-
-      <!-- distance bands -->
-      <!-- to-ma -->
-      <line x1="105" y1="200" x2="290" y2="200" stroke="#3a5d85" stroke-width="1.5"/>
-      <text x="200" y="195" text-anchor="middle" font-family="serif" font-size="11" fill="#3a5d85" font-weight="600">TŌ-MA · long</text>
-      <text x="200" y="215" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">out of striking range — one step needed to reach</text>
-
-      <!-- chika-ma -->
-      <line x1="295" y1="200" x2="430" y2="200" stroke="#c9a35e" stroke-width="1.5"/>
-      <text x="362" y="195" text-anchor="middle" font-family="serif" font-size="11" fill="#a8853f" font-weight="600">UCHI-MA · mid</text>
-      <text x="362" y="215" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">one technique reaches with full extension — kicking distance</text>
-
-      <!-- chika-ma -->
-      <line x1="435" y1="200" x2="555" y2="200" stroke="#b04a3a" stroke-width="1.5"/>
-      <text x="495" y="195" text-anchor="middle" font-family="serif" font-size="11" fill="#b04a3a" font-weight="600">CHIKA-MA · close</text>
-      <text x="495" y="215" text-anchor="middle" font-family="serif" font-size="9" fill="#6b6157">elbows, knees, throws — punching/grappling distance</text>
-
-      <!-- attacker on right -->
-      <circle cx="600" cy="100" r="14" fill="none" stroke="#b04a3a" stroke-width="2.5"/>
-      <line x1="600" y1="114" x2="600" y2="180" stroke="#b04a3a" stroke-width="3"/>
-      <line x1="600" y1="180" x2="580" y2="220" stroke="#b04a3a" stroke-width="3"/>
-      <line x1="600" y1="180" x2="620" y2="220" stroke="#b04a3a" stroke-width="3"/>
-      <line x1="600" y1="135" x2="570" y2="155" stroke="#b04a3a" stroke-width="2.5"/>
-      <line x1="600" y1="135" x2="630" y2="155" stroke="#b04a3a" stroke-width="2.5"/>
-      <text x="600" y="248" text-anchor="middle" font-family="serif" font-size="11" fill="#b04a3a" font-weight="600">OPPONENT</text>
-
-      <!-- Ki gauge above -->
-      <text x="350" y="35" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="16" fill="#0f2540" font-weight="600">Ma-ai is the negotiation between two centers</text>
-      <text x="350" y="55" text-anchor="middle" font-family="serif" font-size="11" fill="#6b6157" font-style="italic">"He who controls the distance, controls the engagement." — common Okinawan teaching</text>
-    </svg>
-
-    <div class="row-3 mt-4">
-      <div>
-        <h4>Tō-ma · 遠間</h4>
-        <p>Long distance. Safe. Used to read the opponent, breathe, choose your moment. Crossing it requires intention.</p>
-      </div>
-      <div>
-        <h4>Uchi-ma · 打ち間</h4>
-        <p>Mid distance. Striking range with one full step. The most dangerous range — neither out nor in, every commitment is exposed.</p>
-      </div>
-      <div>
-        <h4>Chika-ma · 近間</h4>
-        <p>Close distance. Elbows, knees, throws, kyūsho strikes. No long techniques. The range of every old kata's bunkai.</p>
-      </div>
-    </div>
-
-    <div class="callout paper">
-      <h4>The three moments to attack</h4>
-      <ol style="margin:0;">
-        <li><strong>Sen no sen</strong> (先の先) — strike before they strike, having read their intent.</li>
-        <li><strong>Sen sen no sen</strong> (先々の先) — strike <em>as</em> they begin to strike, intercepting them mid-motion.</li>
-        <li><strong>Go no sen</strong> (後の先) — strike <em>after</em> they strike, having received the attack and counter-attacked on the same beat.</li>
-      </ol>
-    </div>
-  </div>
+<div class="container">
+<div class="section-title">
+<span class="jp">間合い — Ma-ai</span>
+<h2>Distance — the silent skill</h2>
+<p class="lede">Distance decides the fight before timing or technique do. Three ranges — and the moment you cross between them is the moment to act.</p>
+</div>
+<div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/U_YcY5Epw2c" title="Okinawa Shorin-Ryu kumite - distance and engagement"></iframe></div>
+<p class="kata-video-caption">Kyūdōkan · Okinawa Shōrin-Ryū kumite — distance &amp; engagement. <em>"He who controls the distance controls the engagement."</em></p>
+<div class="row-3 mt-4">
+<div>
+<h4>Tō-ma · 遠間</h4>
+<p>Long distance. Safe. Used to read the opponent, breathe, choose your moment. Crossing it requires intention.</p>
+</div>
+<div>
+<h4>Uchi-ma · 打ち間</h4>
+<p>Mid distance. Striking range with one full step. The most dangerous range — neither out nor in, every commitment is exposed.</p>
+</div>
+<div>
+<h4>Chika-ma · 近間</h4>
+<p>Close distance. Elbows, knees, throws, kyūsho strikes. No long techniques. The range of every old kata's bunkai.</p>
+</div>
+</div>
+<div class="callout paper">
+<h4>The three moments to attack</h4>
+<ol style="margin:0;">
+<li><strong>Sen no sen</strong> (先の先) — strike before they strike, having read their intent.</li>
+<li><strong>Sen sen no sen</strong> (先々の先) — strike <em>as</em> they begin to strike, intercepting them mid-motion.</li>
+<li><strong>Go no sen</strong> (後の先) — strike <em>after</em> they strike, having received the attack and counter-attacked on the same beat.</li>
+</ol>
+</div>
+</div>
 </section>
-
 <!-- ============ VITAL POINTS ============ -->
 <section>
-  <div class="container">
-    <div class="section-title">
-      <span class="jp">急所 — Kyūsho</span>
-      <h2>Vital points — kyūsho</h2>
-      <p class="lede">Patrick McCarthy's <em>Bubishi</em> identifies 36 classical points. The eleven below are the most-cited in Shōrin-Ryū bunkai. Train with awareness; never strike them in practice without control.</p>
-    </div>
+<div class="container">
+<div class="section-title">
+<span class="jp">急所 — Kyūsho</span>
+<h2>Vital points — kyūsho</h2>
+<p class="lede">Patrick McCarthy's <em>Bubishi</em> identifies 36 classical points. The eleven below are the most-cited in Shōrin-Ryū bunkai. Train with awareness; never strike them in practice without control.</p>
+</div>
+<div class="kyusho-grid">
+<!-- Front body diagram -->
 
-    <div class="kyusho-grid">
-      <!-- Front body diagram -->
-      <svg viewBox="0 0 240 460" style="background: var(--washi-cream); border: 1px solid var(--line); padding: 0.5rem;">
-        <!-- head -->
-        <ellipse cx="120" cy="50" rx="32" ry="40" fill="none" stroke="#1c3a5e" stroke-width="1.5"/>
-        <!-- neck -->
-        <rect x="105" y="88" width="30" height="20" fill="none" stroke="#1c3a5e" stroke-width="1.5"/>
-        <!-- torso -->
-        <path d="M 75 110 Q 80 105, 120 105 Q 160 105, 165 110 L 175 200 Q 175 250, 165 270 L 75 270 Q 65 250, 65 200 Z" fill="none" stroke="#1c3a5e" stroke-width="1.5"/>
-        <!-- arms -->
-        <path d="M 75 110 L 50 200 L 45 270" fill="none" stroke="#1c3a5e" stroke-width="1.5"/>
-        <path d="M 165 110 L 190 200 L 195 270" fill="none" stroke="#1c3a5e" stroke-width="1.5"/>
-        <!-- legs -->
-        <line x1="100" y1="270" x2="92" y2="430" stroke="#1c3a5e" stroke-width="1.5"/>
-        <line x1="140" y1="270" x2="148" y2="430" stroke="#1c3a5e" stroke-width="1.5"/>
-        <ellipse cx="92" cy="440" rx="14" ry="6" fill="#1c3a5e" opacity="0.3"/>
-        <ellipse cx="148" cy="440" rx="14" ry="6" fill="#1c3a5e" opacity="0.3"/>
-
-        <!-- KYUSHO POINTS (numbered) -->
-        <!-- 1 jinchu -->
-        <circle cx="120" cy="58" r="5" fill="#b04a3a"/>
-        <text x="120" y="62" text-anchor="middle" font-size="8" fill="white" font-weight="700">1</text>
-        <!-- 4 ganka (cheek) -->
-        <circle cx="100" cy="50" r="5" fill="#b04a3a"/>
-        <text x="100" y="54" text-anchor="middle" font-size="8" fill="white" font-weight="700">4</text>
-        <!-- 8 kasumi (temple) -->
-        <circle cx="92" cy="32" r="5" fill="#b04a3a"/>
-        <text x="92" y="36" text-anchor="middle" font-size="8" fill="white" font-weight="700">8</text>
-        <!-- 5 mikazuki (jaw) -->
-        <circle cx="148" cy="78" r="5" fill="#b04a3a"/>
-        <text x="148" y="82" text-anchor="middle" font-size="8" fill="white" font-weight="700">5</text>
-        <!-- 6 hichu (throat) -->
-        <circle cx="120" cy="100" r="5" fill="#b04a3a"/>
-        <text x="120" y="104" text-anchor="middle" font-size="8" fill="white" font-weight="700">6</text>
-        <!-- 10 soda (top trap) -->
-        <circle cx="80" cy="115" r="5" fill="#b04a3a"/>
-        <text x="80" y="119" text-anchor="middle" font-size="8" fill="white" font-weight="700">10</text>
-        <!-- 2 suigetsu (solar plexus) -->
-        <circle cx="120" cy="170" r="6" fill="#b04a3a"/>
-        <text x="120" y="174" text-anchor="middle" font-size="8" fill="white" font-weight="700">2</text>
-        <!-- 3 denko (floating ribs) -->
-        <circle cx="160" cy="195" r="5" fill="#b04a3a"/>
-        <text x="160" y="199" text-anchor="middle" font-size="8" fill="white" font-weight="700">3</text>
-        <!-- 9 kinteki (groin) -->
-        <circle cx="120" cy="260" r="5" fill="#b04a3a"/>
-        <text x="120" y="264" text-anchor="middle" font-size="8" fill="white" font-weight="700">9</text>
-        <!-- 11 inazuma (inner thigh) -->
-        <circle cx="125" cy="320" r="5" fill="#b04a3a"/>
-        <text x="125" y="324" text-anchor="middle" font-size="8" fill="white" font-weight="700">11</text>
-        <!-- 12 hiza-kansetsu (knee) -->
-        <circle cx="92" cy="370" r="5" fill="#b04a3a"/>
-        <text x="92" y="374" text-anchor="middle" font-size="8" fill="white" font-weight="700">12</text>
-        <!-- dokko (behind ear, marked with arrow) -->
-        <text x="200" y="60" font-size="9" fill="#6b6157">7 = dokko</text>
-        <text x="200" y="71" font-size="9" fill="#6b6157">  (mastoid,</text>
-        <text x="200" y="82" font-size="9" fill="#6b6157">  back of ear)</text>
-      </svg>
-
-      <table>
-        <thead><tr><th>#</th><th>Point</th><th>Location &amp; effect</th></tr></thead>
-        <tbody>
-          <tr><td><strong>1</strong></td><td class="jp">Jinchū</td><td>Philtrum (under nose). Nerve cluster — KO from light strike.</td></tr>
-          <tr><td><strong>2</strong></td><td class="jp">Suigetsu</td><td>Solar plexus / xiphoid. Diaphragm stunning, breath loss.</td></tr>
-          <tr><td><strong>3</strong></td><td class="jp">Denkō</td><td>Floating ribs (lateral, 7th–11th). Liver/spleen disruption.</td></tr>
-          <tr><td><strong>4</strong></td><td class="jp">Ganka</td><td>Below the eye on cheekbone. Pain, disorientation.</td></tr>
-          <tr><td><strong>5</strong></td><td class="jp">Mikazuki</td><td>Side of jaw / mandibular angle. KO via vagal/jaw nerve.</td></tr>
-          <tr><td><strong>6</strong></td><td class="jp">Hichū</td><td>Throat / trachea. Airway disruption — lethal force.</td></tr>
-          <tr><td><strong>7</strong></td><td class="jp">Dokko</td><td>Mastoid process (behind ear). Vagal response, KO.</td></tr>
-          <tr><td><strong>8</strong></td><td class="jp">Kasumi</td><td>Temple. KO via temporal artery / nerve.</td></tr>
-          <tr><td><strong>9</strong></td><td class="jp">Kinteki</td><td>Groin / testicles. Incapacitation.</td></tr>
-          <tr><td><strong>10</strong></td><td class="jp">Sōda</td><td>Top of trapezius. Brachial plexus, arm numbness.</td></tr>
-          <tr><td><strong>11</strong></td><td class="jp">Inazuma</td><td>Inner thigh / femoral region. Femoral nerve, leg buckle.</td></tr>
-          <tr><td><strong>12</strong></td><td class="jp">Hiza-kansetsu</td><td>Knee joint. Joint destruction with side-thrust kick.</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+<table>
+<thead><tr><th>#</th><th>Point</th><th>Location &amp; effect</th></tr></thead>
+<tbody>
+<tr><td><strong>1</strong></td><td class="jp">Jinchū</td><td>Philtrum (under nose). Nerve cluster — KO from light strike.</td></tr>
+<tr><td><strong>2</strong></td><td class="jp">Suigetsu</td><td>Solar plexus / xiphoid. Diaphragm stunning, breath loss.</td></tr>
+<tr><td><strong>3</strong></td><td class="jp">Denkō</td><td>Floating ribs (lateral, 7th–11th). Liver/spleen disruption.</td></tr>
+<tr><td><strong>4</strong></td><td class="jp">Ganka</td><td>Below the eye on cheekbone. Pain, disorientation.</td></tr>
+<tr><td><strong>5</strong></td><td class="jp">Mikazuki</td><td>Side of jaw / mandibular angle. KO via vagal/jaw nerve.</td></tr>
+<tr><td><strong>6</strong></td><td class="jp">Hichū</td><td>Throat / trachea. Airway disruption — lethal force.</td></tr>
+<tr><td><strong>7</strong></td><td class="jp">Dokko</td><td>Mastoid process (behind ear). Vagal response, KO.</td></tr>
+<tr><td><strong>8</strong></td><td class="jp">Kasumi</td><td>Temple. KO via temporal artery / nerve.</td></tr>
+<tr><td><strong>9</strong></td><td class="jp">Kinteki</td><td>Groin / testicles. Incapacitation.</td></tr>
+<tr><td><strong>10</strong></td><td class="jp">Sōda</td><td>Top of trapezius. Brachial plexus, arm numbness.</td></tr>
+<tr><td><strong>11</strong></td><td class="jp">Inazuma</td><td>Inner thigh / femoral region. Femoral nerve, leg buckle.</td></tr>
+<tr><td><strong>12</strong></td><td class="jp">Hiza-kansetsu</td><td>Knee joint. Joint destruction with side-thrust kick.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
 </section>
-
 <!-- ============ WKF SCORING ============ -->
 <section class="alt">
-  <div class="container">
-    <div class="section-title">
-      <span class="jp">試合 — Shiai</span>
-      <h2>Sport kumite — WKF scoring &amp; rules</h2>
-      <p class="lede">Most modern gradings include a sport-kumite component. The WKF (World Karate Federation) ruleset is the standard.</p>
-    </div>
-
-    <div class="row-3">
-      <div class="card">
-        <p class="card-jp">有効 · Yūkō</p>
-        <h3>1 point</h3>
-        <p>Any clean punch (tsuki) to a scoring zone: head, neck, abdomen, chest, back, side.</p>
-      </div>
-      <div class="card accent-beni">
-        <p class="card-jp">技あり · Waza-ari</p>
-        <h3>2 points</h3>
-        <p>Clean kick to the body (chūdan-geri).</p>
-      </div>
-      <div class="card accent-kincha">
-        <p class="card-jp">一本 · Ippon</p>
-        <h3>3 points</h3>
-        <p>Kick to the head (jōdan-geri), or any scoring technique on a swept/thrown opponent.</p>
-      </div>
-    </div>
-
-    <div class="row-2 mt-4">
-      <div>
-        <h3>Six criteria for a valid score</h3>
-        <ol>
-          <li><strong>Good form</strong> (yoi-keishiki) — correct technique, not a slap.</li>
-          <li><strong>Sporting attitude</strong> — non-malicious, controlled.</li>
-          <li><strong>Vigorous application</strong> — committed, not tentative.</li>
-          <li><strong>Awareness</strong> (zanshin) — composure after the technique.</li>
-          <li><strong>Good timing</strong> — at the moment of opportunity.</li>
-          <li><strong>Correct distance</strong> — close enough to be effective, controlled enough to avoid injury.</li>
-        </ol>
-      </div>
-      <div>
-        <h3>Match basics</h3>
-        <ul>
-          <li><strong>Length:</strong> 3 minutes (kumite), or until 8-point lead.</li>
-          <li><strong>Sun-dome:</strong> stop short of contact (or light contact with full control).</li>
-          <li><strong>Mubobi:</strong> failure to protect oneself — penalized.</li>
-          <li><strong>Penalties:</strong> Category 1 (excessive contact) and Category 2 (rule violations). Progress: <code>Chūkoku → Keikoku → Hansoku-Chūi → Hansoku → Shikkaku</code>.</li>
-          <li><strong>Decisions:</strong> by points, by senshu (first unanswered point), or by hantei (judges' decision).</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="callout">
-      <h4>Sport vs. tradition — both, not either</h4>
-      <p>WKF kumite trains speed, timing, and composure under pressure — invaluable. Bunkai-driven kumite trains close-range, kyūsho-aware, throw-and-strike sequences — also invaluable. The shodan grading at OSK will sample both. Train both.</p>
-    </div>
-  </div>
+<div class="container">
+<div class="section-title">
+<span class="jp">試合 — Shiai</span>
+<h2>Sport kumite — WKF scoring &amp; rules</h2>
+<p class="lede">Most modern gradings include a sport-kumite component. The WKF (World Karate Federation) ruleset is the standard.</p>
+</div>
+<div class="row-3">
+<div class="card">
+<p class="card-jp">有効 · Yūkō</p>
+<h3>1 point</h3>
+<p>Any clean punch (tsuki) to a scoring zone: head, neck, abdomen, chest, back, side.</p>
+</div>
+<div class="card accent-beni">
+<p class="card-jp">技あり · Waza-ari</p>
+<h3>2 points</h3>
+<p>Clean kick to the body (chūdan-geri).</p>
+</div>
+<div class="card accent-kincha">
+<p class="card-jp">一本 · Ippon</p>
+<h3>3 points</h3>
+<p>Kick to the head (jōdan-geri), or any scoring technique on a swept/thrown opponent.</p>
+</div>
+</div>
+<div class="row-2 mt-4">
+<div>
+<h3>Six criteria for a valid score</h3>
+<ol>
+<li><strong>Good form</strong> (yoi-keishiki) — correct technique, not a slap.</li>
+<li><strong>Sporting attitude</strong> — non-malicious, controlled.</li>
+<li><strong>Vigorous application</strong> — committed, not tentative.</li>
+<li><strong>Awareness</strong> (zanshin) — composure after the technique.</li>
+<li><strong>Good timing</strong> — at the moment of opportunity.</li>
+<li><strong>Correct distance</strong> — close enough to be effective, controlled enough to avoid injury.</li>
+</ol>
+</div>
+<div>
+<h3>Match basics</h3>
+<ul>
+<li><strong>Length:</strong> 3 minutes (kumite), or until 8-point lead.</li>
+<li><strong>Sun-dome:</strong> stop short of contact (or light contact with full control).</li>
+<li><strong>Mubobi:</strong> failure to protect oneself — penalized.</li>
+<li><strong>Penalties:</strong> Category 1 (excessive contact) and Category 2 (rule violations). Progress: <code>Chūkoku → Keikoku → Hansoku-Chūi → Hansoku → Shikkaku</code>.</li>
+<li><strong>Decisions:</strong> by points, by senshu (first unanswered point), or by hantei (judges' decision).</li>
+</ul>
+</div>
+</div>
+<div class="callout">
+<h4>Sport vs. tradition — both, not either</h4>
+<p>WKF kumite trains speed, timing, and composure under pressure — invaluable. Bunkai-driven kumite trains close-range, kyūsho-aware, throw-and-strike sequences — also invaluable. The shodan grading at OSK will sample both. Train both.</p>
+</div>
+</div>
 </section>
-
 <!-- ============ MENTAL ============ -->
 <section class="dark">
-  <div class="container">
-    <div class="section-title">
-      <span class="jp">心構え — Kokoro-gamae</span>
-      <h2>The mind in kumite</h2>
-      <p class="lede" style="color: var(--washi-cream);">A black-belt's body and a white-belt's body fight similarly. The black belt's mind is what makes the difference.</p>
-    </div>
-
-    <div class="row-3">
-      <div>
-        <h4>残心 · Zanshin</h4>
-        <p>"Lingering mind." Awareness that does not collapse after the strike. After every technique, the body returns to kamae and the eyes hold the opponent.</p>
-      </div>
-      <div>
-        <h4>無心 · Mushin</h4>
-        <p>"No mind." Action without deliberation — the response selects itself from training. The opposite of <em>thinking about</em> the next move.</p>
-      </div>
-      <div>
-        <h4>不動心 · Fudōshin</h4>
-        <p>"Immovable mind." Calm under fear, anger, surprise. Not absence of feeling — refusal to be ruled by it.</p>
-      </div>
-      <div>
-        <h4>水の心 · Mizu no kokoro</h4>
-        <p>"Mind like water." A still surface reflects everything; a turbulent one reflects nothing. Read the opponent only from a calm mind.</p>
-      </div>
-      <div>
-        <h4>月の心 · Tsuki no kokoro</h4>
-        <p>"Mind like the moon." The moon shines on all things at once — total awareness, with no point of fixation. Avoids tunnel vision.</p>
-      </div>
-      <div>
-        <h4>機 · Ki — opportunity</h4>
-        <p>The instant of vulnerability — when the opponent draws breath, shifts weight, blinks. Train to perceive it; train to create it.</p>
-      </div>
-    </div>
-
-    <blockquote style="background: rgba(201, 163, 94, 0.1); color: var(--washi); border-color: var(--kincha); margin-top: 3rem;">
+<div class="container">
+<div class="section-title">
+<span class="jp">心構え — Kokoro-gamae</span>
+<h2>The mind in kumite</h2>
+<p class="lede" style="color: var(--washi-cream);">A black-belt's body and a white-belt's body fight similarly. The black belt's mind is what makes the difference.</p>
+</div>
+<div class="row-3">
+<div>
+<h4>残心 · Zanshin</h4>
+<p>"Lingering mind." Awareness that does not collapse after the strike. After every technique, the body returns to kamae and the eyes hold the opponent.</p>
+</div>
+<div>
+<h4>無心 · Mushin</h4>
+<p>"No mind." Action without deliberation — the response selects itself from training. The opposite of <em>thinking about</em> the next move.</p>
+</div>
+<div>
+<h4>不動心 · Fudōshin</h4>
+<p>"Immovable mind." Calm under fear, anger, surprise. Not absence of feeling — refusal to be ruled by it.</p>
+</div>
+<div>
+<h4>水の心 · Mizu no kokoro</h4>
+<p>"Mind like water." A still surface reflects everything; a turbulent one reflects nothing. Read the opponent only from a calm mind.</p>
+</div>
+<div>
+<h4>月の心 · Tsuki no kokoro</h4>
+<p>"Mind like the moon." The moon shines on all things at once — total awareness, with no point of fixation. Avoids tunnel vision.</p>
+</div>
+<div>
+<h4>機 · Ki — opportunity</h4>
+<p>The instant of vulnerability — when the opponent draws breath, shifts weight, blinks. Train to perceive it; train to create it.</p>
+</div>
+</div>
+<blockquote style="background: rgba(201, 163, 94, 0.1); color: var(--washi); border-color: var(--kincha); margin-top: 1.5rem;">
       "Karate ni sente nashi — there is no first attack in karate. But once attacked, hesitate not."
       <cite style="color: var(--washi-cream); opacity: 0.7;">— Anko Itosu, Tōde Jukun (1908)</cite>
-    </blockquote>
-  </div>
+</blockquote>
+</div>
 </section>
-
-<footer id="site-footer"
-        data-kanji="組"
-        data-tagline="Kumite — where every other domain is tested."
-        data-nav="kobudo.html|Next: Kobudō →||kata.html|← Back to Kata"></footer>
+<footer data-kanji="組" data-nav="kobudo.html|Next: Kobudō →||kata.html|← Back to Kata" data-tagline="Kumite — where every other domain is tested." id="site-footer"></footer>
 <script src="assets/footer.js"></script>
-
 </body>
 </html>

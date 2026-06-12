@@ -10,6 +10,21 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=EB+Garamond:wght@400;500;600&amp;family=Noto+Serif+JP:wght@400;500;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
 <link href="assets/styles.css" rel="stylesheet"/>
+<style>
+/* Page-local spacing tune — tighter, even vertical rhythm (kata.html only) */
+section:not(.hero) { padding: 2.75rem 0; }
+.section-title { margin-bottom: 1.6rem; }
+.section-title .lede { margin-top: 1rem; }
+.kata-card { padding: 1.4rem 1.5rem; margin-bottom: 1.1rem; }
+.kata-card .kata-header { grid-template-columns: 1fr; margin-bottom: 0.6rem; }
+.kata-card .key-techniques { margin: 0.6rem 0; }
+.kata-card .bunkai-list { padding: 0.85rem 1.1rem; }
+.kata-video { margin: 0.9rem 0 0.3rem; }
+.callout { padding: 1.9rem 2rem; margin: 1.6rem 0; }
+.row-2 { gap: 1.6rem; }
+table { margin: 1rem 0; }
+blockquote { margin: 1rem 0; }
+</style>
 <!-- Cloudflare Web Analytics -->
 <script data-cf-beacon='{"token": "e20171382c37479f917e4cc268267b56"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
 </head>
@@ -76,26 +91,13 @@
 </div>
 <div>
 <h3>The embusen — floor pattern</h3>
-<p>Every kata is performed on a fixed pattern called the <em>embusen</em>. It encodes how an attacker (or attackers) approaches you. Recognizing the embusen is the first step in unpacking bunkai.</p>
-<div class="row-3" style="gap: 0.75rem; margin-top: 1rem;">
-<div style="text-align:center;">
-<svg style="background:#fff; border:1px solid var(--line);" viewbox="0 0 80 80"><line stroke="#1c3a5e" stroke-width="3" x1="40" x2="40" y1="10" y2="70"></line><circle cx="40" cy="10" fill="#b04a3a" r="3"></circle><circle cx="40" cy="70" fill="#b04a3a" r="3"></circle></svg>
-<p style="font-size:0.8rem; margin-top:0.4rem;"><strong>I</strong> — straight line<br/><span style="color:var(--gray-soft);">Naihanchi, Seisan, Ananku</span></p>
-</div>
-<div style="text-align:center;">
-<svg style="background:#fff; border:1px solid var(--line);" viewbox="0 0 80 80"><line stroke="#1c3a5e" stroke-width="3" x1="15" x2="65" y1="40" y2="40"></line><line stroke="#1c3a5e" stroke-width="3" x1="40" x2="40" y1="15" y2="65"></line><circle cx="15" cy="40" fill="#b04a3a" r="3"></circle><circle cx="65" cy="40" fill="#b04a3a" r="3"></circle><circle cx="40" cy="15" fill="#b04a3a" r="3"></circle><circle cx="40" cy="65" fill="#b04a3a" r="3"></circle></svg>
-<p style="font-size:0.8rem; margin-top:0.4rem;"><strong>H / +</strong><br/><span style="color:var(--gray-soft);">Pinan, Kūsankū</span></p>
-</div>
-<div style="text-align:center;">
-<svg style="background:#fff; border:1px solid var(--line);" viewbox="0 0 80 80"><line stroke="#1c3a5e" stroke-width="3" x1="20" x2="65" y1="65" y2="20"></line><circle cx="20" cy="65" fill="#b04a3a" r="3"></circle><circle cx="65" cy="20" fill="#b04a3a" r="3"></circle></svg>
-<p style="font-size:0.8rem; margin-top:0.4rem;"><strong>Diagonal</strong><br/><span style="color:var(--gray-soft);">Chinto only</span></p>
-</div>
-</div>
+<p>Every kata is performed on a fixed floor pattern, the <em>embusen</em> — it encodes how attackers approach you, and reading it is the first step in unpacking bunkai. Each card notes its shape on the <em>Embusen:</em> tag (I = straight line, H / + = four-direction, diagonal = Chinto).</p>
+
 </div>
 </div>
 <div class="callout paper">
 <h4>Three-times rule</h4>
-<p>Master Funakoshi taught: every kata should be performed three times in a row. Once for shape (slow, exact). Once for breath (with kiai, finding the rhythm). Once for application (mentally rehearsing each bunkai partner). Repeated daily, three reps of one kata reveals more than thirty reps of three.</p>
+<p>Funakoshi taught that every kata should be run three times: once for shape (slow, exact), once for breath (with kiai and rhythm), once for application (mentally rehearsing each bunkai). Three reps of one kata daily reveal more than thirty of three.</p>
 </div>
 </div>
 </section>
@@ -105,7 +107,7 @@
 <div class="section-title">
 <span class="jp">普及型 — Fukyū-gata</span>
 <h2>Foundational kata — Taikyoku, Fukyū &amp; Naihanchi</h2>
-<p class="lede">The "promotional" kata of 1940 were created jointly by Nagamine and Miyagi to give Okinawan schoolchildren a single accessible entry into karate. Naihanchi was once <em>the</em> entire syllabus of Shuri-te. The OSK syllabus opens even earlier, with Taikyoku Shodan.</p>
+<p class="lede">The 1940 "promotional" kata gave Okinawan schoolchildren one accessible entry into karate; Naihanchi was once <em>the</em> entire Shuri-te syllabus. The OSK ladder opens earlier still, with Taikyoku Shodan.</p>
 </div>
 <!-- Taikyoku Shodan -->
 <div class="kata-card">
@@ -119,25 +121,15 @@
 <span class="tag tag-beni">Funakoshi, c.1940</span>
 </div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="20" x2="20" y1="40" y2="60"></line>
-<line stroke="#1c3a5e" stroke-width="3" x1="20" x2="80" y1="50" y2="50"></line>
-<line stroke="#1c3a5e" stroke-width="3" x1="80" x2="80" y1="40" y2="60"></line>
-<line stroke="#1c3a5e" stroke-dasharray="3 2" stroke-width="2" x1="50" x2="50" y1="20" y2="80"></line>
-<circle cx="50" cy="50" fill="#c9a35e" r="5"></circle>
-</svg>
-<p class="embusen-label">H-shape</p>
+
 </div>
-</div>
-<p>The simplest classical form — only gedan-barai and oi-zuki, on an H pattern. Created to drill stance, turning, and the basic block-punch reflex before any technical kata. The first kata on the OSK grading list.</p>
+<p>The simplest classical form — only gedan-barai and oi-zuki on an H pattern. Drills stance, turning, and the block-punch reflex; the first kata on the OSK grading list.</p>
 <div class="key-techniques"><strong>Key techniques:</strong> zenkutsu-dachi gedan-barai · oi-zuki chūdan · 90° and 180° turns</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin:0;">
-<li>Gedan-barai sweeps a low attack while the turn takes you off the line.</li>
-<li>Oi-zuki pursues — the whole form is "receive, turn, counter," repeated in every direction.</li>
-<li>Its real lesson is transitions: clean turns and consistent stance depth, not the techniques themselves.</li>
+<li>Gedan-barai sweeps a low attack as the turn takes you off-line.</li>
+<li>Oi-zuki pursues — "receive, turn, counter," repeated in every direction.</li>
 </ol>
 </div>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/DDNBBuEkN1o" title="Taikyoku Shodan — kata reference video"></iframe></div><p class="kata-video-caption">Taikyoku Shodan — beginner kata (Funakoshi lineage)</p></div>
@@ -153,24 +145,15 @@
 <span class="tag tag-beni">Created 1940 · Nagamine</span>
 </div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="50" x2="50" y1="15" y2="85"></line>
-<circle cx="50" cy="15" fill="#b04a3a" r="4"></circle>
-<circle cx="50" cy="85" fill="#b04a3a" r="4"></circle>
-<circle cx="50" cy="50" fill="#c9a35e" r="5"></circle>
-</svg>
-<p class="embusen-label">straight line</p>
+
 </div>
-</div>
-<p>Created at the request of the Okinawan Governor's Office to standardize beginner instruction across schools. The first kata most Shōrin students ever perform.</p>
+<p>Created for the Okinawan Governor's Office to standardize beginner instruction — the first kata most Shōrin students ever perform.</p>
 <div class="key-techniques"><strong>Key techniques:</strong> zenkutsu-dachi gedan-barai · oi-zuki chūdan · 180° turns with simultaneous block-and-strike</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin: 0;">
 <li>Opening gedan-barai jams a low front kick while stepping off-line.</li>
-<li>Oi-zuki chains pursue a retreating opponent in a straight corridor.</li>
-<li>180° turns teach awareness of attackers behind you — the spine remains the axis.</li>
+<li>Oi-zuki chains pursue a retreating opponent down a straight corridor.</li>
 </ol>
 </div>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/vOeIFAVUDcQ" title="Fukyū-gata Ichi — kata reference video"></iframe></div><p class="kata-video-caption">Eihachi Ota Hanshi · Matsubayashi-Ryū</p></div>
@@ -186,24 +169,15 @@
 <span class="tag tag-beni">Created 1940 · Miyagi</span>
 </div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="50" x2="50" y1="15" y2="85"></line>
-<line stroke="#1c3a5e" stroke-dasharray="3 2" stroke-width="2" x1="35" x2="65" y1="50" y2="50"></line>
-<circle cx="50" cy="15" fill="#b04a3a" r="4"></circle>
-<circle cx="50" cy="85" fill="#b04a3a" r="4"></circle>
-</svg>
-<p class="embusen-label">I with side step</p>
+
 </div>
-</div>
-<p>Created in parallel with Fukyū Ichi by Chōjun Miyagi (Goju-Ryū founder). In Goju lines often called <em>Gekisai Dai Ichi</em>; Shōrin schools sometimes re-choreograph it.</p>
+<p>Created alongside Fukyū Ichi by Chōjun Miyagi (Goju-Ryū founder) — often called <em>Gekisai Dai Ichi</em> in Goju lines; Shōrin schools sometimes re-choreograph it.</p>
 <div class="key-techniques"><strong>Key techniques:</strong> jōdan age-uke · mae-geri · gyaku-zuki · shutō-uke in kōkutsu-dachi</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin:0;">
-<li>Age-uke + reverse punch = parry a high committed punch and counter to the ribs.</li>
-<li>Front kick + punch combo = closing distance against a retreating opponent.</li>
-<li>Shutō-uke in cat stance = transitioning to a neutral guard, ready to counter-strike.</li>
+<li>Age-uke + reverse punch = parry a high committed punch, counter to the ribs.</li>
+<li>Front kick + punch = closing distance on a retreating opponent.</li>
 </ol>
 </div>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/cO_DdcqE0DA" title="Fukyū-gata Ni — kata reference video"></iframe></div><p class="kata-video-caption">Kyūdōkan · Okinawa Shōrin-Ryū</p></div>
@@ -219,26 +193,15 @@
 <span class="tag tag-kincha">School-specific</span>
 </div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="20" x2="80" y1="50" y2="50"></line>
-<line stroke="#1c3a5e" stroke-width="3" x1="50" x2="50" y1="15" y2="85"></line>
-<circle cx="20" cy="50" fill="#b04a3a" r="4"></circle>
-<circle cx="80" cy="50" fill="#b04a3a" r="4"></circle>
-<circle cx="50" cy="15" fill="#b04a3a" r="4"></circle>
-<circle cx="50" cy="85" fill="#b04a3a" r="4"></circle>
-</svg>
-<p class="embusen-label">cross / four-direction</p>
+
 </div>
-</div>
-<p>Not part of Nagamine's original Matsubayashi 18 — taught in some Okinawan and OSMKKF lines as an extension. Verify the OSK version with sensei before grading.</p>
+<p>Not in Nagamine's original Matsubayashi 18 — an extension taught in some Okinawan/OSMKKF lines. Verify the OSK version with Sensei.</p>
 <div class="key-techniques"><strong>Key techniques:</strong> uchi-uke + gyaku-zuki combo · yoko-geri keage · hiza-geri · double-step turns</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin:0;">
-<li>Block-strike-pull = receive, anchor, and counter on a single beat.</li>
-<li>Side kick after a turn = controlling lateral attackers.</li>
-<li>Knee strike = close-range finisher after a clinch.</li>
+<li>Block-strike-pull = receive, anchor, and counter on one beat.</li>
+<li>Side kick after a turn = controlling a lateral attacker.</li>
 </ol>
 </div>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/orVhw4ssroM" title="Fukyū-gata San — kata reference video"></iframe></div><p class="kata-video-caption">Matsubayashi-Ryū</p></div>
@@ -254,29 +217,17 @@
 <span class="tag tag-beni">Pre-Matsumura · Itosu split</span>
 </div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="15" x2="85" y1="50" y2="50"></line>
-<circle cx="15" cy="50" fill="#b04a3a" r="4"></circle>
-<circle cx="85" cy="50" fill="#b04a3a" r="4"></circle>
-<circle cx="50" cy="50" fill="#c9a35e" r="5"></circle>
-<text fill="#6b6157" font-size="9" text-anchor="middle" x="50" y="80">naihanchi-dachi throughout</text>
-</svg>
-<p class="embusen-label">sideways straight line</p>
+
 </div>
-</div>
-<p>The <strong>foundational kata</strong> of Shuri-te. Motobu Chōki famously declared "all you need is Naihanchi." Performed entirely in <em>naihanchi-dachi</em> on a single sideways line — practitioners spend years in this kata before moving to others.</p>
+<p>The <strong>foundational kata</strong> of Shuri-te — Motobu Chōki declared "all you need is Naihanchi." Performed entirely in <em>naihanchi-dachi</em> on one sideways line. Itosu later split the original into Nidan (below, required for shodan) and Sandan (rapid double techniques and traps, typically after).</p>
 <div class="key-techniques"><strong>Key techniques:</strong> nami-gaeshi (returning wave kick) · kagi-zuki (hook punch) · haishu-uchi (back-hand strike) · combined uchi-uke + soto-uke double block · double-arm sweep</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin:0;">
-<li>The side-on stance = fighting with back to a wall, in a doorway, or on a narrow bridge — there is nowhere to retreat.</li>
-<li>Kagi-zuki = striking an opponent who has clinched at close range — the elbow stays trapped against your own ribs.</li>
-<li>Nami-gaeshi = stomping/lifting to defend against a low kick or break a leg-grab.</li>
-<li>Combined block + strike = the same arm receives <em>and</em> attacks on the same beat (efficient for close work).</li>
+<li>The side-on stance = fighting with nowhere to retreat — a wall, a doorway, a narrow bridge.</li>
+<li>Kagi-zuki = striking a clinching opponent at close range, the elbow trapped against your ribs.</li>
 </ol>
 </div>
-<p style="font-size: 0.92rem; color: var(--gray-soft); margin-top: 0.75rem;"><strong>Naihanchi Nidan &amp; Sandan</strong> were created by Itosu by splitting the older single Naihanchi. <strong>Nidan</strong> (its own card below) is required for the shodan grading; <strong>Sandan</strong> — rapid double techniques and trapping motions — typically comes after.</p>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/vewbBy4dUEo" title="Naihanchi Shodan — kata reference video"></iframe></div><p class="kata-video-caption">Shidōkan Masters · Maeshiro / Takara / Nakamura</p></div>
 <!-- Naihanchi Nidan -->
 <div class="kata-card">
@@ -290,25 +241,15 @@
 <span class="tag tag-beni">Itosu</span>
 </div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="15" x2="85" y1="50" y2="50"></line>
-<circle cx="15" cy="50" fill="#b04a3a" r="4"></circle>
-<circle cx="85" cy="50" fill="#b04a3a" r="4"></circle>
-<circle cx="50" cy="50" fill="#c9a35e" r="5"></circle>
-<text fill="#6b6157" font-size="9" text-anchor="middle" x="50" y="80">naihanchi-dachi throughout</text>
-</svg>
-<p class="embusen-label">sideways straight line</p>
+
 </div>
-</div>
-<p>The second Naihanchi, required for the shodan grading. It keeps the sideways line and naihanchi-dachi of Shodan but adds <em>double-handed blocking</em>, rising-elbow motions, and a more upright, pressing rhythm. Shorter and starker than Shodan.</p>
+<p>The second Naihanchi, required for shodan. Keeps Shodan's sideways line and naihanchi-dachi but adds <em>double-handed blocking</em>, rising-elbow motions, and a more upright, pressing rhythm.</p>
 <div class="key-techniques"><strong>Key techniques:</strong> morote-uke (double-arm block) · rising elbow (hiji-ate) · uchi-uke + tsuki on one beat · nami-gaeshi returning-wave kick</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin:0;">
-<li>Double-handed blocks trap a grabbing or punching arm between both forearms — set up for a break or pull.</li>
+<li>Double-handed blocks trap a grabbing or punching arm between both forearms — set up a break or pull.</li>
 <li>Rising elbow answers an opponent who has closed to clinch range against the side-on body.</li>
-<li>Same side-on principle as Shodan: fighting where there is no room to retreat — a wall, a doorway, a crowd.</li>
 </ol>
 </div>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/ArYH6sx4S7k" title="Naihanchi Nidan — kata reference video"></iframe></div><p class="kata-video-caption">Okinawa Shidōkan · Shōrin-Ryū</p></div>
@@ -320,7 +261,7 @@
 <div class="section-title">
 <span class="jp">平安五段 — Pinan Go-dan</span>
 <h2>The Pinan series — five forms of "Peaceful Mind"</h2>
-<p class="lede">Created by Anko Itosu around 1907 by simplifying Kūsankū and Channan, so that karate could be taught to schoolchildren. All five share the same H-embusen. They are the heart of brown-belt training.</p>
+<p class="lede">Created by Anko Itosu around 1907 by simplifying Kūsankū and Channan so karate could be taught in schools. All five share the H-embusen — the heart of brown-belt training.</p>
 </div>
 <blockquote>
       Note: in <strong>Shōrin-Ryū the order is Itosu's original</strong> — Pinan Shodan first, then Nidan, etc. Shōtōkan reversed Shodan and Nidan (calling them Heian Nidan and Shodan). What Shōrin calls "Pinan Shodan" is what Shōtōkan calls "Heian Nidan."
@@ -333,28 +274,14 @@
 <p class="meaning">"Peaceful Mind, First Level"</p>
 <div class="kata-meta"><span class="tag">~21 moves</span><span class="tag">Embusen: H</span><span class="tag tag-beni">Itosu, c.1907</span></div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="20" x2="20" y1="40" y2="60"></line>
-<line stroke="#1c3a5e" stroke-width="3" x1="20" x2="50" y1="50" y2="50"></line>
-<line stroke="#1c3a5e" stroke-width="3" x1="50" x2="80" y1="50" y2="50"></line>
-<line stroke="#1c3a5e" stroke-width="3" x1="80" x2="80" y1="40" y2="60"></line>
-<line stroke="#1c3a5e" stroke-dasharray="3 2" stroke-width="2" x1="50" x2="50" y1="50" y2="20"></line>
-<line stroke="#1c3a5e" stroke-dasharray="3 2" stroke-width="2" x1="50" x2="50" y1="50" y2="80"></line>
-<circle cx="50" cy="50" fill="#c9a35e" r="5"></circle>
-<circle cx="20" cy="50" fill="#b04a3a" r="3"></circle>
-<circle cx="80" cy="50" fill="#b04a3a" r="3"></circle>
-</svg>
-<p class="embusen-label">H-shape</p>
-</div>
+
 </div>
 <div class="key-techniques"><strong>Key techniques:</strong> shutō-uke in kōkutsu-dachi (signature opening) · nukite (spear-hand) · age-uke · oi-zuki chūdan</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin:0;">
 <li>Opening shutō sequence = parry-grab-strike against a lapel grab.</li>
-<li>Nukite to solar plexus = vital-point thrust after pulling the opponent's guard down with hikite.</li>
-<li>The H pattern teaches angular footwork — never receive an attack straight on; always step off-line.</li>
+<li>The H pattern teaches angular footwork — never receive straight on; step off-line.</li>
 </ol>
 </div>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/MQOe5o1CEV0" title="Pinan Shodan — kata reference video"></iframe></div><p class="kata-video-caption">Shidōkan Masters · Maeshiro / Takara / Nakamura</p></div>
@@ -366,24 +293,14 @@
 <p class="meaning">"Peaceful Mind, Second Level"</p>
 <div class="kata-meta"><span class="tag">~26 moves</span><span class="tag">Embusen: H</span></div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="20" x2="20" y1="40" y2="60"></line>
-<line stroke="#1c3a5e" stroke-width="3" x1="20" x2="80" y1="50" y2="50"></line>
-<line stroke="#1c3a5e" stroke-width="3" x1="80" x2="80" y1="40" y2="60"></line>
-<line stroke="#1c3a5e" stroke-dasharray="3 2" stroke-width="2.5" x1="50" x2="50" y1="20" y2="80"></line>
-<circle cx="50" cy="50" fill="#c9a35e" r="5"></circle>
-</svg>
-<p class="embusen-label">H-shape</p>
-</div>
+
 </div>
 <div class="key-techniques"><strong>Key techniques:</strong> age-uke chain · mae-geri · ren-zuki (consecutive punches) · shutō-uke turn</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin:0;">
-<li>Rising block + counterpunch combinations against a series of straight attacks.</li>
-<li>The mae-geri line teaches engagement at correct ma-ai — hit the moment the opponent enters your kicking range.</li>
-<li>Final ren-zuki = closing aggressively after a successful counter, denying the opponent recovery.</li>
+<li>Rising block + counterpunch against a series of straight attacks.</li>
+<li>The mae-geri line teaches engaging at correct ma-ai — strike as the opponent enters kicking range.</li>
 </ol>
 </div>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/xx3yKGbZiK8" title="Pinan Nidan — kata reference video"></iframe></div><p class="kata-video-caption">Shidōkan Masters · Maeshiro / Takara / Nakamura</p></div>
@@ -395,25 +312,14 @@
 <p class="meaning">"Peaceful Mind, Third Level"</p>
 <div class="kata-meta"><span class="tag">~20 moves</span><span class="tag">Embusen: H + rear empi</span></div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="20" x2="80" y1="50" y2="50"></line>
-<line stroke="#1c3a5e" stroke-width="3" x1="50" x2="50" y1="20" y2="50"></line>
-<path d="M 50 80 L 70 75" marker-end="url(#arr-empi)" stroke="#b04a3a" stroke-width="3"></path>
-<defs><marker id="arr-empi" markerheight="6" markerwidth="6" orient="auto" refx="5" refy="3"><polygon fill="#b04a3a" points="0 0, 6 3, 0 6"></polygon></marker></defs>
-<text fill="#b04a3a" font-size="8" x="80" y="85">empi</text>
-<circle cx="50" cy="50" fill="#c9a35e" r="5"></circle>
-</svg>
-<p class="embusen-label">H + rear elbow turn</p>
-</div>
+
 </div>
 <div class="key-techniques"><strong>Key techniques:</strong> uchi-uke + gyaku-zuki combo · double block (morote-uke) · tetsui (hammer-fist) on rear turn · stepping elbow strike (empi)</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin:0;">
-<li>The closing 180° turn with empi = throwing or unbalancing an opponent grabbing from behind.</li>
-<li>Repeated uchi-uke + gyaku-zuki teaches simultaneous block-and-counter — same beat, no pause.</li>
-<li>Double block traps an opponent's punching limb between both forearms for an arm break.</li>
+<li>The closing 180° empi = throwing or unbalancing an opponent grabbing from behind.</li>
+<li>Repeated uchi-uke + gyaku-zuki = simultaneous block-and-counter, same beat, no pause.</li>
 </ol>
 </div>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/Tt4moUVxNjM" title="Pinan Sandan — kata reference video"></iframe></div><p class="kata-video-caption">Shidōkan Masters · Maeshiro / Takara / Nakamura</p></div>
@@ -425,26 +331,14 @@
 <p class="meaning">"Peaceful Mind, Fourth Level"</p>
 <div class="kata-meta"><span class="tag">~27 moves</span><span class="tag">Embusen: H</span></div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="20" x2="20" y1="40" y2="60"></line>
-<line stroke="#1c3a5e" stroke-width="3" x1="20" x2="80" y1="50" y2="50"></line>
-<line stroke="#1c3a5e" stroke-width="3" x1="80" x2="80" y1="40" y2="60"></line>
-<line stroke="#1c3a5e" stroke-dasharray="3 2" stroke-width="2.5" x1="50" x2="50" y1="20" y2="80"></line>
-<line stroke="#b04a3a" stroke-width="2" x1="40" x2="60" y1="40" y2="60"></line>
-<line stroke="#b04a3a" stroke-width="2" x1="40" x2="60" y1="60" y2="40"></line>
-<circle cx="50" cy="50" fill="#c9a35e" r="5"></circle>
-</svg>
-<p class="embusen-label">H + jūji-uke (X-block)</p>
-</div>
+
 </div>
 <div class="key-techniques"><strong>Key techniques:</strong> kosa-uke / jūji-uke (X-block) · mae-geri · mawashi-empi (round elbow) · shutō-uke chain · hiza-geri (knee strike)</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin:0;">
-<li>X-block intercepts a club, bottle, or downward weapon attack — wrists support each other.</li>
-<li>Elbow + grab + knee combo simulates a clinch: pull head down, drive knee up.</li>
-<li>Teaches transitions between long and close range — Pinan Yondan is the bridge to Passai.</li>
+<li>X-block intercepts a club, bottle, or downward weapon — the wrists support each other.</li>
+<li>Elbow + grab + knee = clinch work: pull the head down, drive the knee up.</li>
 </ol>
 </div>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/B0XY7y_yCgU" title="Pinan Yondan — kata reference video"></iframe></div><p class="kata-video-caption">Shidōkan Masters · Maeshiro / Takara / Nakamura</p></div>
@@ -456,28 +350,17 @@
 <p class="meaning">"Peaceful Mind, Fifth Level"</p>
 <div class="kata-meta"><span class="tag">~23 moves</span><span class="tag">Embusen: H + jump</span><span class="tag tag-kincha">Most demanding Pinan</span></div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="20" x2="20" y1="40" y2="60"></line>
-<line stroke="#1c3a5e" stroke-width="3" x1="20" x2="80" y1="50" y2="50"></line>
-<line stroke="#1c3a5e" stroke-width="3" x1="80" x2="80" y1="40" y2="60"></line>
-<path d="M 50 50 Q 50 25, 65 50" fill="none" stroke="#b04a3a" stroke-dasharray="3 2" stroke-width="2.5"></path>
-<text fill="#b04a3a" font-size="9" x="55" y="20">jump</text>
-<circle cx="50" cy="50" fill="#c9a35e" r="5"></circle>
-</svg>
-<p class="embusen-label">H + jumping turn</p>
-</div>
+
 </div>
 <div class="key-techniques"><strong>Key techniques:</strong> mikazuki-geri (crescent kick, in some versions) · jūji-uke gedan · jumping turn · shutō-uchi</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin:0;">
-<li>The jump-turn = evading a sweep or low attack while reorienting to a new opponent behind.</li>
-<li>Final jūji-uke teaches a wrist-grab release — wrists form a fulcrum to free a trapped hand.</li>
-<li>Considered the most technically demanding Pinan; mastery is often the milestone for brown 1.</li>
+<li>The jump-turn = evading a sweep or low attack while reorienting to an opponent behind.</li>
+<li>Final jūji-uke = a wrist-grab release, the wrists forming a fulcrum to free a trapped hand.</li>
 </ol>
 </div>
-<p style="font-size:0.9rem; color:var(--gray-soft); margin-top:0.75rem;"><em>Lineage variant:</em> Matsubayashi-Ryū often omits the jump and substitutes a stepped turn; Kobayashi and Shitō-Ryū preserve the jump.</p>
+<p style="font-size:0.9rem; color:var(--gray-soft); margin-top:0.75rem;"><em>Lineage variant:</em> Matsubayashi-Ryū often omits the jump for a stepped turn; Kobayashi and Shitō-Ryū keep it. The most demanding Pinan — often the brown-1 milestone.</p>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/s4KMdfiYIi4" title="Pinan Godan — kata reference video"></iframe></div><p class="kata-video-caption">Shidōkan Masters · Maeshiro / Takara / Nakamura</p></div>
 </div>
 </section>
@@ -487,7 +370,7 @@
 <div class="section-title">
 <span class="jp">中級型 — Chūkyū-gata</span>
 <h2>Intermediate kata — Wansū, Seisan, Ananku, Passai, Rōhai, Jion</h2>
-<p class="lede">After the Pinans, kata begin to specialize: throwing (Wansū), rooting (Seisan), aggressive entry (Passai), single-leg balance (Rōhai), high-power patterns (Jion). These define brown-belt depth.</p>
+<p class="lede">After the Pinans, kata specialize: throwing (Wansū), rooting (Seisan), aggressive entry (Passai), one-legged balance (Rōhai), high-power patterns (Jion). These define brown-belt depth.</p>
 </div>
 <!-- Wansu -->
 <div class="kata-card">
@@ -497,24 +380,15 @@
 <p class="meaning">Named after <em>Wang Ji</em> (Wanshū), a Chinese envoy who reached Tomari in 1683 — nicknamed the "dumping form" for its signature throw</p>
 <div class="kata-meta"><span class="tag">~30 moves</span><span class="tag">Embusen: I / shallow H</span><span class="tag tag-beni">Tomari-te · Kyan lineage</span></div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="50" x2="50" y1="15" y2="85"></line>
-<line stroke="#1c3a5e" stroke-dasharray="3 2" stroke-width="2.5" x1="30" x2="70" y1="50" y2="50"></line>
-<circle cx="50" cy="15" fill="#b04a3a" r="4"></circle>
-<circle cx="50" cy="85" fill="#b04a3a" r="4"></circle>
-</svg>
-<p class="embusen-label">I with side step</p>
+
 </div>
-</div>
-<p>A Tomari-te kata carried into Shōrin-Ryū through <strong>Chōtoku Kyan</strong> (who learned it from Maeda Chiku). Short but technically demanding — built around <em>simultaneous block-and-counter</em> and its trademark <em>kata-guruma</em> (shoulder / "flying-swallow") throw. In the OSK syllabus it is taught directly after Pinan Godan.</p>
+<p>A Tomari-te kata brought into Shōrin-Ryū by <strong>Chōtoku Kyan</strong>. Short but demanding — built around <em>simultaneous block-and-counter</em> and its trademark <em>kata-guruma</em> ("flying-swallow") throw. Taught directly after Pinan Godan.</p>
 <div class="key-techniques"><strong>Key techniques:</strong> kata-guruma throw ("flying swallow") · morote sukui-uke (double scooping block) · simultaneous uke + counter · low crouch / duck-under · shutō-uke</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin:0;">
-<li>The signature throw = catch a committed attacker, load them across your shoulders/arm, and dump them — the "flying swallow."</li>
-<li>Low crouch / duck-under = slipping beneath a high strike or escaping a head-grab to set up the throw.</li>
-<li>Block-and-counter on one beat = the same arm receives and strikes together, the hallmark of Wansū's tempo.</li>
+<li>The signature throw = catch a committed attacker, load them across your shoulders, and dump them.</li>
+<li>Low crouch / duck-under = slipping beneath a high strike or escaping a head-grab into the throw.</li>
 </ol>
 </div>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/E0F5lnffDwY" title="Wansū — kata reference video"></iframe></div><p class="kata-video-caption">Shōrin-Ryū Seibukan · Kyan lineage</p></div>
@@ -526,24 +400,15 @@
 <p class="meaning">"Thirteen" or "Thirteen Hands" — variously: 13 techniques, 13 enemies, or auspicious Chinese numerology</p>
 <div class="kata-meta"><span class="tag">~32–37 moves</span><span class="tag">Embusen: I</span><span class="tag tag-beni">One of the oldest kata</span></div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="50" x2="50" y1="15" y2="85"></line>
-<circle cx="50" cy="15" fill="#b04a3a" r="4"></circle>
-<circle cx="50" cy="85" fill="#b04a3a" r="4"></circle>
-<circle cx="50" cy="50" fill="#c9a35e" r="5"></circle>
-</svg>
-<p class="embusen-label">straight line</p>
+
 </div>
-</div>
-<p>One of the oldest extant kata — versions exist in Goju, Uechi, and every Shōrin lineage. The Matsumura version is the Shōrin standard. Trains rooting, breath, and rotational power.</p>
+<p>One of the oldest extant kata — found in Goju, Uechi, and every Shōrin lineage; the Matsumura version is the Shōrin standard. Trains rooting, breath, and rotational power.</p>
 <div class="key-techniques"><strong>Key techniques:</strong> sanchin-like breath/pressure · double punch (morote-zuki) · tate-shutō-uke · mae-geri keage · age-uke + gyaku-zuki finish</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin:0;">
-<li>Opening triple sequence = receiving, controlling, and counter-striking a committed lunge punch.</li>
-<li>The pulling hand (hikite) emphasizes off-balancing the opponent's wrist — every pull is a setup for a strike.</li>
-<li>The kata trains rooting and breath against shoving/pushing attacks. Often used as the partner kata for Sanchin training.</li>
+<li>Opening triple sequence = receive, control, and counter-strike a committed lunge punch.</li>
+<li>Trains rooting and breath against shoving/pushing — often the partner kata for Sanchin.</li>
 </ol>
 </div>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/8cAlqb9RpnI" title="Seisan — kata reference video"></iframe></div><p class="kata-video-caption">Shōei Miyazato · Shōrin-Ryū Shidōkan</p></div>
@@ -555,23 +420,14 @@
 <p class="meaning">Often translated "Light from the South" — a reference to its Taiwanese origin</p>
 <div class="kata-meta"><span class="tag">~26 moves</span><span class="tag">Embusen: I / shallow T</span><span class="tag tag-beni">Kyan, ~1895</span></div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="50" x2="50" y1="15" y2="85"></line>
-<line stroke="#1c3a5e" stroke-dasharray="3 2" stroke-width="2.5" x1="30" x2="70" y1="50" y2="50"></line>
-<circle cx="50" cy="15" fill="#b04a3a" r="4"></circle>
-<circle cx="50" cy="85" fill="#b04a3a" r="4"></circle>
-</svg>
-<p class="embusen-label">straight + side step</p>
+
 </div>
-</div>
-<p>Created by <strong>Chōtoku Kyan</strong> after a study trip to Taiwan around 1895 — unique among classical Okinawan forms for being the youngest. A signature kata of the Shōbayashi/Seibukan line.</p>
+<p>Created by <strong>Chōtoku Kyan</strong> after a ~1895 study trip to Taiwan — the youngest of the classical Okinawan forms, and a signature of the Shōbayashi/Seibukan line.</p>
 <div class="key-techniques"><strong>Key techniques:</strong> zenkutsu oi-zuki opening · double shutō-uke · yoko-geri kekomi · mawashi-zuki</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin:0;">
-<li>Opening forward charge = pre-emptive offense — moving first when you have read the attacker's intent.</li>
-<li>Double shutō = simultaneous two-handed neck attack, or breaking out of a clinch.</li>
+<li>Opening forward charge = pre-emptive offense — moving first once you've read the attacker.</li>
 <li>Side kick + reverse punch = lateral counter against an opponent flanking you.</li>
 </ol>
 </div>
@@ -584,25 +440,15 @@
 <p class="meaning">"Penetrating the Fortress, Minor Form" — also "To extract from a fortress"</p>
 <div class="kata-meta"><span class="tag">~22 moves</span><span class="tag">Embusen: I + side pivots</span><span class="tag tag-beni">Itosu</span></div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="50" x2="50" y1="15" y2="85"></line>
-<line stroke="#1c3a5e" stroke-dasharray="3 2" stroke-width="2" x1="30" x2="70" y1="35" y2="35"></line>
-<line stroke="#1c3a5e" stroke-dasharray="3 2" stroke-width="2" x1="30" x2="70" y1="65" y2="65"></line>
-<circle cx="50" cy="15" fill="#b04a3a" r="4"></circle>
-<circle cx="50" cy="85" fill="#b04a3a" r="4"></circle>
-</svg>
-<p class="embusen-label">I + side pivots</p>
-</div>
+
 </div>
 <p>Itosu created Passai Shō by simplifying Matsumura's older Passai. Designed to teach <em>bo-disarm</em> sequences against a staff-armed attacker.</p>
 <div class="key-techniques"><strong>Key techniques:</strong> opening morote-uke (augmented block) entry · sukui-uke (scooping block) · bo-disarm sequence · nukite</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin:0;">
-<li>Augmented block = entering against a heavy weapon (bo) attack — the supporting hand reinforces the receiving forearm.</li>
-<li>Scooping block + grab + counter = capturing the bo and reversing it on the attacker.</li>
-<li>Final lunge teaches the commitment required to "storm a fortress" — once you commit, do not retreat.</li>
+<li>Augmented block = entering against a heavy weapon (bo); the supporting hand reinforces the forearm.</li>
+<li>Scooping block + grab = capturing the bo and reversing it on the attacker.</li>
 </ol>
 </div>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/BQ9-k6E6RiY" title="Passai Shō — kata reference video"></iframe></div><p class="kata-video-caption">Shidōkan Masters · Koryū Passai</p></div>
@@ -614,25 +460,15 @@
 <p class="meaning">"Penetrating the Fortress, Major Form"</p>
 <div class="kata-meta"><span class="tag">~42 moves</span><span class="tag">Embusen: I + 45° pivots</span><span class="tag tag-beni">Matsumura's original</span></div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="50" x2="50" y1="15" y2="85"></line>
-<line stroke="#1c3a5e" stroke-dasharray="3 2" stroke-width="1.5" x1="20" x2="80" y1="20" y2="80"></line>
-<line stroke="#1c3a5e" stroke-dasharray="3 2" stroke-width="1.5" x1="80" x2="20" y1="20" y2="80"></line>
-<circle cx="50" cy="15" fill="#b04a3a" r="4"></circle>
-<circle cx="50" cy="85" fill="#b04a3a" r="4"></circle>
-</svg>
-<p class="embusen-label">I + 45° entries</p>
+
 </div>
-</div>
-<p>Matsumura's original "Passai." Two versions exist in lineage — <em>Matsumura-no-Passai</em> and <em>Itosu-no-Passai</em> — differing in details. A formidable, strong-spirited kata; widely used as a tokui-gata (chosen kata) for shodan exams.</p>
+<p>Matsumura's original "Passai" (lineage keeps both <em>Matsumura-</em> and <em>Itosu-no-Passai</em> versions). A formidable, strong-spirited kata, widely used as a tokui-gata for shodan exams.</p>
 <div class="key-techniques"><strong>Key techniques:</strong> shoulder-tackle entry · double uchi-uke · yama-zuki (mountain punch) · shutō-uke kōkutsu · sweep + downward punch</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin:0;">
-<li>Initial charge = closing distance against a stronger opponent ("storming the fortress" — overwhelm in a single beat).</li>
-<li>Yama-zuki = simultaneous two-level attack: face <em>and</em> ribs at once.</li>
-<li>The 45° entries teach off-line angles — never face the attacker square once contact is made.</li>
+<li>Initial charge = closing on a stronger opponent — overwhelm in a single beat.</li>
+<li>Yama-zuki = a simultaneous two-level attack: face <em>and</em> ribs at once.</li>
 </ol>
 </div>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/oo9-d2dfkyU" title="Passai (Dai) — kata reference video"></iframe></div><p class="kata-video-caption">Shidōkan Masters · Matsumura no Passai</p></div>
@@ -644,18 +480,7 @@
 <p class="meaning">"54 Steps." Also called <em>Useishi</em> in Okinawan, <em>Hotaku</em> ("Woodpecker") in Matsumura Seitō</p>
 <div class="kata-meta"><span class="tag">~54–67 moves</span><span class="tag">Embusen: I or +</span><span class="tag tag-kincha">Advanced</span></div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="50" x2="50" y1="15" y2="85"></line>
-<line stroke="#1c3a5e" stroke-width="2.5" x1="20" x2="80" y1="50" y2="50"></line>
-<circle cx="50" cy="15" fill="#b04a3a" r="4"></circle>
-<circle cx="50" cy="85" fill="#b04a3a" r="4"></circle>
-<circle cx="20" cy="50" fill="#b04a3a" r="4"></circle>
-<circle cx="80" cy="50" fill="#b04a3a" r="4"></circle>
-<text fill="#c9a35e" font-size="10" font-weight="700" text-anchor="middle" x="50" y="50">+</text>
-</svg>
-<p class="embusen-label">cross / four-direction</p>
-</div>
+
 </div>
 <p>Attributed to Matsumura, refined by Itosu (some lineages have Shō/Dai versions). Famous for the <em>woodpecker</em> rhythm of rapid pecking strikes (keitō, washide, ippon-nukite).</p>
 <div class="key-techniques"><strong>Key techniques:</strong> ippon-nukite (one-finger spear-hand) · keitō-uchi (chicken-head wrist strike) · tate-zuki · washide (eagle-hand) · repeated nukite chains</div>
@@ -663,8 +488,7 @@
 <h5>Bunkai</h5>
 <ol style="margin:0;">
 <li>Nukite chains = vital-point attacks (eyes, throat, suigetsu) — pinpoint, not power.</li>
-<li>The "woodpecker" name reflects the rapid pecking strikes of the keitō and washide forms.</li>
-<li>Considered an advanced kata teaching pinpoint precision — kata for the brown belt aspiring to shodan.</li>
+<li>An advanced kata of pinpoint precision — for the brown belt aspiring to shodan.</li>
 </ol>
 </div>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/P4tu4WOj7Fs" title="Gojūshiho — kata reference video"></iframe></div><p class="kata-video-caption">Maeshiro Morinobu Hanshi · Shōrin-Ryū Shidōkan</p></div>
@@ -676,24 +500,15 @@
 <p class="meaning">"Vision of a Heron" (Matsubayashi) or "Old Crane" (Itosu/Mabuni)</p>
 <div class="kata-meta"><span class="tag">~28 moves</span><span class="tag">Embusen: T / I</span><span class="tag tag-beni">Tomari-te roots · Itosu redacted three versions</span></div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="50" x2="50" y1="15" y2="85"></line>
-<line stroke="#1c3a5e" stroke-width="2.5" x1="20" x2="80" y1="50" y2="50"></line>
-<circle cx="50" cy="15" fill="#b04a3a" r="4"></circle>
-<text fill="#c9a35e" font-size="10" x="65" y="65">鷺</text>
-</svg>
-<p class="embusen-label">T-shape</p>
-</div>
+
 </div>
 <p>Tomari-te kata via <strong>Kosaku Matsumora</strong>; Itosu redacted three versions (Shō/Dai/Ni). Famous for the <em>sagi-ashi-dachi</em> — the one-legged crane stance.</p>
 <div class="key-techniques"><strong>Key techniques:</strong> sagi-ashi-dachi (heron stance) · tomoe-zuki (twin punches in opposing directions) · gedan-barai · mawashi-uke</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin:0;">
-<li>One-leg stance = checking or attacking the opponent's lead leg; can also be a knee strike chambered.</li>
-<li>The crane motif represents balance and precision over power — the kata of the older karateka.</li>
-<li>Tomoe-zuki = two attackers, one in front and one behind, struck on the same beat.</li>
+<li>One-leg stance = checking or attacking the opponent's lead leg; can chamber a knee strike.</li>
+<li>Tomoe-zuki = two attackers, front and behind, struck on the same beat.</li>
 </ol>
 </div>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/zZojrRR9oiw" title="Rōhai — kata reference video"></iframe></div><p class="kata-video-caption">Shōrin-Ryū Bushidaikan</p></div>
@@ -705,26 +520,15 @@
 <p class="meaning">"Mercy and Goodness" — possibly named after the Jion Temple in China</p>
 <div class="kata-meta"><span class="tag">~47 moves</span><span class="tag">Embusen: I + strong +</span><span class="tag tag-kincha">Tomari-te / Shitō-Ryū origin</span></div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="50" x2="50" y1="15" y2="85"></line>
-<line stroke="#1c3a5e" stroke-width="3" x1="15" x2="85" y1="50" y2="50"></line>
-<circle cx="50" cy="15" fill="#b04a3a" r="4"></circle>
-<circle cx="50" cy="85" fill="#b04a3a" r="4"></circle>
-<circle cx="15" cy="50" fill="#b04a3a" r="4"></circle>
-<circle cx="85" cy="50" fill="#b04a3a" r="4"></circle>
-</svg>
-<p class="embusen-label">cross / four-direction</p>
-</div>
+
 </div>
 <p>Originally Tomari-te / Chinese tradition; preserved primarily in <strong>Shōtōkan, Shitō-Ryū, and Wadō-Ryū</strong>. Less common in pure Shōrin lineages — its presence in OSK signals cross-style training.</p>
 <div class="key-techniques"><strong>Key techniques:</strong> opening morote-uke in kiba-dachi after kuma-de (bear-hand) salutation · kosa-uke · jōdan age-uke + gyaku-zuki chain · augmented punch</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin:0;">
-<li>Opening salutation = a Buddhist Shaolin greeting indicating non-aggression — the kata begins by offering peace.</li>
-<li>Augmented blocks = receiving heavy committed strikes by reinforcing the blocking arm with the opposite hand.</li>
-<li>Cross-pattern footwork teaches multiple-opponent management — every direction is an attacker.</li>
+<li>Opening salutation = a Shaolin greeting of non-aggression — the kata begins by offering peace.</li>
+<li>Augmented blocks = receiving heavy committed strikes, the free hand reinforcing the blocking arm.</li>
 </ol>
 </div>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/1sr0Op8Jsog" title="Jion — kata reference video"></iframe></div><p class="kata-video-caption">Shōrin-Ryū Shidōkan</p></div>
@@ -746,25 +550,15 @@
 <p class="meaning">"Fighter to the East" — named for a Chinese sailor who taught Matsumura</p>
 <div class="kata-meta"><span class="tag">~33 moves</span><span class="tag tag-beni">Diagonal embusen — unique</span><span class="tag">Matsumura → Kyan</span></div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="20" x2="80" y1="80" y2="20"></line>
-<circle cx="20" cy="80" fill="#b04a3a" r="4"></circle>
-<circle cx="80" cy="20" fill="#b04a3a" r="4"></circle>
-<text fill="#c9a35e" font-size="9" x="55" y="60">鶴</text>
-<text fill="#6b6157" font-size="8" x="55" y="72">crane</text>
-</svg>
-<p class="embusen-label">diagonal 45° line — unique</p>
-</div>
+
 </div>
 <p>The only major Shōrin kata performed on a diagonal line. Legend places its origin on a beach — fighting on uneven ground. Famous for <em>tsuru-ashi-dachi</em>, the crane stance.</p>
 <div class="key-techniques"><strong>Key techniques:</strong> tsuru-ashi-dachi (crane stance) · jumping kick (tobi-geri) · simultaneous block + kick · ren-geri (consecutive kicks)</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin:0;">
-<li>The diagonal embusen represents fighting on uneven ground — sand, rocks, slopes.</li>
-<li>Crane stance = evading sweeps and attacks to the support leg; the standing leg is also a counter weapon.</li>
-<li>Jumping kick teaches commitment, recovery, and zanshin — landing must be balanced enough to attack again.</li>
+<li>The diagonal embusen = fighting on uneven ground — sand, rocks, slopes.</li>
+<li>Crane stance = evading sweeps to the support leg, which is also a counter weapon.</li>
 </ol>
 </div>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/8Rgxnr4zBcg" title="Chinto — kata reference video"></iframe></div><p class="kata-video-caption">Shidōkan Masters (titled Gangaku)</p></div>
@@ -776,28 +570,15 @@
 <p class="meaning">Named for the Chinese envoy "Kong Su Kung" who visited Okinawa in 1756</p>
 <div class="kata-meta"><span class="tag">Shō ~48</span><span class="tag">Dai ~65</span><span class="tag">Embusen: +</span><span class="tag tag-kincha">Night-fighting kata</span></div>
 </div>
-<div class="embusen-box">
-<svg viewbox="0 0 100 100">
-<line stroke="#1c3a5e" stroke-width="3" x1="50" x2="50" y1="15" y2="85"></line>
-<line stroke="#1c3a5e" stroke-width="3" x1="15" x2="85" y1="50" y2="50"></line>
-<circle cx="50" cy="15" fill="#b04a3a" r="4"></circle>
-<circle cx="50" cy="85" fill="#b04a3a" r="4"></circle>
-<circle cx="15" cy="50" fill="#b04a3a" r="4"></circle>
-<circle cx="85" cy="50" fill="#b04a3a" r="4"></circle>
-<circle cx="50" cy="50" fill="#c9a35e" r="6"></circle>
-</svg>
-<p class="embusen-label">+ (cross), four-direction</p>
-</div>
+
 </div>
 <p>Kūsankū → Sakugawa → Matsumura. Itosu created the Shō version; the Dai is Matsumura's original. Famously a <strong>night-combat treatise</strong> — many techniques described as fighting in low light.</p>
 <div class="key-techniques"><strong>Key techniques:</strong> opening kankū salutation (looking through the triangular hand frame) · low duck and one-handed attack sequences · jumping kick at end · shutō chains</div>
 <div class="bunkai-list">
 <h5>Bunkai</h5>
 <ol style="margin:0;">
-<li>The opening salute may have been a range/light gauge — peering through the frame at the opponent's outline.</li>
-<li>Low postures simulate fighting in darkness — when you cannot see, you stay low and let the attacker reach for you.</li>
-<li>Jumping kick at the end is an escape-and-counter when surrounded.</li>
-<li>Considered the longest and most comprehensive of Itosu's lineage kata.</li>
+<li>The opening salute may gauge range/light — peering through the hand-frame at the opponent's outline.</li>
+<li>Low postures simulate fighting in darkness — stay low and let the attacker reach for you.</li>
 </ol>
 </div>
 <div class="kata-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/Em1Jk90iQ_I" title="Kūsankū Shō / Dai — kata reference video"></iframe></div><p class="kata-video-caption">Shidōkan Masters · Kushanku Shō / Kanku Shō</p></div>
